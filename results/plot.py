@@ -18,6 +18,7 @@ f.close()
 def func(x, A, B, r):
     return A * (1 - 4/3*r)**x + B
 
+
 popt, pcov = curve_fit(func, x, y, p0=[1, 0, 0], bounds = (0, 1), maxfev = 5000)
 #p0 is the guess of the parameters. Guess B ~ 0 (ideally be 0.25) and r ~ 0 (no noise model now so r should be ultra low)
 

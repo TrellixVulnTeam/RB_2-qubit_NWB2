@@ -30,6 +30,7 @@ def RB_single_seq(L, repetition=125, ini_error=None, rd_error=None):
         # energy fluctuation noise is quasi-static with timescale of single measurement (single sequence).
         noise = [np.random.normal(0.0, std_uu), np.random.normal(0.0, std_ud),
                  np.random.normal(0.0, std_du), np.random.normal(0.0, std_dd)]
+        print(noise)
         g1 = get_seq(cliff_seq, phase, noise=noise, noise_type=QUASI_STATIC, crosstalk=False)
         g2 = get_seq_inverse(cliff_seq, phase, noise=noise, noise_type=QUASI_STATIC, crosstalk=False)
         seq_k = g2 @ g1  # k_th
@@ -56,8 +57,8 @@ y = []
 yerr = []
 
 # N = 2  # samples for each Cliff_decompose point (算標準差即是使用每個data point對應的N個數據)
-K = 51  # choices of S sequence 相同長度 重複取k次不同seq(等同K_L參數)
-s_re = 125  # repeated times for each sequence
+K = 2  # choices of S sequence 相同長度 重複取k次不同seq(等同K_L參數)
+s_re = 10  # repeated times for each sequence
 initial_error = [0, 0, 0]   # [e_ud, e_du, e_dd]
 readout_error = [0, 0, 0]
 

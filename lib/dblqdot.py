@@ -17,12 +17,17 @@ dEz = 1.326e7
 Omega = 410000.0
 J = 1.59e6
 
-f_1u = Ez + (dEz+J)/2
-f_1d = Ez + (dEz-J)/2
-f_2u = Ez + (-dEz+J)/2
-f_2d = Ez + (-dEz-J)/2
+dEz_tilde = np.sqrt(J**2 + dEz**2)
+
+f_1u = (dEz_tilde+J)/2
+f_1d = (dEz_tilde-J)/2
+f_2u = (-dEz_tilde+J)/2
+f_2d = (-dEz_tilde-J)/2
 
 T_pi_2 = 1.0/(4.0*Omega)
+
+alpha = (dEz + np.sqrt(J**2 + dEz**2)) / np.sqrt((dEz + np.sqrt(J**2 + dEz**2))**2 + J**2)
+beta = J / np.sqrt((dEz + np.sqrt(J**2 + dEz**2))**2 + J**2)
 
 QUASI_STATIC = True
 STOCHASTIC = False
@@ -52,15 +57,15 @@ def esr(a, f, t, p):
 # Lab frame Hamiltonian (in diagonalized basis)
 def h_lab(a, f, t, p):
     b = esr(a, f, t, p)
-    return 1/2 * 2*np.pi * np.array([[2*Ez, b, b, 0],
-                                     [np.conj(b), dEz-J, 0, b],
-                                     [np.conj(b), 0, -dEz-J, b],
-                                     [0, np.conj(b), np.conj(b), -2*Ez]])
+    return 1/2 * 2*np.pi * np.array([[0, b, b, 0],
+                                     [np.conj(b), dEz_tilde-J, 0, b],
+                                     [np.conj(b), 0, -dEz_tilde-J, b],
+                                     [0, np.conj(b), np.conj(b), 0]])
 
 # RWA transformation matrix
 def r(t):
-    return np.diag([np.exp(1j*Ez*2*np.pi*t), np.exp(1j*(dEz-J)*2*np.pi*t/2), np.exp(-1j*(dEz-J)*2*np.pi*t/2),
-                    np.exp(-1j*Ez*2*np.pi*t)])
+    return np.diag([1, np.exp(1j*(dEz_tilde-J)*2*np.pi*t/2), np.exp(-1j*(dEz_tilde-J)*2*np.pi*t/2),
+                    1])
 
 
 '''
@@ -106,11 +111,28 @@ External error model
 '''
 
 # Energy fluctuation error (Gaussian fluctuations on diagonal elements)
-# df_uu/ud/du/dd: fluctuations on uu/ud/du/dd state
+# df_uu/ud/du/dd: fluctuations on uu/ud_tilde/du_tilde/dd under RWA state
 def dh_e(df_uu, df_ud, df_du, df_dd):
     return 2*np.pi*np.array([[df_uu, 0, 0, 0],
                              [0, df_ud, 0, 0],
                              [0, 0, df_du, 0],
+                             [0, 0, 0, df_dd]])
+
+# Energy fluctuation error (Gaussian fluctuations on diagonal elements)
+# df_uu/ud/du/dd: fluctuations on uu/ud/du/dd state
+# t: gate time
+def dh_e_tilde(df_uu, df_ud, df_du, df_dd, t):
+    return 2*np.pi*np.array([[df_uu, 0, 0, 0],
+                             [0, alpha**2*df_ud + beta**2*df_du,
+                              np.exp(1j*(dEz_tilde-J)*t)*alpha*beta*(df_du-df_ud), 0],
+                             [0, np.exp(-1j*(dEz_tilde-J)*t)*alpha*beta*(df_du-df_ud),
+                              alpha**2*df_du + beta**2*df_ud, 0],
+                             [0, 0, 0, df_dd]])
+
+def dh_e_approx(df_uu, df_ud, df_du, df_dd):
+    return 2*np.pi*np.array([[df_uu, 0, 0, 0],
+                             [0, alpha**2*df_ud + beta**2*df_du, alpha*beta*(df_du-df_ud), 0],
+                             [0, alpha*beta*(df_du-df_ud), alpha**2*df_du + beta**2*df_ud, 0],
                              [0, 0, 0, df_dd]])
 
 
@@ -219,7 +241,7 @@ def pulse_generate(k, t_total, a, p, delta, noise, noise_type=QUASI_STATIC, sgn=
                     m = np.dot(expm(-1j * sgn * h_rwa_2d(a, t - (t_slice[1] / 2), p[3] - p[2], noise) * t_slice[1]), m)
     return m
 
-# phase record for crosstalk error correction algorithm
+# phase record for crosstalk error correction algorithm (obtain p_err by simulation)
 def phase_rec(k, p):
     p_err = 0.03167654250993053 * np.pi  # phase error is given by simulation
     if k == 0:      # 1u
