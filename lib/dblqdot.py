@@ -62,10 +62,9 @@ def h_lab(a, f, t, p):
                                      [np.conj(b), 0, -dEz_tilde-J, b],
                                      [0, np.conj(b), np.conj(b), 0]])
 
-# RWA transformation matrix
+# RWA transformation matrix (rU_rwa = U_lab)
 def r(t):
-    return np.diag([1, np.exp(1j*(dEz_tilde-J)*2*np.pi*t/2), np.exp(-1j*(dEz_tilde-J)*2*np.pi*t/2),
-                    1])
+    return np.diag([1, np.exp(1j*f_1d*2*np.pi*t), np.exp(-1j*f_1u*2*np.pi*t), 1])
 
 
 '''
