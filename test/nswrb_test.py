@@ -2,16 +2,16 @@ from lib.nswrb import *
 import random
 
 offset_f = ac_stark_frequency()
-# phase_comp = ac_stark_modulation(offset_f, T_pi_2)
-phase_comp = np.ones((4, 4))
+phase_comp = ac_stark_modulation(offset_f, T_pi_2)
+# phase_comp = np.ones((4, 4))
 dt = 5e-9
 f = np.array([[f_1u, f_1d, f_2u, f_2d]])
 rho_0 = error_initial_state(0, 0, 0)
 L = [1]
 
-cliff_seq = [[12, 0, 10, 5, 11, 2, 8, 12, 7, 4, 9, 1, 9, 11]]
+# cliff_seq = [[12, 0, 10, 5, 11, 2, 8, 12, 7, 4, 9, 1, 9, 11]]
 # cliff_seq = random.choices(Cliff_decompose, k=L[-1])
-# cliff_seq = [[0]]
+cliff_seq = [[7]]
 wav, tindex, p_rec = generate_cliff_waveform(cliff_seq, L, dt, phase_comp)
 H_seq = waveform_2_H(wav, dt, f)
 # print(wav)

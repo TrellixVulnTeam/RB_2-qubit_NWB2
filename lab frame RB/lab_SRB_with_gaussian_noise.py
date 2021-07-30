@@ -4,16 +4,17 @@ from scipy.optimize import curve_fit
 from lib.nswrb import *
 
 # stochastic noise deviation
-std_uu = 20000
-std_ud = 20000
-std_du = 20000
+std_uu = 16100
+std_ud = 10100
+std_du = 21000
 std_dd = 0
 
 
 offset_f = ac_stark_frequency()
 phase_comp = ac_stark_modulation(offset_f, T_pi_2)
 # phase_comp = np.ones((4, 4))
-L = [1, 3, 5, 7, 10, 20, 30]
+
+L = [1, 3, 5, 7, 10]
 F = np.zeros(len(L))
 dt = 5e-10
 f = np.array([[f_1u, f_1d, f_2u, f_2d]])
@@ -30,7 +31,18 @@ for re in range(rep):
     wav, tindex, p_rec = generate_cliff_waveform(cliff_seq, L, dt, phase_comp)
     # print("tindex: ", tindex)
     # print("phase_rec: ", p_rec)
-    H_seq = waveform_2_H(wav, dt, f)
+
+    # add noise here
+    sf1 = np.random.normal(0.0, std_uu)
+    sf2 = np.random.normal(0.0, std_ud)
+    sf3 = np.random.normal(0.0, std_du)
+    sf4 = np.random.normal(0.0, std_dd)
+    H_noise = 2 * np.pi * np.diag([sf1, sf2, sf3, sf4])
+    # print(H_noise)
+    # end noise
+
+    H_seq = waveform_2_H(wav, dt, f) + H_noise
+    # H_seq = waveform_2_H(wav, dt, f)
     rho_list, U = time_evolve_2(H_seq, dt, rho_0)
     inv = get_perfect_inverse_set(cliff_seq, L)
     C = get_perfect_cliff([0])
@@ -45,7 +57,17 @@ for re in range(rep):
 def func(x, A, B, r):
     return A * (1 - 4 / 3 * r) ** x + B
 
+
 print(F)
+
+f5 = open('2q_lab_RB_simu_L.pkl', 'wb')
+pickle.dump(L, f5)
+f5.close()
+
+f6 = open('2q_lab_RB_simu_y.pkl', 'wb')
+pickle.dump(F, f6)
+f6.close()
+
 popt, pcov = curve_fit(func, L, F, p0=[1, 0, 0], bounds=(0, 1), maxfev=5000)
 # p0 is the guess of the parameters.
 # Guess B ~ 0 (ideally be 0.25) and r ~ 0 (no noise model now so r should be ultra low)
