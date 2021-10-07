@@ -4,16 +4,17 @@ import multiprocessing as mp
 from scipy.optimize import curve_fit
 from lib.nswrb import *
 
-def RB_single_sequence(l, noise, rho_initial, delta_t, phase_compensation, four_frequency):
+def RB_single_sequence(l, noise_std, noise_switch, rho_initial, delta_t, phase_compensation, four_frequency):
     cliff_seq = random.choices(Cliff_decompose, k=l[-1])
     wav, tindex, p_rec = generate_cliff_waveform(cliff_seq, l, delta_t, phase_compensation)
 
     # add noise here
-    sf1 = np.random.normal(0.0, noise[0])
-    sf2 = np.random.normal(0.0, noise[1])
-    sf3 = np.random.normal(0.0, noise[2])
-    sf4 = np.random.normal(0.0, noise[3])
-    H_noise = 2 * np.pi * np.diag([sf1, sf2, sf3, sf4])
+    # sf1 = np.random.normal(0.0, noise_std[0])
+    # sf2 = np.random.normal(0.0, noise_std[1])
+    # sf3 = np.random.normal(0.0, noise_std[2])
+    # sf4 = np.random.normal(0.0, noise_std[3])
+    # H_noise = 2 * np.pi * np.diag([sf1, sf2, sf3, sf4])
+    H_noise = time_varying_gaussian_noise(wav, delta_t, noise_std, f_noise=noise_switch)
     # end noise
 
     H_seq = waveform_2_H(wav, delta_t, four_frequency) + H_noise
@@ -48,13 +49,16 @@ f = np.array([[f_1u, f_1d, f_2u, f_2d]])
 rho_0 = error_initial_state(0, 0, 0)
 rep = 3
 
-# define Gaussian error standard deviation series
-# sigma_list = 2000 * np.array(range(26))
-sigma_list = [0, 2000, 4000]
-F_Clifford = np.zeros(len(sigma_list))
+# define noise changing frequencies #TODO: noise freqency here
+# switch_list = 1000 * np.array(range(1, 31))
+switch_list = [1000, 2000]
+
+F_Clifford = np.zeros(len(switch_list))
+r_sqrd = np.zeros(len(switch_list))
+
 
 if __name__ == '__main__':
-    for i in range(len(sigma_list)):
+    for i in range(len(switch_list)):
         result_list = []
 
         def log_result(result):
@@ -62,7 +66,7 @@ if __name__ == '__main__':
 
         pool = mp.Pool()
         for re in range(rep):
-            pool.apply_async(RB_single_sequence, args=(L, [sigma_list[i], sigma_list[i], sigma_list[i], 0],
+            pool.apply_async(RB_single_sequence, args=(L, four_noise, switch_list[i],
                                                        rho_0, dt, phase_comp, f), callback=log_result)
         pool.close()
         pool.join()
@@ -72,19 +76,37 @@ if __name__ == '__main__':
         popt, pcov = curve_fit(func, L, F, p0=[1, 0, 0], bounds=(0, 1), maxfev=5000)
         F_Clifford[i] = popt[2] * 100
 
-    print(F_Clifford)
+        residuals = F - func(L, *popt)
+        ss_res = np.sum(residuals**2)
+        ss_tot = np.sum((F - np.mean(F))**2)
+        r_sqrd[i] = 1 - (ss_res/ss_tot)
 
-    f5 = open('quasi_noise_sigma.pkl', 'wb')
-    pickle.dump(sigma_list, f5)
+    print(F_Clifford)
+    print(r_sqrd)
+
+    f5 = open('noise_switch_frequency.pkl', 'wb')
+    pickle.dump(switch_list, f5)
     f5.close()
 
-    f6 = open('quasi_noise_infidelity.pkl', 'wb')
+    f6 = open('noise_switch_infidelity.pkl', 'wb')
     pickle.dump(F_Clifford, f6)
     f6.close()
 
-    plt_sigma_list = [x / 1000 for x in sigma_list]
-    plt.plot(plt_sigma_list, F_Clifford, 'o', markersize=4)
-    plt.xlabel("Frequency noise (kHz)")
+    f7 = open('noise_switch_r_squared.pkl', 'wb')
+    pickle.dump(r_sqrd, f7)
+    f7.close()
+
+    plot1 = plt.figure(1)
+    plt_switch_list = [x / 1000 for x in switch_list]
+    plt.plot(plt_switch_list, F_Clifford, 'o', markersize=4)
+    plt.xlabel("Switching Frequency (kHz)")
     plt.ylabel("Clifford infidelity (%)")
+    plt.show()
+
+    plot2 = plt.figure(2)
+    plt_switch_list = [x / 1000 for x in switch_list]
+    plt.plot(plt_switch_list, r_sqrd, 'o', markersize=4)
+    plt.xlabel("Switching Frequency (kHz)")
+    plt.ylabel("R_squared")
     plt.show()
 

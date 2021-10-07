@@ -11,6 +11,7 @@ Provides
 
 from lib.twoqrb import *
 import copy
+import math
 
 '''
 tilde frame Hamiltonian with ac magnetic field off
@@ -230,6 +231,29 @@ def waveform_2_H(waveform, dt, f):
     H_seq = 1 / 2 * 2 * np.pi * esr + Hd
     # H_seq = 1 / 2 * 2 * np.pi * esr
     return H_seq
+
+def get_gaussian_noisy_h(std):
+    sf1 = np.random.normal(0.0, std[0])
+    sf2 = np.random.normal(0.0, std[1])
+    sf3 = np.random.normal(0.0, std[2])
+    sf4 = np.random.normal(0.0, std[3])
+    h_noise = 2 * np.pi * np.diag([sf1, sf2, sf3, sf4])
+    return h_noise
+
+def time_varying_gaussian_noise(waveform, dt, std, f_noise=0):
+    N = len(waveform[0])
+    n = round(1/dt/f_noise)
+    k = math.ceil(N/n)
+    noisy_h = np.empty((k, 4, 4))
+    if f_noise:
+        for i in range(k):
+            noisy_h[i] = get_gaussian_noisy_h(std)
+        h_noise_list = np.array([[m]*n for m in noisy_h])
+        h_noise_list = h_noise_list.reshape(-1, 4, 4)
+        h_noise_list = h_noise_list[:N]
+        return h_noise_list
+    else:   # f_noise = 0 implies noise is static through whole sequence
+        return get_gaussian_noisy_h(std)
 
 
 

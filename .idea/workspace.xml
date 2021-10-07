@@ -2,10 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d70837f3-f2df-469d-865e-32745c819d82" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/lab frame RB/mp_lab_RB_with_different_noise_frequency.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/OU_noise.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab frame RB/lab_SRB_with_gaussian_noise.py" beforeDir="false" afterPath="$PROJECT_DIR$/lab frame RB/lab_SRB_with_gaussian_noise.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/plot/plot.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/plot/plot.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/nswrb_test.py" beforeDir="false" afterPath="$PROJECT_DIR$/test/nswrb_test.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/2q_lab_RB_simu_y.pkl" beforeDir="false" afterPath="$PROJECT_DIR$/lab frame RB/2q_lab_RB_simu_y.pkl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/mp_fidelity_with_different_std_dev.py" beforeDir="false" afterPath="$PROJECT_DIR$/lab frame RB/mp_fidelity_with_different_std_dev.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/mp_lab_SRB_with_gaussian_noise.py" beforeDir="false" afterPath="$PROJECT_DIR$/lab frame RB/mp_lab_SRB_with_gaussian_noise.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/paper F=97.5 setup/.ipynb_checkpoints/plot-checkpoint.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/lab frame RB/paper F=97.5 setup/.ipynb_checkpoints/plot-checkpoint.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/paper F=97.5 setup/plot.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/lab frame RB/paper F=97.5 setup/plot.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/新文字文件.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/nswrb.py" beforeDir="false" afterPath="$PROJECT_DIR$/lib/nswrb.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -44,13 +50,31 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/RB_nocrosstalk/gaussian_noise(quasi-static).py">
+        <entry file="file://$PROJECT_DIR$/lib/nswrb.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1072">
-              <caret line="71" column="8" selection-start-line="71" selection-start-column="8" selection-end-line="71" selection-end-column="24" />
+            <state relative-caret-position="3904">
+              <caret line="246" column="4" selection-start-line="246" selection-start-column="4" selection-end-line="246" selection-end-column="33" />
               <folding>
-                <element signature="e#126#139#0" expanded="true" />
+                <element signature="e#238#262#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test/OU_noise.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="896">
+              <caret line="59" column="24" selection-start-line="59" selection-start-column="24" selection-end-line="59" selection-end-column="24" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lab frame RB/lab_SRB_with_gaussian_noise.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="155">
+              <caret line="21" column="7" selection-start-line="21" selection-start-column="7" selection-end-line="21" selection-end-column="7" />
             </state>
           </provider>
         </entry>
@@ -68,7 +92,7 @@
         <entry file="file://$PROJECT_DIR$/lib/dblqdot.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="384">
-              <caret line="26" column="9" selection-start-line="26" selection-start-column="9" selection-end-line="26" selection-end-column="24" />
+              <caret line="26" selection-start-line="26" selection-end-line="26" selection-end-column="6" />
               <folding>
                 <element signature="e#180#198#0" expanded="true" />
               </folding>
@@ -77,81 +101,36 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test/nswrb_test.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="80">
-              <caret line="6" column="9" selection-start-line="6" selection-start-column="9" selection-end-line="6" selection-end-column="9" />
-              <folding>
-                <element signature="e#0#23#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lab frame RB/lab_SRB_with_gaussian_noise.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="288">
-              <caret line="21" column="7" selection-start-line="21" selection-start-column="7" selection-end-line="21" selection-end-column="7" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lab frame RB/mp_lab_SRB_with_gaussian_noise.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="224">
-              <caret line="18" column="10" selection-end-line="88" />
-              <folding>
-                <element signature="e#0#13#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lab frame RB/mp_fidelity_with_different_std_dev.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="640">
-              <caret line="44" column="20" selection-start-line="44" selection-start-column="20" selection-end-line="44" selection-end-column="20" />
+            <state relative-caret-position="496">
+              <caret line="35" selection-start-line="35" selection-end-line="39" selection-end-column="45" />
               <folding>
                 <element signature="e#0#13#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test/phase correction.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1568">
-              <caret line="102" column="12" selection-start-line="102" selection-start-column="12" selection-end-line="102" selection-end-column="12" />
-              <folding>
-                <element signature="e#0#16#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test/lab frame pulses.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="32">
-              <caret line="6" selection-start-line="6" selection-end-line="9" selection-end-column="44" />
-              <folding>
-                <element signature="e#0#16#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/lib/nswrb.py">
+        <entry file="file://$PROJECT_DIR$/lab frame RB/mp_lab_RB_with_different_noise_frequency.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="668">
-              <caret line="234" lean-forward="true" selection-start-line="234" selection-end-line="234" />
+            <state relative-caret-position="220">
+              <caret line="72" column="34" lean-forward="true" selection-start-line="72" selection-start-column="34" selection-end-line="72" selection-end-column="34" />
               <folding>
-                <element signature="e#238#262#0" expanded="true" />
+                <element signature="e#0#13#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lab frame RB/fidelity_with_different_std_dev.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="412">
+              <caret line="77" column="10" selection-start-line="77" selection-start-column="10" selection-end-line="77" selection-end-column="10" />
+              <folding>
+                <element signature="e#0#13#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -194,6 +173,7 @@
       <find>p *= p_ac[:, 3]</find>
       <find>rho_list[i] = rho</find>
       <find>empty</find>
+      <find>append</find>
     </findStrings>
     <replaceStrings>
       <replace>a,</replace>
@@ -221,8 +201,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/C_2 decompose demo.py" />
-        <option value="$PROJECT_DIR$/generator.py" />
         <option value="$PROJECT_DIR$/Cliff2_pickle.py" />
         <option value="$PROJECT_DIR$/Cliff2_pickle_generate.py" />
         <option value="$PROJECT_DIR$/RB-2q.py" />
@@ -263,23 +241,25 @@
         <option value="$PROJECT_DIR$/lib/twoqrb.py" />
         <option value="$PROJECT_DIR$/results/plot.py" />
         <option value="$PROJECT_DIR$/test/phase correction.py" />
-        <option value="$PROJECT_DIR$/lib/dblqdot.py" />
-        <option value="$PROJECT_DIR$/lib/nswrb.py" />
         <option value="$PROJECT_DIR$/test/nswrb_test.py" />
         <option value="$PROJECT_DIR$/lab frame RB/fidelity with different std dev.py" />
         <option value="$PROJECT_DIR$/test/mp test.py" />
         <option value="$PROJECT_DIR$/lab frame RB/lab_SRB_with_gaussian_noise.py" />
         <option value="$PROJECT_DIR$/lab frame RB/fidelity_with_different_std_dev.py" />
+        <option value="$PROJECT_DIR$/lib/dblqdot.py" />
+        <option value="$PROJECT_DIR$/lab frame RB/mp_lab_RB_with_different_noise_frequency.py" />
         <option value="$PROJECT_DIR$/lab frame RB/mp_lab_SRB_with_gaussian_noise.py" />
         <option value="$PROJECT_DIR$/lab frame RB/mp_fidelity_with_different_std_dev.py" />
+        <option value="$PROJECT_DIR$/lib/nswrb.py" />
+        <option value="$PROJECT_DIR$/test/OU_noise.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="340" />
-    <option name="y" value="106" />
+    <option name="x" value="240" />
+    <option name="y" value="125" />
     <option name="width" value="1440" />
-    <option name="height" value="778" />
+    <option name="height" value="775" />
   </component>
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -348,7 +328,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.dblqdot">
+  <component name="RunManager" selected="Python.OU_noise">
     <configuration default="true" type="tests" factoryName="Attests">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -383,6 +363,28 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Cliff2_pickle.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="true" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="OU_noise" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="2-qubit" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/test" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/test/OU_noise.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="true" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -435,7 +437,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="fidelity with different std dev" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="mp_lab_RB_with_different_noise_frequency" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="2-qubit" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -448,7 +450,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/lab frame RB/fidelity with different std dev.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/lab frame RB/mp_lab_RB_with_different_noise_frequency.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="true" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -457,7 +459,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="lab_SRB_with_gaussian_noise" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="mp_lab_SRB_with_gaussian_noise" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="2-qubit" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -470,51 +472,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/lab frame RB/lab_SRB_with_gaussian_noise.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="true" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="mp_fidelity_with_different_std_dev" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="2-qubit" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/lab frame RB" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/lab frame RB/mp_fidelity_with_different_std_dev.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="true" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="nswrb_test" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="2-qubit" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/test" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/test/nswrb_test.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/lab frame RB/mp_lab_SRB_with_gaussian_noise.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="true" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -532,21 +490,36 @@
       <envs />
       <method v="2" />
     </configuration>
+    <configuration name="Unittests in test" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+      <module name="2-qubit" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/test" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;$PROJECT_DIR$/test&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
+      <method v="2" />
+    </configuration>
     <list>
       <item itemvalue="Python.Cliff2_pickle" />
-      <item itemvalue="Python.lab_SRB_with_gaussian_noise" />
-      <item itemvalue="Python.nswrb_test" />
-      <item itemvalue="Python.fidelity with different std dev" />
-      <item itemvalue="Python.mp_fidelity_with_different_std_dev" />
       <item itemvalue="Python.dblqdot" />
+      <item itemvalue="Python.mp_lab_RB_with_different_noise_frequency" />
+      <item itemvalue="Python.mp_lab_SRB_with_gaussian_noise" />
+      <item itemvalue="Python.OU_noise" />
+      <item itemvalue="Python tests.Unittests in test" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.OU_noise" />
+        <item itemvalue="Python tests.Unittests in test" />
+        <item itemvalue="Python.mp_lab_RB_with_different_noise_frequency" />
+        <item itemvalue="Python.mp_lab_SRB_with_gaussian_noise" />
         <item itemvalue="Python.dblqdot" />
-        <item itemvalue="Python.mp_fidelity_with_different_std_dev" />
-        <item itemvalue="Python.lab_SRB_with_gaussian_noise" />
-        <item itemvalue="Python.fidelity with different std dev" />
-        <item itemvalue="Python.nswrb_test" />
       </list>
     </recent_temporary>
   </component>
@@ -747,12 +720,37 @@
       <workItem from="1626247896560" duration="620000" />
       <workItem from="1626934736896" duration="644000" />
       <workItem from="1627462615093" duration="621000" />
-      <workItem from="1627623158037" duration="757000" />
+      <workItem from="1627623158037" duration="1582000" />
+      <workItem from="1628498847895" duration="4977000" />
+      <workItem from="1628528344842" duration="2427000" />
+      <workItem from="1628530805491" duration="1496000" />
+      <workItem from="1629173826368" duration="2878000" />
+      <workItem from="1630481050188" duration="1637000" />
+      <workItem from="1630756744516" duration="3544000" />
+      <workItem from="1630826330756" duration="7012000" />
+      <workItem from="1631008102986" duration="2400000" />
+      <workItem from="1632380772983" duration="1574000" />
+      <workItem from="1632634886727" duration="2091000" />
+      <workItem from="1632754593379" duration="2056000" />
+      <workItem from="1632807933668" duration="710000" />
+      <workItem from="1632883343844" duration="786000" />
+      <workItem from="1633331308486" duration="2198000" />
+      <workItem from="1633344966432" duration="2323000" />
+      <workItem from="1633398737173" duration="9227000" />
+      <workItem from="1633425900209" duration="3168000" />
+      <workItem from="1633578380289" duration="842000" />
+      <workItem from="1633579650641" duration="605000" />
+      <workItem from="1633589980602" duration="1768000" />
     </task>
     <servers />
   </component>
+  <component name="TestHistory">
+    <history-entry file="Unittests_in_test - 2021.10.04 at 18h 49m 15s.xml">
+      <configuration name="Unittests in test" configurationId="tests" />
+    </history-entry>
+  </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="580346000" />
+    <option name="totallyTimeSpent" value="634890000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -765,29 +763,28 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.17761394" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.15616623" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" weight="0.32995737" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.329718" />
       <window_info anchor="bottom" id="Run" order="2" sideWeight="0.61266094" weight="0.36659437" />
-      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49784714" weight="0.39583334" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49784714" weight="0.39518413" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.4914712" weight="0.32104123" />
-      <window_info anchor="bottom" id="Version Control" order="7" sideWeight="0.4804772" weight="0.47830802" />
-      <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.78272533" weight="0.18763557" />
+      <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.4914712" weight="0.3201133" />
+      <window_info anchor="bottom" id="Version Control" order="7" sideWeight="0.4804772" weight="0.47733712" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="8" sideWeight="0.78272533" visible="true" weight="0.18696883" />
       <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.23134328" side_tool="true" weight="0.49566162" />
-      <window_info active="true" anchor="bottom" id="Python Console" order="10" sideWeight="0.76865673" visible="true" weight="0.34844193" />
+      <window_info anchor="bottom" id="Python Console" order="10" sideWeight="0.76865673" weight="0.3903819" />
       <window_info anchor="bottom" id="Docker" order="11" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="12" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Database" order="3" weight="0.32995737" />
-      <window_info anchor="right" id="SciView" order="4" sideWeight="0.8184569" visible="true" weight="0.24731903" />
+      <window_info anchor="right" id="SciView" order="4" sideWeight="0.8184569" visible="true" weight="0.20911528" />
       <window_info anchor="right" x="0" y="0" width="337" height="638" id="Documentation" order="5" sideWeight="0.18154311" side_tool="true" weight="0.54371" />
     </layout>
     <layout-to-restore>
@@ -820,6 +817,7 @@
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/RB_2_qubit$Cliff2_pickle_generate.coverage" NAME="Cliff2_pickle_generate Coverage Results" MODIFIED="1561210845740" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/RB_2_qubit$OU_noise.coverage" NAME="OU_noise Coverage Results" MODIFIED="1633406882001" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" />
     <SUITE FILE_PATH="coverage/RB_2_qubit$RB_2q.coverage" NAME="RB-2q Coverage Results" MODIFIED="1561213053411" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/RB_2_qubit$plot__1_.coverage" NAME="plot (1) Coverage Results" MODIFIED="1561455692457" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/results" />
     <SUITE FILE_PATH="coverage/RB_2_qubit$plot.coverage" NAME="plot Coverage Results" MODIFIED="1561455278973" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
@@ -830,6 +828,7 @@
     <SUITE FILE_PATH="coverage/RB_2_qubit$generator.coverage" NAME="generator Coverage Results" MODIFIED="1561453790907" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/RB_2_qubit$SRB_with_gaussian_noise.coverage" NAME="SRB_with_gaussian_noise Coverage Results" MODIFIED="1565199240826" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/RB_2_qubit$Cliff2_pickle.coverage" NAME="Cliff2_pickle Coverage Results" MODIFIED="1561210049101" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/RB_2_qubit$Unittests_in_test.coverage" NAME="Unittests in test Coverage Results" MODIFIED="1633344551470" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" />
     <SUITE FILE_PATH="coverage/RB_2_qubit$twoqrb.coverage" NAME="twoqrb Coverage Results" MODIFIED="1597069332218" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/lib" />
     <SUITE FILE_PATH="coverage/RB_2_qubit$test.coverage" NAME="test Coverage Results" MODIFIED="1563737986884" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/RB_2_qubit$gates_with_noise.coverage" NAME="gates_with_noise Coverage Results" MODIFIED="1563805928108" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
@@ -838,33 +837,6 @@
     <SUITE FILE_PATH="coverage/RB_2_qubit$energy_fluc_err_analysis.coverage" NAME="energy_fluc_err_analysis Coverage Results" MODIFIED="1597070015317" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/generator analysis" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Clifford decompose/arXiv 1805.05027/C_2 decompose demo.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1824">
-          <caret line="117" column="8" selection-start-line="117" selection-start-column="8" selection-end-line="117" selection-end-column="8" />
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/RB/Lib/site-packages/numpy/core/numeric.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-5938">
-          <caret line="2202" column="43" selection-start-line="2202" selection-start-column="43" selection-end-line="2202" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/RB/Lib/site-packages/numpy/core/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="368">
-          <caret line="38" column="10" lean-forward="true" selection-start-line="38" selection-start-column="10" selection-end-line="38" selection-end-column="10" />
-          <folding>
-            <element signature="e#0#64#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Clifford decompose/Cliff2_pickle_generate.py">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -1067,39 +1039,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/lab frame RB/fidelity with different std dev.py" />
     <entry file="file://$PROJECT_DIR$/test/mp test.py" />
-    <entry file="file://$PROJECT_DIR$/lab frame RB/fidelity_with_different_std_dev.py">
+    <entry file="file://$PROJECT_DIR$/test/lab frame pulses.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="668">
-          <caret line="66" selection-start-line="66" selection-end-line="77" selection-end-column="10" />
+        <state relative-caret-position="32">
+          <caret line="6" selection-start-line="6" selection-end-line="9" selection-end-column="44" />
           <folding>
-            <element signature="e#0#13#0" expanded="true" />
+            <element signature="e#0#16#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/RB_nocrosstalk/gaussian_noise(quasi-static).py">
+    <entry file="file://$PROJECT_DIR$/test/phase correction.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1072">
-          <caret line="71" column="8" selection-start-line="71" selection-start-column="8" selection-end-line="71" selection-end-column="24" />
+        <state relative-caret-position="378">
+          <caret line="102" column="12" selection-start-line="102" selection-start-column="12" selection-end-line="102" selection-end-column="12" />
           <folding>
-            <element signature="e#126#139#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/twoqrb.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/dblqdot.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="384">
-          <caret line="26" column="9" selection-start-line="26" selection-start-column="9" selection-end-line="26" selection-end-column="24" />
-          <folding>
-            <element signature="e#180#198#0" expanded="true" />
+            <element signature="e#0#16#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1114,59 +1069,100 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lab frame RB/lab_SRB_with_gaussian_noise.py">
+    <entry file="file://$PROJECT_DIR$/RB_nocrosstalk/gaussian_noise(quasi-static).py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="21" column="7" selection-start-line="21" selection-start-column="7" selection-end-line="21" selection-end-column="7" />
+        <state relative-caret-position="400">
+          <caret line="71" column="8" selection-start-line="71" selection-start-column="8" selection-end-line="71" selection-end-column="24" />
+          <folding>
+            <element signature="e#126#139#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.PyCharm2019.1/system/python_stubs/772880067/numpy/random/mtrand.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="201">
+          <caret line="1594" column="4" selection-start-line="1594" selection-start-column="4" selection-end-line="1594" selection-end-column="4" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/lab frame RB/mp_lab_SRB_with_gaussian_noise.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="224">
-          <caret line="18" column="10" selection-end-line="88" />
+        <state relative-caret-position="16">
+          <caret line="16" column="20" lean-forward="true" selection-start-line="16" selection-start-column="20" selection-end-line="16" selection-end-column="20" />
           <folding>
             <element signature="e#0#13#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lab frame RB/mp_fidelity_with_different_std_dev.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="640">
-          <caret line="44" column="20" selection-start-line="44" selection-start-column="20" selection-end-line="44" selection-end-column="20" />
-          <folding>
-            <element signature="e#0#13#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/phase correction.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1568">
-          <caret line="102" column="12" selection-start-line="102" selection-start-column="12" selection-end-line="102" selection-end-column="12" />
-          <folding>
-            <element signature="e#0#16#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/lab frame pulses.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="32">
-          <caret line="6" selection-start-line="6" selection-end-line="9" selection-end-column="44" />
-          <folding>
-            <element signature="e#0#16#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/nswrb.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="668">
-          <caret line="234" lean-forward="true" selection-start-line="234" selection-end-line="234" />
+        <state relative-caret-position="3904">
+          <caret line="246" column="4" selection-start-line="246" selection-start-column="4" selection-end-line="246" selection-end-column="33" />
           <folding>
             <element signature="e#238#262#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/OU_noise.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="896">
+          <caret line="59" column="24" selection-start-line="59" selection-start-column="24" selection-end-line="59" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/twoqrb.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/dblqdot.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="384">
+          <caret line="26" selection-start-line="26" selection-end-line="26" selection-end-column="6" />
+          <folding>
+            <element signature="e#180#198#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lab frame RB/mp_fidelity_with_different_std_dev.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="496">
+          <caret line="35" selection-start-line="35" selection-end-line="39" selection-end-column="45" />
+          <folding>
+            <element signature="e#0#13#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lab frame RB/lab_SRB_with_gaussian_noise.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="155">
+          <caret line="21" column="7" selection-start-line="21" selection-start-column="7" selection-end-line="21" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lab frame RB/fidelity_with_different_std_dev.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="412">
+          <caret line="77" column="10" selection-start-line="77" selection-start-column="10" selection-end-line="77" selection-end-column="10" />
+          <folding>
+            <element signature="e#0#13#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lab frame RB/mp_lab_RB_with_different_noise_frequency.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="72" column="34" lean-forward="true" selection-start-line="72" selection-start-column="34" selection-end-line="72" selection-end-column="34" />
+          <folding>
+            <element signature="e#0#13#0" expanded="true" />
           </folding>
         </state>
       </provider>

@@ -21,16 +21,17 @@ f = np.array([[f_1u, f_1d, f_2u, f_2d]])
 rho_0 = error_initial_state(0, 0, 0)
 rep = 3
 
-def RB_single_sequence(l, noise, rho_initial, delta_t, phase_compensation, four_frequency):
+def RB_single_sequence(l, noise_std, rho_initial, delta_t, phase_compensation, four_frequency):
     cliff_seq = random.choices(Cliff_decompose, k=l[-1])
     wav, tindex, p_rec = generate_cliff_waveform(cliff_seq, l, dt, phase_compensation)
 
     # add noise here
-    sf1 = np.random.normal(0.0, noise[0])
-    sf2 = np.random.normal(0.0, noise[1])
-    sf3 = np.random.normal(0.0, noise[2])
-    sf4 = np.random.normal(0.0, noise[3])
-    H_noise = 2 * np.pi * np.diag([sf1, sf2, sf3, sf4])
+    # sf1 = np.random.normal(0.0, noise[0])
+    # sf2 = np.random.normal(0.0, noise[1])
+    # sf3 = np.random.normal(0.0, noise[2])
+    # sf4 = np.random.normal(0.0, noise[3])
+    # H_noise = 2 * np.pi * np.diag([sf1, sf2, sf3, sf4])
+    H_noise = time_varying_gaussian_noise(wav, delta_t, noise_std, f_noise=1 / T_pi_2)
     # end noise
 
     H_seq = waveform_2_H(wav, delta_t, four_frequency) + H_noise
