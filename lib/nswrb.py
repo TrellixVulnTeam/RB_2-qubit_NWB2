@@ -232,7 +232,12 @@ def waveform_2_H(waveform, dt, f):
     # H_seq = 1 / 2 * 2 * np.pi * esr
     return H_seq
 
+
+'''''''''
+Gaussian noise
+'''''''''
 def get_gaussian_noisy_h(std):
+    np.random.seed()
     sf1 = np.random.normal(0.0, std[0])
     sf2 = np.random.normal(0.0, std[1])
     sf3 = np.random.normal(0.0, std[2])
@@ -256,4 +261,58 @@ def time_varying_gaussian_noise(waveform, dt, std, f_noise=0):
         return get_gaussian_noisy_h(std)
 
 
+'''''''''
+OU noise and 1/f noise
+'''''''''
+# OU noise: dx(t) = -gamma*x(t)*dt + sigma*sqrt(2*gamma)*dW(t) ; dW(t) ~ sqrt(dt)N(0, 1)
+def OU_noise_seq(length, dt, gamma, sigma):
+    y = np.zeros(length)
+    # y[0] = np.random.normal(loc=0.0, scale=std)  # initial condition
+    y[0] = 0
+    noise = np.random.normal(loc=0.0, scale=1, size=length) * np.sqrt(dt)    # define noise process
+    # solve SDE
+    for i in range(1, length):
+        y[i] = (1 - gamma * dt) * y[i-1] + sigma * np.sqrt(2*gamma) * noise[i]
+    return y
 
+def diagonal_OU_noise(waveform, dt, gamma, sigma):
+    N = len(waveform[0])
+    sf1 = OU_noise_seq(N, dt, gamma, sigma)
+    sf2 = OU_noise_seq(N, dt, gamma, sigma)
+    sf3 = OU_noise_seq(N, dt, gamma, sigma)
+    sf4 = OU_noise_seq(N, dt, gamma, sigma)
+    noisy_h = np.empty((N, 4, 4))
+    for i in range(N):
+        noisy_h[i] = np.diag([sf1[i], sf2[i], sf3[i], sf4[i]])
+    return noisy_h
+
+# generate one over f noise sequence from combining OU noise sequences
+# range: tuple (a, b) s.t. one over f spectrum located between frequency (10^a, 10^b)
+def one_over_f_noise_seq(length, dt, sigma_OU, alpha=1, noise_range=(7, 9), dev=0.5):
+    gamma = np.arange(noise_range[0], noise_range[1]+dev, dev)
+    gamma = [10**x for x in gamma]
+    Gamma = [x/(2*np.pi) for x in gamma]
+    kappa = 0.316   # TODO: kappa-alpha relation TBD
+    sigma = [sigma_OU * kappa**(np.log10(x)/2) for x in Gamma]
+    OU_seqs = [OU_noise_seq(length, dt, gamma[i], sigma[i]) for i in range(len(gamma))]
+    return np.array([sum(x) for x in zip(*OU_seqs)])
+
+# Calculate correlation function of given discrete noise sequence
+# Output would be a numpy array c with the same number of elements as input sequence
+# c[0] is the correlation function for t1-t2 = 0; c[1] for t1-t2 = 1*dt etc.
+def correlation_function(noise_seq):
+    N = len(noise_seq)
+    c = np.zeros(N)
+    for i in range(N):
+        for j in range(N-i):
+            c[i] += noise_seq[j] * noise_seq[j+i]
+        c[i] = c[i]/(N-i)
+    return c
+
+def s_j(f, sigma_j, Gamma_j):
+    return sigma_j**2 * Gamma_j / np.pi / (Gamma_j**2 + f**2)
+
+def S(f, kappa, Gamma_j_list, sigma):
+    sigma_j_list = [sigma * kappa**(np.log10(x)/2) for x in Gamma_j_list]
+    s_j_list = [s_j(f, sigma_j_list[i], Gamma_j_list[i]) for i in range(len(Gamma_j_list))]
+    return sum(s_j_list)

@@ -49,7 +49,7 @@ f = np.array([[f_1u, f_1d, f_2u, f_2d]])
 rho_0 = error_initial_state(0, 0, 0)
 rep = 3
 
-# define noise changing frequencies #TODO: noise freqency here
+# define noise changing frequencies #TODO: noise frequency here
 # switch_list = 1000 * np.array(range(1, 31))
 switch_list = [1000, 2000]
 
@@ -72,6 +72,10 @@ if __name__ == '__main__':
         pool.join()
         F = sum(result_list) / rep
         print(F)
+
+        ff = open(str(switch_list[i]) + ".pkl", "wb")
+        pickle.dump((switch_list[i], F), ff)
+        ff.close()
 
         popt, pcov = curve_fit(func, L, F, p0=[1, 0, 0], bounds=(0, 1), maxfev=5000)
         F_Clifford[i] = popt[2] * 100
