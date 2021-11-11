@@ -10,6 +10,7 @@ Provides
 """
 
 from lib.twoqrb import *
+from lib.rbnoise import *
 import copy
 import math
 
@@ -193,29 +194,29 @@ def generate_cliff_waveform(seq, data, dt, phase_comp):
             # print(data_tindex, data_prec)
     return waveform, data_tindex, data_prec
 
-def time_evolve_2(H_seq, dt, rho_0):
+def time_evolve_2(h_seq, dt, rho_0):
     rho = rho_0
-    rho_list = np.empty((len(H_seq), 4, 4), dtype=np.complex)
-    U_total = np.identity(4)
-    for i in range(len(H_seq)):
-        H = H_seq[i]
-        U = expm(-1j * H * dt)
-        U_total = U @ U_total
-        rho = U @ rho @ U.conj().T
+    rho_list = np.empty((len(h_seq), 4, 4), dtype=np.complex)
+    u_total = np.identity(4)
+    for i in range(len(h_seq)):
+        h = h_seq[i]
+        u = expm(-1j * h * dt)
+        u_total = u @ u_total
+        rho = u @ rho @ u.conj().T
         rho_list[i] = rho
-    return rho_list, U_total
+    return rho_list, u_total
 
 def inverse_gate_apply(rho_list, data_tindex, inverse_set, prec, dt):
     pre_measure_rho = np.empty((len(data_tindex), 4, 4), dtype=np.complex)
     for i in range(len(data_tindex)):
-        U_inv = inverse_set[i]
+        u_inv = inverse_set[i]
         tindex = data_tindex[i]
         phase = prec[i]
-        U = U_inv @ r(dt * tindex) @ np.diag(phase).conj()
+        u = u_inv @ r(dt * tindex) @ np.diag(phase).conj()
         # print("tindex:", data_tindex[i])
         # print("U: ", U)
         # print("rho before measure: ", rho_list[tindex])
-        rho = U @ rho_list[tindex] @ U.conj().T
+        rho = u @ rho_list[tindex] @ u.conj().T
         pre_measure_rho[i] = rho
     return pre_measure_rho
 
@@ -228,9 +229,9 @@ def waveform_2_H(waveform, dt, f):
                     [0, 0, 0, Omega],
                     [0, 0, 0, 0]]) * iq
     esr = esr + np.transpose(esr.conj(), (0, 2, 1))
-    H_seq = 1 / 2 * 2 * np.pi * esr + Hd
+    h_seq = 1 / 2 * 2 * np.pi * esr + Hd
     # H_seq = 1 / 2 * 2 * np.pi * esr
-    return H_seq
+    return h_seq
 
 
 '''''''''
@@ -246,16 +247,16 @@ def get_gaussian_noisy_h(std):
     return h_noise
 
 def time_varying_gaussian_noise(waveform, dt, std, f_noise=0):
-    N = len(waveform[0])
-    n = round(1/dt/f_noise)
-    k = math.ceil(N/n)
+    n1 = len(waveform[0])
+    n2 = round(1/dt/f_noise)
+    k = math.ceil(n1/n2)
     noisy_h = np.empty((k, 4, 4))
     if f_noise:
         for i in range(k):
             noisy_h[i] = get_gaussian_noisy_h(std)
-        h_noise_list = np.array([[m]*n for m in noisy_h])
+        h_noise_list = np.array([[m]*n2 for m in noisy_h])
         h_noise_list = h_noise_list.reshape(-1, 4, 4)
-        h_noise_list = h_noise_list[:N]
+        h_noise_list = h_noise_list[:n1]
         return h_noise_list
     else:   # f_noise = 0 implies noise is static through whole sequence
         return get_gaussian_noisy_h(std)
@@ -264,55 +265,36 @@ def time_varying_gaussian_noise(waveform, dt, std, f_noise=0):
 '''''''''
 OU noise and 1/f noise
 '''''''''
-# OU noise: dx(t) = -gamma*x(t)*dt + sigma*sqrt(2*gamma)*dW(t) ; dW(t) ~ sqrt(dt)N(0, 1)
-def OU_noise_seq(length, dt, gamma, sigma):
-    y = np.zeros(length)
-    # y[0] = np.random.normal(loc=0.0, scale=std)  # initial condition
-    y[0] = 0
-    noise = np.random.normal(loc=0.0, scale=1, size=length) * np.sqrt(dt)    # define noise process
-    # solve SDE
-    for i in range(1, length):
-        y[i] = (1 - gamma * dt) * y[i-1] + sigma * np.sqrt(2*gamma) * noise[i]
-    return y
+# # OU noise: dx(t) = -gamma*x(t)*dt + sigma*sqrt(2*gamma)*dW(t) ; dW(t) ~ sqrt(dt)N(0, 1)
+# def OU_noise_seq(length, dt, gamma, sigma):
+#     y = np.zeros(length)
+#     # y[0] = np.random.normal(loc=0.0, scale=std)  # initial condition
+#     y[0] = 0
+#     noise = np.random.normal(loc=0.0, scale=1, size=length) * np.sqrt(dt)    # define noise process
+#     # solve SDE
+#     for i in range(1, length):
+#         y[i] = (1 - gamma * dt) * y[i-1] + sigma * np.sqrt(2*gamma) * noise[i]
+#     return y
 
-def diagonal_OU_noise(waveform, dt, gamma, sigma):
-    N = len(waveform[0])
-    sf1 = OU_noise_seq(N, dt, gamma, sigma)
-    sf2 = OU_noise_seq(N, dt, gamma, sigma)
-    sf3 = OU_noise_seq(N, dt, gamma, sigma)
-    sf4 = OU_noise_seq(N, dt, gamma, sigma)
-    noisy_h = np.empty((N, 4, 4))
-    for i in range(N):
+def diagonal_ou_noise(waveform, dt, gamma, sigma):
+    n = len(waveform[0])
+    sf1 = ou_noise_seq(n, dt, gamma, sigma)
+    sf2 = ou_noise_seq(n, dt, gamma, sigma)
+    sf3 = ou_noise_seq(n, dt, gamma, sigma)
+    sf4 = ou_noise_seq(n, dt, gamma, sigma)
+    noisy_h = np.empty((n, 4, 4))
+    for i in range(n):
         noisy_h[i] = np.diag([sf1[i], sf2[i], sf3[i], sf4[i]])
     return noisy_h
 
-# generate one over f noise sequence from combining OU noise sequences
-# range: tuple (a, b) s.t. one over f spectrum located between frequency (10^a, 10^b)
-def one_over_f_noise_seq(length, dt, sigma_OU, alpha=1, noise_range=(7, 9), dev=0.5):
-    gamma = np.arange(noise_range[0], noise_range[1]+dev, dev)
-    gamma = [10**x for x in gamma]
-    Gamma = [x/(2*np.pi) for x in gamma]
-    kappa = 0.316   # TODO: kappa-alpha relation TBD
-    sigma = [sigma_OU * kappa**(np.log10(x)/2) for x in Gamma]
-    OU_seqs = [OU_noise_seq(length, dt, gamma[i], sigma[i]) for i in range(len(gamma))]
-    return np.array([sum(x) for x in zip(*OU_seqs)])
+def diagonal_one_over_f_noise(waveform, dt, s_0, alpha, noise_range=(-7, 7)):
+    n = len(waveform[0])
+    sf1 = one_over_f_noise_seq(n, dt, s_0, alpha, noise_range=noise_range)
+    sf2 = one_over_f_noise_seq(n, dt, s_0, alpha, noise_range=noise_range)
+    sf3 = one_over_f_noise_seq(n, dt, s_0, alpha, noise_range=noise_range)
+    sf4 = one_over_f_noise_seq(n, dt, s_0, alpha, noise_range=noise_range)
+    noisy_h = np.empty((n, 4, 4))
+    for i in range(n):
+        noisy_h[i] = np.diag([sf1[i], sf2[i], sf3[i], sf4[i]])
+    return noisy_h
 
-# Calculate correlation function of given discrete noise sequence
-# Output would be a numpy array c with the same number of elements as input sequence
-# c[0] is the correlation function for t1-t2 = 0; c[1] for t1-t2 = 1*dt etc.
-def correlation_function(noise_seq):
-    N = len(noise_seq)
-    c = np.zeros(N)
-    for i in range(N):
-        for j in range(N-i):
-            c[i] += noise_seq[j] * noise_seq[j+i]
-        c[i] = c[i]/(N-i)
-    return c
-
-def s_j(f, sigma_j, Gamma_j):
-    return sigma_j**2 * Gamma_j / np.pi / (Gamma_j**2 + f**2)
-
-def S(f, kappa, Gamma_j_list, sigma):
-    sigma_j_list = [sigma * kappa**(np.log10(x)/2) for x in Gamma_j_list]
-    s_j_list = [s_j(f, sigma_j_list[i], Gamma_j_list[i]) for i in range(len(Gamma_j_list))]
-    return sum(s_j_list)

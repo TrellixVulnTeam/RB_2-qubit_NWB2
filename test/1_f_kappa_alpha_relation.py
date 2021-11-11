@@ -1,86 +1,68 @@
-import numpy as np
 import matplotlib.pyplot as plt
 from scipy.optimize import curve_fit
 from scipy.special import exp10
 from lib.rbnoise import *
 
-def func(x, A, B):
-    return A * 1/x + B
+def func(x, a, b):
+    return a * 1/x + b
 
 
-alpha_sample = [0.5, 0.8, 0.9, 1, 1.01, 1.1, 1.5, 2]
-kappa_sample = [3.162, 1.585, 1.259, 1, 0.977, 0.795, 0.316, 0.01]
+# alpha_sample = [0.5, 0.8, 0.9, 1, 1.01, 1.1, 1.5, 2]
+# kappa_sample = [3.162, 1.585, 1.259, 1, 0.977, 0.795, 0.316, 0.01]
 
 # def func(x):
 #     return 2.12444824 * 1/x + -1.09983209
 
-def func2(x, logA, alpha):
-    return logA - alpha * x
+def func2(x, log_a, alpha):
+    return log_a - alpha * x
 
 
-noise_range = (-7, 5)
-fitting_range = (0, 1)
+noise_range = (-7, 7)
+fitting_range = (-6, 2.5)
 plot_range = (-10, 10)
 dev = 0.5
-gamma_list = np.arange(noise_range[0], noise_range[1]+dev, dev)
-gamma_list = [10**x for x in gamma_list]
-Gamma_list = [x/(2*np.pi) for x in gamma_list]
-kappa_list = [0.01*(x+1) for x in range(2000)]
-alpha_list = np.zeros(len(kappa_list))
+step_kappa = 0.01
+stop_kappa = 20
+gamma_arr = np.arange(noise_range[0], noise_range[1]+dev, dev)
+gamma_arr = 10**gamma_arr
+kappa_arr = np.arange(step_kappa, stop_kappa + step_kappa, step_kappa)
+alpha_arr = np.zeros(len(kappa_arr))
 
-N = 1000
-log_f = np.array([plot_range[0]+i*(plot_range[1] - plot_range[0])/(N-1) for i in range(N)])
-f = [10**x for x in log_f]
+step_f = 0.001
+log_f = np.arange(plot_range[0], plot_range[1] + step_f, step_f)
+f = 10**log_f
 
+# for i in range(len(kappa_arr)):
+#     S_kappa_fitting = [psd_one_over_f(x, kappa_arr[i], gamma_arr, 1) for x in f_fitting]
+#     popt, pcov = curve_fit(func2, log_f_fitting, np.log10(S_kappa_fitting), maxfev=5000)
+#     alpha_arr[i] = popt[1]
+#
+# plt.plot(alpha_arr, kappa_arr, 'go', markersize=2, label='my simulation', zorder=5)
+# plt.xlabel("alpha")
+# plt.ylabel("kappa")
+# plt.legend()
+# plt.show()
+
+''''''''''''''''''''
+alpha_list = [0.5, 1.0, 1.5, 2.0]
 index_left = int((np.where(log_f == log_f[np.abs(log_f - fitting_range[0]).argmin()])[0]))
 index_right = int((np.where(log_f == log_f[np.abs(log_f - fitting_range[1]).argmin()])[0])+1)
 log_f_fitting = log_f[index_left:index_right]
 f_fitting = f[index_left:index_right]
 
-for i in range(len(kappa_list)):
-    S_kappa_fitting = [S_one_over_f(x, kappa_list[i], Gamma_list, 1) for x in f_fitting]
-    popt, pcov = curve_fit(func2, log_f_fitting, np.log10(S_kappa_fitting), maxfev=5000)
-    alpha_list[i] = popt[1]
+for i in range(len(alpha_list)):
+    S_alpha = psd_one_over_f(f, find_kappa(alpha_list[i]), gamma_arr,
+                             find_sigma_ou(1, find_kappa(alpha_list[i]), gamma_arr))
+    S_alpha_fitting = S_alpha[index_left:index_right]
+    popt, pcov = curve_fit(func2, log_f_fitting, np.log10(S_alpha_fitting), maxfev=5000)
+    plt.plot(log_f, S_alpha,
+             label='alpha = ' + str(alpha_list[i]) + ' (alpha = ' + str(round(popt[1], 5)) + ' from fitting)')
+    plt.plot(log_f_fitting, exp10(func2(log_f_fitting, *popt)))
 
-# plt.plot(alpha_sample, kappa_sample, 'bo', markersize=3, label='samples', zorder=10)
-plt.plot(alpha_list, kappa_list, 'go', markersize=2, label='my simulation', zorder=5)
-x_plt = np.array([0.5+i*1.5/(N-1) for i in range(N)])
-# plt.plot(x_plt, func(x_plt), 'r-', label='samples fitting')
-plt.xlabel("alpha")
-plt.ylabel("kappa")
-plt.legend()
-plt.show()
-
-''''''''''''''''''''
-S_alpha_1 = [S_one_over_f(x, find_kappa(0.5), Gamma_list, find_sigma_OU(1, find_kappa(0.5), Gamma_list)) for x in f]
-S_alpha_2 = [S_one_over_f(x, find_kappa(1), Gamma_list, find_sigma_OU(1, find_kappa(1), Gamma_list)) for x in f]
-S_alpha_3 = [S_one_over_f(x, find_kappa(1.5), Gamma_list, find_sigma_OU(1, find_kappa(1.5), Gamma_list)) for x in f]
-S_alpha_4 = [S_one_over_f(x, find_kappa(2), Gamma_list, find_sigma_OU(1, find_kappa(2), Gamma_list)) for x in f]
-
-S_alpha_1_fitting = S_alpha_1[index_left:index_right]
-S_alpha_2_fitting = S_alpha_2[index_left:index_right]
-S_alpha_3_fitting = S_alpha_3[index_left:index_right]
-S_alpha_4_fitting = S_alpha_4[index_left:index_right]
-popt1, pcov1 = curve_fit(func2, log_f_fitting, np.log10(S_alpha_1_fitting), maxfev=5000)
-popt2, pcov2 = curve_fit(func2, log_f_fitting, np.log10(S_alpha_2_fitting), maxfev=5000)
-popt3, pcov3 = curve_fit(func2, log_f_fitting, np.log10(S_alpha_3_fitting), maxfev=5000)
-popt4, pcov4 = curve_fit(func2, log_f_fitting, np.log10(S_alpha_4_fitting), maxfev=5000)
-plt.plot(log_f, S_alpha_1)
-plt.plot(log_f, S_alpha_2)
-plt.plot(log_f, S_alpha_3)
-plt.plot(log_f, S_alpha_4)
-plt.plot(log_f_fitting, exp10(func2(log_f_fitting, *popt1)), 'r-', label='kappa=3.2 (alpha=0.5 from fitting)')
-plt.plot(log_f_fitting, exp10(func2(log_f_fitting, *popt2)), 'k-', label='kappa=1.0 (alpha=1.0 from fitting)')
-plt.plot(log_f_fitting, exp10(func2(log_f_fitting, *popt3)), 'b-', label='kappa=0.32 (alpha=1.5 from fitting)')
-plt.plot(log_f_fitting, exp10(func2(log_f_fitting, *popt4)), 'r-', label='kappa=0.01 (alpha=2 from fitting)')
-
-index = int((np.where(log_f == log_f[np.abs(log_f - 6).argmin()])[0]))
-print(log_f[index])
-print(S_alpha_2[index])
 plt.yscale("log")
 plt.xlabel("log f")
-plt.ylabel("S(f)")
+plt.ylabel("Normalized S(f)")
+plt.title('OU_composed 1/f^(alpha) noise')
 plt.legend()
 plt.show()
-
 ''''''''''''''''''''

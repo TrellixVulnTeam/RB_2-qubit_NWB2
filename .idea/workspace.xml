@@ -1,32 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/test/rbnoise_naive_test.py" line="1" />
-  </component>
   <component name="ChangeListManager">
     <list default="true" id="d70837f3-f2df-469d-865e-32745c819d82" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/lab frame RB/test.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/rbnoise.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/1_f_kappa_alpha_relation.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/OU_1_f_noise.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/rbnoise_test.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/rbnoise_test2.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab frame RB/mp_lab_RB_with_different_noise_frequency.py" beforeDir="false" afterPath="$PROJECT_DIR$/lab frame RB/mp_lab_RB_with_different_noise_frequency.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab frame RB/noise_switch_infidelity.pkl" beforeDir="false" afterPath="$PROJECT_DIR$/lab frame RB/noise_switch_infidelity.pkl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab frame RB/noise_switch_r_squared.pkl" beforeDir="false" afterPath="$PROJECT_DIR$/lab frame RB/noise_switch_r_squared.pkl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/1x noise/using frequency/infidelity vs freq.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/1x noise/using frequency/noise_switch_frequency.pkl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/1x noise/using frequency/noise_switch_infidelity.pkl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/1x noise/using frequency/noise_switch_r_squared.pkl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/1x noise/using frequency/r_sqrd vs frequency.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/1x noise/using switching time/infidelity vs switching time.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/1x noise/using switching time/noise_switch_infidelity.pkl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/1x noise/using switching time/noise_switch_r_squared.pkl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/1x noise/using switching time/noise_switch_time.pkl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/1x noise/using switching time/r_sqrd vs switching time.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/nswrb.py" beforeDir="false" afterPath="$PROJECT_DIR$/lib/nswrb.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/OU_noise.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/rbnoise.py" beforeDir="false" afterPath="$PROJECT_DIR$/lib/rbnoise.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/1_f_kappa_alpha_relation.py" beforeDir="false" afterPath="$PROJECT_DIR$/test/1_f_kappa_alpha_relation.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/rbnoise_naive_test.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/rbnoise_test.py" beforeDir="false" afterPath="$PROJECT_DIR$/test/rbnoise_test.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/rbnoise_test2.py" beforeDir="false" afterPath="$PROJECT_DIR$/test/rbnoise_test2.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -67,11 +49,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/test/rbnoise_test2.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="556">
-              <caret line="41" column="14" lean-forward="true" selection-start-line="41" selection-start-column="14" selection-end-line="41" selection-end-column="14" />
-              <folding>
-                <element signature="e#0#25#0" expanded="true" />
-              </folding>
+            <state>
+              <caret column="13" lean-forward="true" selection-start-column="13" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -79,8 +58,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test/rbnoise_test.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="412">
-              <caret line="46" column="60" selection-start-line="46" selection-start-column="60" selection-end-line="46" selection-end-column="60" />
+            <state relative-caret-position="304">
+              <caret line="19" column="27" lean-forward="true" selection-start-line="19" selection-start-column="27" selection-end-line="19" selection-end-column="27" />
               <folding>
                 <element signature="e#0#25#0" expanded="true" />
               </folding>
@@ -91,34 +70,43 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test/1_f_kappa_alpha_relation.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="492">
-              <caret line="76" column="53" selection-start-line="76" selection-start-column="53" selection-end-line="76" selection-end-column="53" />
+            <state relative-caret-position="160">
+              <caret line="13" column="27" selection-start-line="13" selection-start-column="27" selection-end-line="13" selection-end-column="27" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lib/nswrb.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="220">
+              <caret line="20" column="40" lean-forward="true" selection-start-line="20" selection-start-column="40" selection-end-line="20" selection-end-column="40" />
               <folding>
-                <element signature="e#0#18#0" expanded="true" />
+                <element signature="e#238#262#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test/lab frame pulses.py">
+        <entry file="file://$PROJECT_DIR$/lib/dblqdot.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="16">
-              <caret line="6" selection-start-line="6" selection-end-line="9" selection-end-column="44" />
+            <state relative-caret-position="93">
+              <caret line="16" selection-start-line="16" selection-end-line="16" selection-end-column="16" />
               <folding>
-                <element signature="e#0#16#0" expanded="true" />
+                <element signature="e#180#198#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test/rbnoise_naive_test.py">
+        <entry file="file://$PROJECT_DIR$/lib/twoqrb.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="112">
-              <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
+            <state relative-caret-position="-240">
+              <caret line="15" column="22" lean-forward="true" selection-start-line="15" selection-start-column="22" selection-end-line="15" selection-end-column="22" />
               <folding>
-                <element signature="e#0#25#0" expanded="true" />
+                <element signature="e#106#119#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -127,8 +115,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lib/rbnoise.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="368">
-              <caret line="23" column="78" selection-start-line="23" selection-start-column="78" selection-end-line="23" selection-end-column="78" />
+            <state relative-caret-position="1552">
+              <caret line="97" lean-forward="true" selection-start-line="97" selection-end-line="97" />
               <folding>
                 <element signature="e#75#93#0" expanded="true" />
               </folding>
@@ -246,22 +234,22 @@
         <option value="$PROJECT_DIR$/lab frame RB/test.py" />
         <option value="$PROJECT_DIR$/lab frame RB/mp_fidelity_with_different_std_dev.py" />
         <option value="$PROJECT_DIR$/test/OU_noise.py" />
-        <option value="$PROJECT_DIR$/lib/nswrb.py" />
         <option value="$PROJECT_DIR$/lib/twoqrb.py" />
         <option value="$PROJECT_DIR$/test/OU_1_f_noise.py" />
         <option value="$PROJECT_DIR$/test/rbnoise_naive_test.py" />
-        <option value="$PROJECT_DIR$/test/rbnoise_test.py" />
         <option value="$PROJECT_DIR$/test/1_f_kappa_alpha_relation.py" />
-        <option value="$PROJECT_DIR$/test/rbnoise_test2.py" />
         <option value="$PROJECT_DIR$/lib/rbnoise.py" />
+        <option value="$PROJECT_DIR$/lib/nswrb.py" />
+        <option value="$PROJECT_DIR$/test/rbnoise_test2.py" />
+        <option value="$PROJECT_DIR$/test/rbnoise_test.py" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
-    <option name="x" value="310" />
-    <option name="y" value="145" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="575" />
+    <option name="y" value="141" />
     <option name="width" value="1440" />
-    <option name="height" value="777" />
+    <option name="height" value="780" />
   </component>
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -271,6 +259,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -297,20 +286,18 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="js.eslint.eslintPackage" value="" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../.." />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/test" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="PyConsoleOptionsProvider">
     <option name="myPythonConsoleState">
       <console-settings module-name="2-qubit" is-module-sdk="true">
-        <option name="useSoftWraps" value="true" />
         <option name="myUseModuleSdk" value="true" />
         <option name="myModuleName" value="2-qubit" />
       </console-settings>
@@ -361,6 +348,9 @@
       <module name="2-qubit" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
       <option name="SDK_HOME" value="" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/test" />
       <option name="IS_MODULE_SDK" value="true" />
@@ -545,8 +535,8 @@
     <recent_temporary>
       <list>
         <item itemvalue="Python.rbnoise_test2" />
-        <item itemvalue="Python.1_f_kappa_alpha_relation" />
         <item itemvalue="Python.rbnoise_test" />
+        <item itemvalue="Python.1_f_kappa_alpha_relation" />
         <item itemvalue="Python.rbnoise_naive_test" />
         <item itemvalue="Python.OU_1_f_noise" />
       </list>
@@ -799,7 +789,15 @@
       <workItem from="1635954667419" duration="1342000" />
       <workItem from="1635995460715" duration="6370000" />
       <workItem from="1636172808853" duration="4207000" />
-      <workItem from="1636187453906" duration="3830000" />
+      <workItem from="1636187453906" duration="19954000" />
+      <workItem from="1636367127370" duration="657000" />
+      <workItem from="1636429452810" duration="3886000" />
+      <workItem from="1636449700344" duration="2968000" />
+      <workItem from="1636516012883" duration="3990000" />
+      <workItem from="1636520066018" duration="4584000" />
+      <workItem from="1636534294088" duration="3248000" />
+      <workItem from="1636608885558" duration="9705000" />
+      <workItem from="1636619369297" duration="5318000" />
     </task>
     <servers />
   </component>
@@ -809,7 +807,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="747336000" />
+    <option name="totallyTimeSpent" value="797816000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -821,55 +819,32 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.20202559" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.22252011" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" weight="0.32995737" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.329718" />
       <window_info anchor="bottom" id="Run" order="2" sideWeight="0.61266094" weight="0.36659437" />
-      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49784714" weight="0.39479393" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49784714" weight="0.3937677" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.4914712" weight="0.3201133" />
       <window_info anchor="bottom" id="Version Control" order="7" sideWeight="0.4804772" weight="0.47722343" />
-      <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.78272533" weight="0.18329719" />
+      <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.78272533" weight="0.18271954" />
       <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.23134328" side_tool="true" weight="0.49566162" />
-      <window_info anchor="bottom" id="Python Console" order="10" sideWeight="0.76865673" visible="true" weight="0.34273317" />
+      <window_info anchor="bottom" id="Python Console" order="10" sideWeight="0.76865673" visible="true" weight="0.36260623" />
       <window_info anchor="bottom" id="Docker" order="11" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="12" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Database" order="3" weight="0.32995737" />
-      <window_info active="true" anchor="right" id="SciView" order="4" sideWeight="0.8184569" visible="true" weight="0.30597016" />
+      <window_info active="true" anchor="right" id="SciView" order="4" sideWeight="0.8184569" visible="true" weight="0.28753352" />
       <window_info anchor="right" x="0" y="0" width="337" height="638" id="Documentation" order="5" sideWeight="0.18154311" side_tool="true" weight="0.54371" />
     </layout>
-    <layout-to-restore>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.16471216" />
-      <window_info id="Structure" order="1" weight="0.25" />
-      <window_info id="Favorites" order="2" side_tool="true" weight="0.32995737" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.329718" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.61266094" weight="0.36659437" />
-      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49784714" weight="0.39587852" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.4914712" weight="0.32104123" />
-      <window_info anchor="bottom" id="Version Control" order="7" sideWeight="0.4804772" weight="0.47939262" />
-      <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.78272533" weight="0.18872017" />
-      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.23134328" side_tool="true" weight="0.49566162" />
-      <window_info active="true" anchor="bottom" id="Python Console" order="10" sideWeight="0.76865673" visible="true" weight="0.3261105" />
-      <window_info anchor="bottom" id="Docker" order="11" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Database Changes" order="12" />
-      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Database" order="3" weight="0.32995737" />
-      <window_info anchor="right" id="SciView" order="4" sideWeight="0.8184569" visible="true" weight="0.021855012" />
-      <window_info anchor="right" x="0" y="0" width="337" height="638" id="Documentation" order="5" sideWeight="0.18154311" side_tool="true" weight="0.54371" />
-    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -893,34 +868,13 @@
     <SUITE FILE_PATH="coverage/RB_2_qubit$test.coverage" NAME="test Coverage Results" MODIFIED="1563737986884" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/RB_2_qubit$gates_with_noise.coverage" NAME="gates_with_noise Coverage Results" MODIFIED="1563805928108" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/RB_2_qubit$Lab_frame_analysis.coverage" NAME="Lab_frame_analysis Coverage Results" MODIFIED="1591261933982" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/generator analysis" />
+    <SUITE FILE_PATH="coverage/RB_2_qubit$1_f_kappa_alpha_relation.coverage" NAME="1_f_kappa_alpha_relation Coverage Results" MODIFIED="1636615442825" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" />
     <SUITE FILE_PATH="coverage/RB_2_qubit$rbnoise_test.coverage" NAME="rbnoise_test Coverage Results" MODIFIED="1636185903632" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" />
     <SUITE FILE_PATH="coverage/RB_2_qubit$crosstalk_error_compensate.coverage" NAME="crosstalk error compensate Coverage Results" MODIFIED="1581953325219" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/generator analysis" />
     <SUITE FILE_PATH="coverage/RB_2_qubit$rbnoise_test2.coverage" NAME="rbnoise_test2 Coverage Results" MODIFIED="1635751620586" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" />
     <SUITE FILE_PATH="coverage/RB_2_qubit$energy_fluc_err_analysis.coverage" NAME="energy_fluc_err_analysis Coverage Results" MODIFIED="1597070015317" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/generator analysis" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/SRB_2qubit/dblqdot.py" />
-    <entry file="file://$PROJECT_DIR$/SRB_2qubit/twoqrb.py" />
-    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python37-32/Lib/lib2to3/__init__.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/generator analysis/phase_offset_compensate.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="402">
-          <caret line="298" selection-start-line="298" selection-end-line="302" selection-end-column="14" />
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/RB/Lib/site-packages/numpy/core/fromnumeric.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="1407" column="4" selection-start-line="1407" selection-start-column="4" selection-end-line="1407" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/RB/Lib/site-packages/numpy/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -1017,13 +971,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/test.py" />
     <entry file="file://$PROJECT_DIR$/test/test.py" />
-    <entry file="file://$USER_HOME$/.PyCharm2019.1/system/python_stubs/772880067/builtins.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="139">
-          <caret line="488" column="4" selection-start-line="488" selection-start-column="4" selection-end-line="488" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/.PyCharm2019.1/system/python_stubs/772880067/numpy/core/multiarray.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="61568">
@@ -1090,13 +1037,6 @@
     <entry file="file://$USER_HOME$/RB/Lib/site-packages/scipy/__init__.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$USER_HOME$/RB/Lib/site-packages/scipy/fftpack/basic.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="335">
-          <caret line="193" column="8" selection-start-line="193" selection-start-column="8" selection-end-line="193" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/RB/Lib/site-packages/matplotlib/pyplot.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1953">
@@ -1114,16 +1054,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lab frame RB/mp_lab_RB_with_different_noise_frequency.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1216">
-          <caret line="80" column="37" selection-start-line="79" selection-start-column="8" selection-end-line="80" selection-end-column="37" />
-          <folding>
-            <element signature="e#0#13#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/lab frame RB/fidelity_with_different_std_dev.py">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -1131,44 +1061,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lab frame RB/lab_SRB_with_gaussian_noise.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="66" lean-forward="true" selection-start-line="66" selection-end-line="68" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/dblqdot.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2048">
-          <caret line="167" selection-start-line="167" selection-end-line="175" selection-end-column="78" />
-          <folding>
-            <element signature="e#180#198#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/lab frame RB/mp_fidelity_with_different_std_dev.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="64">
           <caret line="4" column="7" selection-start-line="4" selection-start-column="7" selection-end-line="4" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/twoqrb.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="265">
-          <caret line="60" selection-start-line="60" selection-end-line="60" />
-          <folding>
-            <element signature="e#106#119#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/nswrb.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="11" column="12" selection-start-line="11" selection-start-column="12" selection-end-line="11" selection-end-column="12" />
         </state>
       </provider>
     </entry>
@@ -1192,19 +1088,30 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/rbnoise_naive_test.py">
+    <entry file="file://$USER_HOME$/RB/Lib/site-packages/scipy/signal/__init__.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$USER_HOME$/.PyCharm2019.1/system/python_stubs/772880067/builtins.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="112">
-          <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
+        <state relative-caret-position="193">
+          <caret line="258" column="4" selection-start-line="258" selection-start-column="4" selection-end-line="258" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/rbnoise_naive_test.py" />
+    <entry file="file://$PROJECT_DIR$/lab frame RB/mp_lab_RB_with_different_noise_frequency.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1088">
+          <caret line="71" column="19" selection-start-line="71" selection-start-column="19" selection-end-line="71" selection-end-column="19" />
           <folding>
-            <element signature="e#0#25#0" expanded="true" />
+            <element signature="e#0#13#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/test/lab frame pulses.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="16">
+        <state relative-caret-position="32">
           <caret line="6" selection-start-line="6" selection-end-line="9" selection-end-column="44" />
           <folding>
             <element signature="e#0#16#0" expanded="true" />
@@ -1212,43 +1119,111 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/lab frame RB/lab_SRB_with_gaussian_noise.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="48">
+          <caret line="3" column="10" selection-start-line="3" selection-start-column="10" selection-end-line="3" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lab frame RB/mp_lab_RB_with_one_over_f_noise.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#13#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/RB/Lib/site-packages/numpy/core/fromnumeric.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="131">
+          <caret line="1820" column="4" selection-start-line="1820" selection-start-column="4" selection-end-line="1820" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/RB/Lib/site-packages/scipy/fftpack/basic.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1119">
+          <caret line="185" column="4" selection-start-line="185" selection-start-column="4" selection-end-line="185" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.PyCharm2019.1/system/python_stubs/772880067/numpy/core/umath.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-6647">
+          <caret line="50" column="31" selection-start-line="50" selection-start-column="31" selection-end-line="50" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/test/rbnoise_test.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="412">
-          <caret line="46" column="60" selection-start-line="46" selection-start-column="60" selection-end-line="46" selection-end-column="60" />
+        <state relative-caret-position="304">
+          <caret line="19" column="27" lean-forward="true" selection-start-line="19" selection-start-column="27" selection-end-line="19" selection-end-column="27" />
           <folding>
             <element signature="e#0#25#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/1_f_kappa_alpha_relation.py">
+    <entry file="file://$USER_HOME$/RB/Lib/site-packages/numpy/core/numeric.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="492">
-          <caret line="76" column="53" selection-start-line="76" selection-start-column="53" selection-end-line="76" selection-end-column="53" />
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="368">
+          <caret line="370" column="8" selection-start-line="370" selection-start-column="8" selection-end-line="370" selection-end-column="8" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/rbnoise.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="368">
-          <caret line="23" column="78" selection-start-line="23" selection-start-column="78" selection-end-line="23" selection-end-column="78" />
+        <state relative-caret-position="1552">
+          <caret line="97" lean-forward="true" selection-start-line="97" selection-end-line="97" />
           <folding>
             <element signature="e#75#93#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/lib/twoqrb.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-240">
+          <caret line="15" column="22" lean-forward="true" selection-start-line="15" selection-start-column="22" selection-end-line="15" selection-end-column="22" />
+          <folding>
+            <element signature="e#106#119#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/nswrb.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="20" column="40" lean-forward="true" selection-start-line="20" selection-start-column="40" selection-end-line="20" selection-end-column="40" />
+          <folding>
+            <element signature="e#238#262#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/dblqdot.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="93">
+          <caret line="16" selection-start-line="16" selection-end-line="16" selection-end-column="16" />
+          <folding>
+            <element signature="e#180#198#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/1_f_kappa_alpha_relation.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="160">
+          <caret line="13" column="27" selection-start-line="13" selection-start-column="27" selection-end-line="13" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/test/rbnoise_test2.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="556">
-          <caret line="41" column="14" lean-forward="true" selection-start-line="41" selection-start-column="14" selection-end-line="41" selection-end-column="14" />
-          <folding>
-            <element signature="e#0#25#0" expanded="true" />
-          </folding>
+        <state>
+          <caret column="13" lean-forward="true" selection-start-column="13" selection-end-column="13" />
         </state>
       </provider>
     </entry>
