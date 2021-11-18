@@ -5,21 +5,21 @@ import matplotlib.pyplot as plt
 matching correlation function of OU noise with theory
 '''''''''
 
-dt = 0.01
-N = 1000
-gamma = 1
+dt = 5e-8
+N = 1500
+gamma = 1e4
 Gamma = gamma/(2 * np.pi)
 sigma = 1
 
-X = np.arange(0, N*dt, dt)
+X = np.arange(0, (N-1/2)*dt, dt)
 X_spec = np.fft.rfftfreq(N, dt)
 
 plt.figure(1)
-plt.plot(X, ou_noise_seq(N, dt, gamma, sigma))
+plt.plot(X[1:100], ou_noise_seq(N, dt, gamma, sigma)[1:100])
 plt.show()
 
 averaged_correlation_func = np.zeros(N)
-shot = 100
+shot = 500
 for j in range(shot):
     noise_seq = ou_noise_seq(N, dt, gamma, sigma)
     c = correlation_function(noise_seq)
@@ -47,8 +47,8 @@ plt.xscale("log")
 plt.show()
 
 plt.figure(3)
-plt.plot(X, averaged_correlation_func, 'b-')
-plt.plot(X, C_thr, 'r-')
+plt.plot(X[1:100], averaged_correlation_func[1:100], 'b-')
+plt.plot(X[1:100], C_thr[1:100], 'r-')
 plt.title("OU correlation function test")
 plt.legend(['C(t) from noise shots', 'C(t) from theory'])
 plt.xlabel('t2-t1 (s)')

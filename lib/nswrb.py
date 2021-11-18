@@ -187,9 +187,9 @@ def generate_cliff_waveform(seq, data, dt, phase_comp):
         a, p_new = cliff_waveform(keys, phase_comp, p, dt, T_pi_2)
         waveform = np.append(waveform, a, axis=1)
         p = p_new
-        if i+1 in data:
+        if i+1 in data:     # "+1" because data is gate length while "i" labelling from 0
             # print("L = ", i+1)
-            data_tindex.append(len(waveform[0])-1)
+            data_tindex.append(len(waveform[0])-1)  # "-1" from true length to labelling
             data_prec.append(copy.deepcopy(p))
             # print(data_tindex, data_prec)
     return waveform, data_tindex, data_prec

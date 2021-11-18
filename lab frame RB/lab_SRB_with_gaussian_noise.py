@@ -14,7 +14,7 @@ offset_f = ac_stark_frequency()
 phase_comp = ac_stark_modulation(offset_f, T_pi_2)
 # phase_comp = np.ones((4, 4))
 
-L = [1, 3, 5, 7, 10]
+L = [x for x in range(15)]
 F = np.zeros(len(L))
 dt = 5e-10
 f = np.array([[f_1u, f_1d, f_2u, f_2d]])
@@ -29,7 +29,7 @@ for re in range(rep):
     # cliff_seq = [[0, 9, 3, 8, 13, 13, 4, 10, 1, 10, 12, 12, 0, 10, 5, 11, 2, 8, 12, 7, 4, 9, 1, 9, 11]]
     print(cliff_seq)
     wav, tindex, p_rec = generate_cliff_waveform(cliff_seq, L, dt, phase_comp)
-    # print("tindex: ", tindex)
+    print("tindex: ", tindex)
     # print("phase_rec: ", p_rec)
 
     # add noise here
