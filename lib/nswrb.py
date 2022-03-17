@@ -246,22 +246,19 @@ def get_gaussian_noisy_h(std):
     h_noise = 2 * np.pi * np.diag([sf1, sf2, sf3, sf4])
     return h_noise
 
-def time_varying_gaussian_noise(waveform, dt, std, f_noise=0):  # TODO: randomize initial changing time
+def time_varying_gaussian_noise(waveform, dt, std, f_noise=0):
     n1 = len(waveform[0])
     if f_noise:
         n2 = round(1 / dt / f_noise)  # n2: number of time slices that have the same noise value
-        k = math.ceil(n1 / n2)
+        k = math.ceil(n1 / n2) + 1
         noisy_h = np.empty((k, 4, 4))
         for i in range(k):
             noisy_h[i] = get_gaussian_noisy_h(std)
         np.random.seed()
         n2_initial = np.random.randint(n2)
-        h_noise_initial = np.array([[get_gaussian_noisy_h(std)]*n2_initial])
-        h_noise_initial = h_noise_initial.reshape(-1, 4, 4)
-        h_noise_followup = np.array([[m]*n2 for m in noisy_h])
-        h_noise_followup = h_noise_followup.reshape(-1, 4, 4)
-        h_noise = np.concatenate((h_noise_initial, h_noise_followup), axis=0)
-        h_noise = h_noise[:n1]
+        h_noise = np.array([[m]*n2 for m in noisy_h])
+        h_noise = h_noise.reshape(-1, 4, 4)
+        h_noise = h_noise[n2_initial:n2_initial+n1]
         return h_noise
     else:   # f_noise = 0 implies noise is static through whole sequence
         return get_gaussian_noisy_h(std)

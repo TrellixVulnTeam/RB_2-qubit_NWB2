@@ -2,15 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d70837f3-f2df-469d-865e-32745c819d82" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/Clifford decompose/Clifford sympletic.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/rbnoise_test3.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Clifford decompose/onequbit_perfect_clifford.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RB_1q/channel noise vs hamiltonian noise.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RB_1q/hamiltonian noise test.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RB_1q/noisy pulse sorting.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/oneqrb.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/oneqrb_test.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/1x noise/with seed re=500/.ipynb_checkpoints/plot-checkpoint.ipynb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/1x noise/with seed re=500/plot.ipynb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/2x noise/with seed re = 500/.ipynb_checkpoints/plot-checkpoint.ipynb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/2x noise/with seed re = 500/plot.ipynb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/5x noise/with seed re=500/.ipynb_checkpoints/plot-checkpoint.ipynb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/5x noise/with seed re=500/plot.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/generator analysis/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/generator analysis/test.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/5x noise/with seed re=500/plot 5x.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/5x noise/with seed re=500/plot 5x.ipynb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/nswrb.py" beforeDir="false" afterPath="$PROJECT_DIR$/lib/nswrb.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -50,12 +50,69 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/test/rbnoise_test3.py">
+        <entry file="file://$PROJECT_DIR$/lib/oneqrb.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="13">
-              <caret line="10" selection-start-line="10" selection-end-line="10" />
+            <state relative-caret-position="144">
+              <caret line="9" column="11" selection-start-line="9" selection-start-column="11" selection-end-line="9" selection-end-column="11" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/RB_1q/channel noise vs hamiltonian noise.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret column="10" selection-start-column="10" selection-end-column="10" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lab frame RB/mp_fidelity_with_different_std_dev.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="484">
+              <caret line="89" selection-start-line="89" selection-end-line="89" />
               <folding>
-                <element signature="e#0#25#0" expanded="true" />
+                <element signature="e#0#13#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/RB_1q/noisy pulse sorting.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1568">
+              <caret line="98" column="39" selection-start-line="98" selection-start-column="39" selection-end-line="98" selection-end-column="39" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/RB_1q/hamiltonian noise test.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="176">
+              <caret line="11" selection-start-line="11" selection-end-line="11" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Clifford decompose/onequbit_perfect_clifford.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="16">
+              <caret line="1" column="9" selection-start-line="1" selection-start-column="9" selection-end-line="1" selection-end-column="9" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test/oneqrb_test.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="272">
+              <caret line="18" column="3" selection-start-line="18" selection-start-column="3" selection-end-line="18" selection-end-column="3" />
+              <folding>
+                <element signature="e#0#24#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -64,8 +121,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lib/nswrb.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="72">
-              <caret line="180" column="15" lean-forward="true" selection-start-line="180" selection-start-column="15" selection-end-line="180" selection-end-column="31" />
+            <state relative-caret-position="2576">
+              <caret line="164" selection-start-line="164" selection-end-line="165" selection-end-column="19" />
               <folding>
                 <element signature="e#238#262#0" expanded="true" />
               </folding>
@@ -74,34 +131,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lib/rbnoise.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="196">
-              <caret line="89" column="34" lean-forward="true" selection-start-line="89" selection-start-column="34" selection-end-line="89" selection-end-column="34" />
-              <folding>
-                <element signature="e#75#93#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Clifford decompose/Cliff2_pickle_generate.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="160">
-              <caret line="11" column="27" selection-start-line="11" selection-start-column="27" selection-end-line="11" selection-end-column="27" />
-              <folding>
-                <element signature="e#0#16#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Clifford decompose/Clifford sympletic.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="33">
-              <caret line="4" column="19" selection-start-line="4" selection-start-column="19" selection-end-line="5" selection-end-column="21" />
+            <state relative-caret-position="16">
+              <caret line="1" selection-start-line="1" selection-end-line="1" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -173,12 +206,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/SRB_with_gaussian_noise(non-stochastic).py" />
-        <option value="$PROJECT_DIR$/generator analysis/finding_Tpi_2_via_pulse.py" />
-        <option value="$PROJECT_DIR$/generator analysis/crosstalk error compensate.py" />
-        <option value="$PROJECT_DIR$/generator analysis/Lab_frame analysis.py" />
-        <option value="$PROJECT_DIR$/generator analysis/generator.py" />
-        <option value="$PROJECT_DIR$/generator analysis/crosstalk_error_compensate.py" />
         <option value="$PROJECT_DIR$/Clifford decompose/arXiv 1805.05027/C_2 decompose.py" />
         <option value="$PROJECT_DIR$/generator analysis/Lab_frame_analysis.py" />
         <option value="$PROJECT_DIR$/generator analysis/phase_offset_compensate.py" />
@@ -193,7 +220,6 @@
         <option value="$PROJECT_DIR$/RB_no_crosstalk/gaussian_noise(quasi-static).py" />
         <option value="$PROJECT_DIR$/SRB_2qubit/RB_nocrosstalk/gaussian_noise(quasi-static).py" />
         <option value="$PROJECT_DIR$/SRB_2qubit/SRB_with_gaussian_noise(quasi-static).py" />
-        <option value="$PROJECT_DIR$/generator analysis/test.py" />
         <option value="$PROJECT_DIR$/generator analysis/energy_fluc_err_analysis.py" />
         <option value="$PROJECT_DIR$/RB_nocrosstalk/gaussian_noise(quasi-static).py" />
         <option value="$PROJECT_DIR$/test.py" />
@@ -212,7 +238,6 @@
         <option value="$PROJECT_DIR$/lab frame RB/test.py" />
         <option value="$PROJECT_DIR$/lab frame RB/mp_fidelity_with_different_std_dev.py" />
         <option value="$PROJECT_DIR$/test/OU_noise.py" />
-        <option value="$PROJECT_DIR$/lib/twoqrb.py" />
         <option value="$PROJECT_DIR$/test/OU_1_f_noise.py" />
         <option value="$PROJECT_DIR$/test/rbnoise_naive_test.py" />
         <option value="$PROJECT_DIR$/test/1_f_kappa_alpha_relation.py" />
@@ -224,14 +249,22 @@
         <option value="$PROJECT_DIR$/Clifford decompose/Clifford sympletic.py" />
         <option value="$PROJECT_DIR$/lib/nswrb.py" />
         <option value="$PROJECT_DIR$/test/rbnoise_test3.py" />
+        <option value="$PROJECT_DIR$/lib/twoqrb.py" />
+        <option value="$PROJECT_DIR$/generator analysis/test.py" />
+        <option value="$PROJECT_DIR$/RB_1q/hamiltonian noise test.py" />
+        <option value="$PROJECT_DIR$/Clifford decompose/onequbit_perfect_clifford.py" />
+        <option value="$PROJECT_DIR$/test/oneqrb_test.py" />
+        <option value="$PROJECT_DIR$/lib/oneqrb.py" />
+        <option value="$PROJECT_DIR$/RB_1q/channel noise vs hamiltonian noise.py" />
+        <option value="$PROJECT_DIR$/RB_1q/noisy pulse sorting.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="575" />
-    <option name="y" value="140" />
-    <option name="width" value="1440" />
-    <option name="height" value="780" />
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1550" />
+    <option name="height" value="879" />
   </component>
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -241,6 +274,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -256,20 +290,29 @@
             <path>
               <item name="RB_2-qubit" type="b2602c69:ProjectViewProjectNode" />
               <item name="RB_2-qubit" type="462c0819:PsiDirectoryNode" />
+              <item name="lib" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="RB_2-qubit" type="b2602c69:ProjectViewProjectNode" />
+              <item name="RB_2-qubit" type="462c0819:PsiDirectoryNode" />
+              <item name="RB_1q" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="RB_2-qubit" type="b2602c69:ProjectViewProjectNode" />
+              <item name="RB_2-qubit" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="js.eslint.eslintPackage" value="" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/test/ou noise test/gamma = 1e4 dt = 5e-9" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/RB_1q" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="PyConsoleOptionsProvider">
@@ -300,7 +343,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.rbnoise_test3">
+  <component name="RunManager" selected="Python.noisy pulse sorting">
     <configuration default="true" type="tests" factoryName="Attests">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -321,28 +364,6 @@
       <option name="USE_PATTERN" value="false" />
       <method />
     </configuration>
-    <configuration name="1_f_kappa_alpha_relation" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="2-qubit" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/test" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/test/1_f_kappa_alpha_relation.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="true" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
     <configuration name="Cliff2_pickle" type="PythonConfigurationType" factoryName="Python">
       <module name="2-qubit" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -357,28 +378,6 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Cliff2_pickle.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="true" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="Clifford sympletic" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="2-qubit" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Clifford decompose" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Clifford decompose/Clifford sympletic.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="true" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -431,7 +430,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="lab_SRB_with_gaussian_noise" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="channel noise vs hamiltonian noise" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="2-qubit" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -439,12 +438,12 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/lab frame RB" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/RB_1q" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/lab frame RB/lab_SRB_with_gaussian_noise.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/RB_1q/channel noise vs hamiltonian noise.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="true" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -453,7 +452,73 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="rbnoise_test2" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="hamiltonian noise test" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="2-qubit" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/RB_1q" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/RB_1q/hamiltonian noise test.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="true" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="noisy pulse sorting" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="2-qubit" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/RB_1q" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/RB_1q/noisy pulse sorting.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="true" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="oneqrb" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="2-qubit" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/lib" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/lib/oneqrb.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="true" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="oneqrb_test" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="2-qubit" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -466,26 +531,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/test/rbnoise_test2.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="true" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="rbnoise_test3" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="2-qubit" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/test" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/test/rbnoise_test3.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/test/oneqrb_test.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="true" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -506,19 +552,19 @@
     <list>
       <item itemvalue="Python.Cliff2_pickle" />
       <item itemvalue="Python.OU_noise" />
-      <item itemvalue="Python.1_f_kappa_alpha_relation" />
-      <item itemvalue="Python.rbnoise_test2" />
-      <item itemvalue="Python.lab_SRB_with_gaussian_noise" />
-      <item itemvalue="Python.Clifford sympletic" />
-      <item itemvalue="Python.rbnoise_test3" />
+      <item itemvalue="Python.channel noise vs hamiltonian noise" />
+      <item itemvalue="Python.hamiltonian noise test" />
+      <item itemvalue="Python.oneqrb_test" />
+      <item itemvalue="Python.oneqrb" />
+      <item itemvalue="Python.noisy pulse sorting" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.rbnoise_test3" />
-        <item itemvalue="Python.Clifford sympletic" />
-        <item itemvalue="Python.1_f_kappa_alpha_relation" />
-        <item itemvalue="Python.rbnoise_test2" />
-        <item itemvalue="Python.lab_SRB_with_gaussian_noise" />
+        <item itemvalue="Python.noisy pulse sorting" />
+        <item itemvalue="Python.channel noise vs hamiltonian noise" />
+        <item itemvalue="Python.oneqrb" />
+        <item itemvalue="Python.oneqrb_test" />
+        <item itemvalue="Python.hamiltonian noise test" />
       </list>
     </recent_temporary>
   </component>
@@ -790,6 +836,29 @@
       <workItem from="1639318088678" duration="636000" />
       <workItem from="1639374424722" duration="2555000" />
       <workItem from="1639550062611" duration="3854000" />
+      <workItem from="1639817639742" duration="1803000" />
+      <workItem from="1639975418104" duration="665000" />
+      <workItem from="1640085829789" duration="1520000" />
+      <workItem from="1640426533004" duration="1900000" />
+      <workItem from="1641646228278" duration="2668000" />
+      <workItem from="1641786519685" duration="3399000" />
+      <workItem from="1642689280358" duration="841000" />
+      <workItem from="1642997598637" duration="616000" />
+      <workItem from="1645332229143" duration="10241000" />
+      <workItem from="1645367097941" duration="9567000" />
+      <workItem from="1645412948646" duration="11554000" />
+      <workItem from="1646368238836" duration="1196000" />
+      <workItem from="1646384353407" duration="597000" />
+      <workItem from="1646408425358" duration="10360000" />
+      <workItem from="1646496607202" duration="1259000" />
+      <workItem from="1646626882582" duration="3744000" />
+      <workItem from="1647075594307" duration="19562000" />
+      <workItem from="1647104998986" duration="1559000" />
+      <workItem from="1647146457503" duration="2386000" />
+      <workItem from="1647350249948" duration="652000" />
+      <workItem from="1647407200343" duration="895000" />
+      <workItem from="1647516570958" duration="64000" />
+      <workItem from="1647534394208" duration="3289000" />
     </task>
     <servers />
   </component>
@@ -799,7 +868,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="825604000" />
+    <option name="totallyTimeSpent" value="915941000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -811,29 +880,30 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2580429" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.15298508" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" weight="0.32995737" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.329718" />
       <window_info anchor="bottom" id="Run" order="2" sideWeight="0.61266094" weight="0.36659437" />
-      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49784714" weight="0.3937677" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49784714" weight="0.39370933" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.4914712" weight="0.3201133" />
-      <window_info anchor="bottom" id="Version Control" order="7" sideWeight="0.4804772" weight="0.47592068" />
-      <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.78272533" weight="0.17847025" />
+      <window_info anchor="bottom" id="Version Control" order="7" sideWeight="0.4804772" weight="0.47396964" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="8" sideWeight="0.78272533" visible="true" weight="0.30368763" />
       <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.23134328" side_tool="true" weight="0.49566162" />
-      <window_info active="true" anchor="bottom" id="Python Console" order="10" sideWeight="0.76865673" visible="true" weight="0.9575071" />
+      <window_info anchor="bottom" id="Python Console" order="10" sideWeight="0.76865673" weight="0.38611713" />
       <window_info anchor="bottom" id="Docker" order="11" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="12" />
+      <window_info anchor="bottom" id="Concurrent Activities Diagram" order="13" weight="0.329718" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Database" order="3" weight="0.3297587" />
-      <window_info anchor="right" id="SciView" order="4" sideWeight="0.8184569" visible="true" weight="0.2680965" />
+      <window_info anchor="right" id="SciView" order="4" sideWeight="0.8184569" visible="true" weight="0.3107676" />
       <window_info anchor="right" x="0" y="0" width="337" height="638" id="Documentation" order="5" sideWeight="0.18154311" side_tool="true" weight="0.54371" />
     </layout>
     <layout-to-restore>
@@ -865,88 +935,33 @@
     <option name="version" value="1" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/RB_2_qubit$Cliff2_pickle_generate.coverage" NAME="Cliff2_pickle_generate Coverage Results" MODIFIED="1561210845740" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/RB_2_qubit$OU_noise.coverage" NAME="OU_noise Coverage Results" MODIFIED="1634568774999" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" />
-    <SUITE FILE_PATH="coverage/RB_2_qubit$RB_2q.coverage" NAME="RB-2q Coverage Results" MODIFIED="1561213053411" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/RB_2_qubit$plot__1_.coverage" NAME="plot (1) Coverage Results" MODIFIED="1561455692457" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/results" />
-    <SUITE FILE_PATH="coverage/RB_2_qubit$mp_lab_RB_with_different_noise_frequency.coverage" NAME="mp_lab_RB_with_different_noise_frequency Coverage Results" MODIFIED="1633920774709" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/lab frame RB" />
-    <SUITE FILE_PATH="coverage/RB_2_qubit$plot.coverage" NAME="plot Coverage Results" MODIFIED="1561455278973" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/RB_2_qubit$find_inverse.coverage" NAME="find_inverse Coverage Results" MODIFIED="1561271049437" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/RB_2_qubit$C_2_decompose.coverage" NAME="C_2 decompose Coverage Results" MODIFIED="1561272167533" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/RB_2_qubit$lab_SRB_with_gaussian_noise.coverage" NAME="lab_SRB_with_gaussian_noise Coverage Results" MODIFIED="1624899089082" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/lab frame RB" />
     <SUITE FILE_PATH="coverage/RB_2_qubit$test__1_.coverage" NAME="test (1) Coverage Results" MODIFIED="1621866153051" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" />
-    <SUITE FILE_PATH="coverage/RB_2_qubit$generator.coverage" NAME="generator Coverage Results" MODIFIED="1561453790907" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/RB_2_qubit$SRB_with_gaussian_noise.coverage" NAME="SRB_with_gaussian_noise Coverage Results" MODIFIED="1565199240826" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/RB_2_qubit$Cliff2_pickle.coverage" NAME="Cliff2_pickle Coverage Results" MODIFIED="1561210049101" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/RB_2_qubit$Unittests_in_test.coverage" NAME="Unittests in test Coverage Results" MODIFIED="1633344551470" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" />
     <SUITE FILE_PATH="coverage/RB_2_qubit$twoqrb.coverage" NAME="twoqrb Coverage Results" MODIFIED="1597069332218" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/lib" />
     <SUITE FILE_PATH="coverage/RB_2_qubit$test.coverage" NAME="test Coverage Results" MODIFIED="1563737986884" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/RB_2_qubit$gates_with_noise.coverage" NAME="gates_with_noise Coverage Results" MODIFIED="1563805928108" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/RB_2_qubit$Lab_frame_analysis.coverage" NAME="Lab_frame_analysis Coverage Results" MODIFIED="1591261933982" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/generator analysis" />
     <SUITE FILE_PATH="coverage/RB_2_qubit$1_f_kappa_alpha_relation.coverage" NAME="1_f_kappa_alpha_relation Coverage Results" MODIFIED="1636615442825" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" />
-    <SUITE FILE_PATH="coverage/RB_2_qubit$rbnoise_test.coverage" NAME="rbnoise_test Coverage Results" MODIFIED="1636185903632" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" />
     <SUITE FILE_PATH="coverage/RB_2_qubit$crosstalk_error_compensate.coverage" NAME="crosstalk error compensate Coverage Results" MODIFIED="1581953325219" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/generator analysis" />
     <SUITE FILE_PATH="coverage/RB_2_qubit$rbnoise_test2.coverage" NAME="rbnoise_test2 Coverage Results" MODIFIED="1635751620586" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" />
+    <SUITE FILE_PATH="coverage/RB_2_qubit$Cliff2_pickle_generate.coverage" NAME="Cliff2_pickle_generate Coverage Results" MODIFIED="1561210845740" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/RB_2_qubit$OU_noise.coverage" NAME="OU_noise Coverage Results" MODIFIED="1634568774999" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" />
+    <SUITE FILE_PATH="coverage/RB_2_qubit$channel_noise_vs_hamiltonian_noise.coverage" NAME="channel noise vs hamiltonian noise Coverage Results" MODIFIED="1645416256164" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/RB_1q" />
+    <SUITE FILE_PATH="coverage/RB_2_qubit$RB_2q.coverage" NAME="RB-2q Coverage Results" MODIFIED="1561213053411" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/RB_2_qubit$mp_lab_RB_with_different_noise_frequency.coverage" NAME="mp_lab_RB_with_different_noise_frequency Coverage Results" MODIFIED="1633920774709" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/lab frame RB" />
+    <SUITE FILE_PATH="coverage/RB_2_qubit$plot.coverage" NAME="plot Coverage Results" MODIFIED="1561455278973" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/RB_2_qubit$generator.coverage" NAME="generator Coverage Results" MODIFIED="1561453790907" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/RB_2_qubit$SRB_with_gaussian_noise.coverage" NAME="SRB_with_gaussian_noise Coverage Results" MODIFIED="1565199240826" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/RB_2_qubit$Unittests_in_test.coverage" NAME="Unittests in test Coverage Results" MODIFIED="1633344551470" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" />
+    <SUITE FILE_PATH="coverage/RB_2_qubit$noisy_pulse_sorting.coverage" NAME="noisy pulse sorting Coverage Results" MODIFIED="1647146842697" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/RB_1q" />
+    <SUITE FILE_PATH="coverage/RB_2_qubit$gates_with_noise.coverage" NAME="gates_with_noise Coverage Results" MODIFIED="1563805928108" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/RB_2_qubit$rbnoise_test.coverage" NAME="rbnoise_test Coverage Results" MODIFIED="1636185903632" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" />
     <SUITE FILE_PATH="coverage/RB_2_qubit$energy_fluc_err_analysis.coverage" NAME="energy_fluc_err_analysis Coverage Results" MODIFIED="1597070015317" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/generator analysis" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/generator analysis/generator.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="18" selection-start-line="18" selection-end-line="22" />
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SRB_2qubit/SRB_with_gaussian_noise(stochastic).py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="13" lean-forward="true" selection-start-column="13" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/RB_no_crosstalk/gaussian_noise(quasi-static).py" />
-    <entry file="file://$PROJECT_DIR$/SRB_2qubit/RB_nocrosstalk/gaussian_noise(quasi-static).py" />
-    <entry file="file://$PROJECT_DIR$/SRB_2qubit/aaa" />
-    <entry file="file://$PROJECT_DIR$/generator analysis/test.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/generator analysis/energy_fluc_err_analysis.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1360">
-          <caret line="86" column="33" selection-start-line="86" selection-start-column="33" selection-end-line="86" selection-end-column="34" />
-          <folding>
-            <element signature="e#0#24#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/generator analysis/crosstalk_amp_error_synchronize.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="208">
-          <caret line="13" selection-start-line="13" selection-end-line="13" />
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python37-32/Lib/__future__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1182">
-          <caret line="75" column="20" lean-forward="true" selection-start-line="75" selection-start-column="20" selection-end-line="75" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/RB/Lib/site-packages/scipy/linalg/matfuncs.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="283">
-          <caret line="255" column="32" selection-start-line="255" selection-start-column="32" selection-end-line="255" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/RB/Lib/site-packages/scipy/sparse/linalg/matfuncs.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="16">
@@ -960,13 +975,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="61568">
           <caret line="3848" column="8" selection-start-line="3848" selection-start-column="8" selection-end-line="3848" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SRB_2qubit/SRB_with_gaussian_noise(quasi-static).py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="271">
-          <caret line="106" column="4" selection-start-line="106" selection-start-column="4" selection-end-line="106" selection-end-column="67" />
         </state>
       </provider>
     </entry>
@@ -1002,13 +1010,6 @@
     <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python37-32/Lib/pickle.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/lab frame RB/test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="9" selection-start-line="9" selection-end-line="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/RB/Lib/site-packages/scipy/__init__.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -1016,23 +1017,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1953">
           <caret line="405" column="4" selection-start-line="405" selection-start-column="4" selection-end-line="405" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lab frame RB/mp_lab_SRB_with_gaussian_noise.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="640">
-          <caret line="44" column="21" selection-start-line="44" selection-start-column="21" selection-end-line="44" selection-end-column="21" />
-          <folding>
-            <element signature="e#0#13#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lab frame RB/mp_fidelity_with_different_std_dev.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="64">
-          <caret line="4" column="7" selection-start-line="4" selection-start-column="7" selection-end-line="4" selection-end-column="7" />
         </state>
       </provider>
     </entry>
@@ -1057,16 +1041,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/test/rbnoise_naive_test.py" />
-    <entry file="file://$PROJECT_DIR$/lab frame RB/mp_lab_RB_with_different_noise_frequency.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1088">
-          <caret line="71" column="19" selection-start-line="71" selection-start-column="19" selection-end-line="71" selection-end-column="19" />
-          <folding>
-            <element signature="e#0#13#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/test/lab frame pulses.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="32">
@@ -1105,70 +1079,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/OU_1_f_noise.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="16">
-          <caret line="75" column="40" selection-start-line="75" selection-start-column="40" selection-end-line="75" selection-end-column="40" />
-          <folding>
-            <element signature="e#0#44#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lab frame RB/lab_SRB_with_gaussian_noise.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="15" selection-start-line="15" selection-end-line="15" />
-          <folding>
-            <element signature="e#0#13#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/dblqdot.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="384">
-          <caret line="26" column="24" selection-start-line="26" selection-start-column="24" selection-end-line="26" selection-end-column="24" />
-          <folding>
-            <element signature="e#180#198#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/twoqrb.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="768">
-          <caret line="50" column="17" selection-start-line="50" selection-start-column="17" selection-end-line="50" selection-end-column="17" />
-          <folding>
-            <element signature="e#106#119#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lab frame RB/mp_lab_RB_with_one_over_f_noise.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="896">
-          <caret line="60" column="35" selection-start-line="60" selection-start-column="35" selection-end-line="60" selection-end-column="35" />
-          <folding>
-            <element signature="e#0#13#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/1_f_kappa_alpha_relation.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="13" column="27" selection-start-line="13" selection-start-column="27" selection-end-line="13" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lab frame RB/fidelity_with_different_std_dev.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="13" selection-start-column="13" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/test/rbnoise_test.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="352">
@@ -1176,23 +1086,6 @@
           <folding>
             <element signature="e#0#25#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Clifford decompose/Cliff2_pickle_generate.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="11" column="27" selection-start-line="11" selection-start-column="27" selection-end-line="11" selection-end-column="27" />
-          <folding>
-            <element signature="e#0#16#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Clifford decompose/Clifford sympletic.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="33">
-          <caret line="4" column="19" selection-start-line="4" selection-start-column="19" selection-end-line="5" selection-end-column="21" />
         </state>
       </provider>
     </entry>
@@ -1216,33 +1109,229 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/rbnoise.py">
+    <entry file="file://$PROJECT_DIR$/Clifford decompose/arXiv 1805.05027/C_2 decompose demo.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="196">
-          <caret line="89" column="34" lean-forward="true" selection-start-line="89" selection-start-column="34" selection-end-line="89" selection-end-column="34" />
+        <state>
           <folding>
-            <element signature="e#75#93#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/nswrb.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="180" column="15" lean-forward="true" selection-start-line="180" selection-start-column="15" selection-end-line="180" selection-end-column="31" />
-          <folding>
-            <element signature="e#238#262#0" expanded="true" />
+            <element signature="e#0#18#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/test/rbnoise_test3.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="13">
+        <state relative-caret-position="144">
           <caret line="10" selection-start-line="10" selection-end-line="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lab frame RB/fidelity_with_different_std_dev.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="13" selection-start-column="13" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lab frame RB/lab_SRB_with_gaussian_noise.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="192">
+          <caret line="15" selection-start-line="15" selection-end-line="15" />
           <folding>
-            <element signature="e#0#25#0" expanded="true" />
+            <element signature="e#0#13#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SRB_2qubit/SRB_with_gaussian_noise(quasi-static).py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1744">
+          <caret line="113" column="14" selection-start-line="113" selection-start-column="14" selection-end-line="113" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lab frame RB/mp_lab_RB_with_one_over_f_noise.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="896">
+          <caret line="60" column="35" selection-start-line="60" selection-start-column="35" selection-end-line="60" selection-end-column="35" />
+          <folding>
+            <element signature="e#0#13#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/rbnoise.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1408">
+          <caret line="89" column="34" selection-start-line="89" selection-start-column="34" selection-end-line="89" selection-end-column="34" />
+          <folding>
+            <element signature="e#75#93#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Clifford decompose/Clifford sympletic.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="64">
+          <caret line="4" column="19" selection-start-line="4" selection-start-column="19" selection-end-line="5" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lab frame RB/mp_lab_SRB_with_gaussian_noise.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="16">
+          <caret line="44" column="21" selection-start-line="44" selection-start-column="21" selection-end-line="44" selection-end-column="21" />
+          <folding>
+            <element signature="e#0#13#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lab frame RB/test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="9" selection-start-line="9" selection-end-line="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/RB/Lib/site-packages/scipy/linalg/matfuncs.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="210" column="4" selection-start-line="210" selection-start-column="4" selection-end-line="210" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/twoqrb.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2032">
+          <caret line="129" selection-start-line="129" selection-end-line="135" selection-end-column="121" />
+          <folding>
+            <element signature="e#106#119#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/dblqdot.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3120">
+          <caret line="197" column="20" selection-start-line="197" selection-start-column="20" selection-end-line="197" selection-end-column="67" />
+          <folding>
+            <element signature="e#180#198#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lab frame RB/mp_lab_RB_with_different_noise_frequency.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="192">
+          <caret line="102" selection-start-line="102" selection-end-line="107" selection-end-column="14" />
+          <folding>
+            <element signature="e#0#13#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/1_f_kappa_alpha_relation.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="256">
+          <caret line="58" column="109" selection-start-line="58" selection-start-column="13" selection-end-line="58" selection-end-column="109" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/OU_1_f_noise.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-464">
+          <caret line="75" column="40" selection-start-line="75" selection-start-column="40" selection-end-line="75" selection-end-column="40" />
+          <folding>
+            <element signature="e#0#44#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/generator analysis/test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="16" lean-forward="true" selection-start-column="16" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/RB_1q/hamiltonian noise test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="11" selection-start-line="11" selection-end-line="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Clifford decompose/onequbit_perfect_clifford.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="16">
+          <caret line="1" column="9" selection-start-line="1" selection-start-column="9" selection-end-line="1" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/oneqrb_test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="18" column="3" selection-start-line="18" selection-start-column="3" selection-end-line="18" selection-end-column="3" />
+          <folding>
+            <element signature="e#0#24#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/nswrb.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2576">
+          <caret line="164" selection-start-line="164" selection-end-line="165" selection-end-column="19" />
+          <folding>
+            <element signature="e#238#262#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Clifford decompose/Cliff2_pickle_generate.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="16">
+          <caret line="1" selection-start-line="1" selection-end-line="1" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lab frame RB/mp_fidelity_with_different_std_dev.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="484">
+          <caret line="89" selection-start-line="89" selection-end-line="89" />
+          <folding>
+            <element signature="e#0#13#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/RB_1q/noisy pulse sorting.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1568">
+          <caret line="98" column="39" selection-start-line="98" selection-start-column="39" selection-end-line="98" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/RB_1q/channel noise vs hamiltonian noise.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="10" selection-start-column="10" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/RB/Lib/site-packages/numpy/__init__.pyi">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/oneqrb.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="9" column="11" selection-start-line="9" selection-start-column="11" selection-end-line="9" selection-end-column="11" />
         </state>
       </provider>
     </entry>
