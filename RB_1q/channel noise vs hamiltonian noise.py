@@ -3,8 +3,8 @@ import matplotlib.pyplot as plt
 
 cliff_seq = np.random.choice(24, 50, replace=True)
 data_point = np.arange(1, 50, 1, dtype=int)
-n = 1  # number of sample of noises
-dephasing_angle = np.pi/100
+n = 100  # number of sample of noises
+dephasing_angle = 0.5
 
 fidelity_channel = np.zeros(len(data_point))
 fidelity_hamiltonian = np.zeros(len(data_point))
@@ -35,7 +35,6 @@ for i in range(n):
             idx = np.where(data_point == (l+1))[0][0]
             fidelity_channel[idx] += gate_fidelity_1q(S_channel, S_perfect)/n
             fidelity_hamiltonian[idx] += gate_fidelity_1q(S_hamiltonian, S_perfect)/n
-
 
 plt.plot(data_point, fidelity_channel, 'ro', markersize=2, label='channel noise')
 plt.plot(data_point, fidelity_hamiltonian, 'bo', markersize=2, label='Hamiltonian noise')

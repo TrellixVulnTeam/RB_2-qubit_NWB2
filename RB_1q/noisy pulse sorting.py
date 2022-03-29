@@ -1,4 +1,11 @@
 import copy as cp
+from lib.oneqrb import *
+from qiskit import quantum_info
+import matplotlib.pyplot as plt
+'''
+1. Sort the Hamiltonian noise into left unitary operation.
+2. Extract the noise for each Clifford as unitary matrices. (numpy array)
+'''
 
 class Pulse:
     def __init__(self, pulse_type, axis, sign, angle):
@@ -6,16 +13,26 @@ class Pulse:
             raise Exception('"pulse_type" could only has value "noise" or "pulse".')
         self.pulse_type = pulse_type
 
-        if not (axis == 'X' or axis == 'Y' or axis == 'Z'):
-            raise Exception('"axis" could only has value \'X\', \'Y\' or \'Z\'.')
+        if pulse_type == 'noise':
+            if not (axis == 'X' or axis == 'Y' or axis == 'Z'):
+                raise Exception('"axis" attribute for "pulse_type" = "noise" '
+                                'could only has value \'X\', \'Y\' or \'Z\'.')
+        elif pulse_type == 'pulse':
+            if not (axis == 'X' or axis == 'Z'):
+                raise Exception('"axis" attribute for "pulse_type" = "pulse" could only has value \'X\' or \'Z\'.')
         self.axis = axis
 
         if not (sign == 1 or sign == -1):
             raise Exception('"sign" could only has value 1 or -1.')
         self.sign = sign
 
-        if not isinstance(angle, str):
-            raise TypeError('"angle" could only has type "char".')
+        if pulse_type == 'noise':
+            if not (angle == 'epsilon' or angle == 'gamma'):
+                raise Exception('"angle" attribute for "pulse_type" = "noise" '
+                                'could only has value "epsilon" or "gamma" .')
+        elif pulse_type == 'pulse':
+            if not (angle == 'pi/2'):
+                raise Exception('"angle" attribute for "pulse_type" = "pulse" could only has value "pi/2".')
         self.angle = angle
 
 
@@ -70,60 +87,274 @@ def print_pulse(p):
         raise TypeError('The input should be of type "Pulse" object.')
     print("{" + p.pulse_type + " ; " + p.axis + " ; " + str(p.sign) + " * " + p.angle + "}")
 
-def noisy_X(sign):
+def pulse_noisy_x(sign):
     if not (sign == 1 or sign == -1):
         raise Exception('"sign" of noisy_X pulse could only has value 1 or -1.')
     else:
-        a1 = Pulse('noise', 'Y', -1, 'gamma')
+        a1 = Pulse('noise', 'Y', -1 * sign, 'gamma')
         a2 = Pulse('pulse', 'X', sign, 'pi/2')
-        a3 = Pulse('noise', 'X', sign, 'delta')
-        a4 = Pulse('noise', 'Y', 1, 'gamma')
+        a3 = Pulse('noise', 'X', sign, 'epsilon')
+        a4 = Pulse('noise', 'Y', sign, 'gamma')
         return [a1, a2, a3, a4]
 
-def Z(sign):
+def pulse_z(sign):
     if not (sign == 1 or sign == -1):
         raise Exception('"sign" of noisy_X pulse could only has value 1 or -1.')
     a = Pulse('pulse', 'Z', sign, 'pi/2')
     return [a]
 
-def X(sign):
+def pulse_x(sign):
     if not (sign == 1 or sign == -1):
         raise Exception('"sign" of noisy_X pulse could only has value 1 or -1.')
     a = Pulse('pulse', 'X', sign, 'pi/2')
     return [a]
 
+def prim_key_to_pulse(key):
+    if not (0 <= key <= 3):
+        raise Exception('Primitive key is out of range (should be 0~3).')
+    if key == 0:
+        return pulse_noisy_x(1)
+    elif key == 1:
+        return pulse_noisy_x(-1)
+    elif key == 2:
+        return pulse_z(1)
+    else:
+        return pulse_z(-1)
+
+def pulse_noisy_clifford(idx):
+    if not (0 <= idx <= 23):
+        raise Exception('Clifford index is out of range (should be 0~23).')
+    key_list = Cliff_decompose_1q[idx]
+    pulse_clifford = []
+    for j in range(len(key_list)):
+        pulse_clifford.append(prim_key_to_pulse(key_list[j]))
+    return list_flatten(pulse_clifford)
+
 def list_flatten(t):
     return [item for sublist in t for item in sublist]
 
+def noise_transform_to_left_channel(pulse_list):
+    for j in range(len(pulse_list)):
+        if not (isinstance(pulse_list[j], Pulse)):
+            raise TypeError('The input should be list of type "Pulse" objects.')
 
-L = [Z(-1), noisy_X(1), Z(-1), noisy_X(1)]
+    # noise simplify
+    for j in range(len(pulse_list)-1):
+        if j >= len(pulse_list)-1:
+            break
+        elif pulse_list[j].pulse_type == pulse_list[j+1].pulse_type\
+                and pulse_list[j].axis == pulse_list[j+1].axis\
+                and pulse_list[j].angle == pulse_list[j+1].angle:
+            if pulse_list[j].sign != pulse_list[j+1].sign:
+                del pulse_list[j:j+2]
 
-L = list_flatten(L)
-print("\nSimplify...\n")
-for i in range(len(L)-1):
-    if i >= len(L)-1:
-        break
-    elif L[i].pulse_type == L[i+1].pulse_type and L[i].axis == L[i+1].axis and L[i].angle == L[i+1].angle:
-        if L[i].sign != L[i+1].sign:
-            del L[i:i+2]
-
-for i in range(len(L)):
-    print_pulse(L[i])
-
-print("\nTransform noises into LHS...\n")
-UNSORTED = True
-boo = True
-while UNSORTED:
-    boo = False
-    for i in range(len(L)-1):
-        boo = boo or commute_transform(L[i], L[i+1])
-    UNSORTED = boo
-
-for i in range(len(L)):
-    print_pulse(L[i])
+    # transform noises to LHS
+    unsorted = True
+    while unsorted:
+        boo = False
+        for j in range(len(pulse_list)-1):
+            boo = boo or commute_transform(pulse_list[j], pulse_list[j+1])
+        unsorted = boo
 
 
+pauli_dict_1q = {'I': I_1q, 'X': X_1q, 'Y': Y_1q, 'Z': Z_1q}
+
+def pulse_to_unitary(p, delta):
+    if not (isinstance(p, Pulse)):
+        raise TypeError('The first input should be of type "Pulse" object.')
+
+    sigma = pauli_dict_1q[p.axis]           # rotation pauli direction
+    angle = 0
+    if p.pulse_type == 'pulse':
+        angle = np.pi / 2
+    else:                                   # p.pulse_type == 'noise'
+        if p.angle == 'epsilon':
+            angle = 1 / 2 * np.sqrt(np.pi**2 + 4 * delta**2) - np.pi / 2
+            # angle = 1 / 2 * delta**2      # 1st order approximation
+        elif p.angle == 'gamma':
+            angle = np.arcsin(delta / np.sqrt(np.pi**2 / 4 + delta ** 2))
+    m = np.cos(angle / 2) * I_1q - p.sign * 1j * np.sin(angle / 2) * sigma
+    return m
 
 
+'''
+# Single delta demonstration
 
+noise_unitary = []
+delta = 0.5
+for n in range(24):
+    L = pulse_noisy_clifford(n)
+    pulse_noise = []
+    noise_transform_to_left_channel(L)
+
+    # print clifford after transformation in terms of the "Pulse" objects
+    print("Clifford #", n)
+
+    for i in range(len(L)):
+        print_pulse(L[i])
+        if L[i].pulse_type == 'noise':
+            pulse_noise.append(L[i])
+
+    m = np.identity(2)
+    for i in reversed(range(len(pulse_noise))):
+        m = pulse_to_unitary(pulse_noise[i], delta/2) @ m   # delta/2: 1/2 factor here because of Clifford decomposition
+    noise_unitary.append(m)
+    # print("Noise channel for Clifford #", n)
+    # print(m)
+    print("Noise trace fidelity = ", gate_fidelity_1q(m, I_1q))
+    c_thr = m @ get_perfect_cliff(n)
+    c_exp = get_cliff_1q(n, delta_t=1000, noise_type=HAMILTONIAN_NOISE, noise_angle=delta)
+    print("Clifford trace fidelity (thr vs. exp) = ", gate_fidelity_1q(c_exp, c_thr))
+    print(" ")
+
+depolarizing_str = []
+d = 2
+for i in range(len(noise_unitary)):
+    ch = quantum_info.Operator(noise_unitary[i])
+    F_ave = quantum_info.average_gate_fidelity(ch)
+    p = (d * F_ave - 1) / (d - 1)
+    depolarizing_str.append(p)
+
+dephasing_unitary = np.cos(delta) * I_1q - 1j * np.sin(delta) * Z_1q
+dephasing_ch = quantum_info.Operator(dephasing_unitary)
+F_dephasing = quantum_info.average_gate_fidelity(dephasing_ch)
+p_dephasing = (d * F_dephasing - 1) / (d - 1)
+
+print("Depolarizing strength: ", depolarizing_str)
+print("Hamiltonain noise average gate fidelity: ", (np.mean(depolarizing_str)*(d-1)+1)/2)
+print("Dephasing channel noise average gate fidelity: ", F_dephasing)
+# Single delta demonstration end here
+'''
+
+# Depolarizing strength comparison for different "delta"
+
+delta_list = [x * 0.01 for x in list(range(1, 51))]
+d = 2
+
+avg_depol_str = []
+depha_str = []
+
+for delta in delta_list:
+    noise_unitary = []
+    for n in range(24):
+        L = pulse_noisy_clifford(n)
+        pulse_noise = []
+        noise_transform_to_left_channel(L)
+
+        for i in range(len(L)):
+            if L[i].pulse_type == 'noise':
+                pulse_noise.append(L[i])
+
+        m = np.identity(2)
+        for i in reversed(range(len(pulse_noise))):
+            m = pulse_to_unitary(pulse_noise[i], delta/2) @ m  # delta/2: 1/2 here because of Clifford decomposition
+        noise_unitary.append(m)
+
+    depol_str = []
+    for i in range(len(noise_unitary)):
+        ch = quantum_info.Operator(noise_unitary[i])
+        F_ave = quantum_info.average_gate_fidelity(ch)
+        p = (d * F_ave - 1) / (d - 1)
+        depol_str.append(p)
+    avg_depol_str.append(np.mean(depol_str))
+
+    depha_m = np.cos(delta) * I_1q - 1j * np.sin(delta) * Z_1q
+    depha_ch = quantum_info.Operator(depha_m)
+    F_depha = quantum_info.average_gate_fidelity(depha_ch)
+    p_depha = (d * F_depha - 1) / (d - 1)
+    depha_str.append(p_depha)
+
+plot1 = plt.figure(1)
+plt.plot(delta_list, depha_str, 'ro', markersize=2, label='channel noise')
+plt.plot(delta_list, avg_depol_str, 'bo', markersize=2, label='Hamiltonian noise')
+
+plt.title('Depolarizing strength p with constant noise')
+plt.xlabel("noise strength delta (rad)")
+plt.ylabel("depolarizing strength")
+plt.legend()
+plt.show()
+
+fidelity_channel = [(x*(d-1)+1)/2 for x in depha_str]
+fidelity_hamiltonian = [(x*(d-1)+1)/2 for x in avg_depol_str]
+
+f1 = open('thr_const_delta_list_1q.pkl', 'wb')
+pickle.dump(delta_list, f1)
+f1.close()
+
+f2 = open('thr_const_delta_f_channel_1q.pkl', 'wb')
+pickle.dump(fidelity_channel, f2)
+f2.close()
+
+f3 = open('thr_const_delta_f_hamiltonian_1q.pkl', 'wb')
+pickle.dump(fidelity_hamiltonian, f3)
+f3.close()
+
+plot2 = plt.figure(2)
+plt.plot(delta_list, fidelity_channel, 'ro', markersize=2, label='channel noise')
+plt.plot(delta_list, fidelity_hamiltonian, 'bo', markersize=2, label='Hamiltonian noise')
+
+plt.title('Average gate fidelity F with constant noise')
+plt.xlabel("noise strength delta (rad)")
+plt.ylabel("Clifford average gate fidelity")
+plt.legend()
+plt.show()
+
+for i in range(len(delta_list)):
+    print(delta_list[i], ":", fidelity_hamiltonian[i])
+# Depolarizing strength comparison for different "delta" end here
+
+
+# test block start here
+
+# delta = 0.1
+# dt = 1000
+#
+# for n in range(24):
+#     p = pulse_noisy_clifford(n)
+#     noise_transform_to_left_channel(p)
+#
+#     for i in range(len(p)):
+#         print_pulse(p[i])
+#
+#     m1 = np.identity(2)
+#     for i in reversed(range(len(p))):
+#         m1 = pulse_to_unitary(p[i], delta) @ m1
+#
+#     m2 = get_cliff_1q(n, delta_t=dt, noise_type=HAMILTONIAN_NOISE, noise_angle=2*delta)
+#
+#     print(gate_fidelity_1q(m1, m2))
+
+# t_slice = np.linspace(0, np.pi/2, dt + 1)
+# x_pi2 = I_1q
+# hx = 1 / 2 * X_1q
+# hz = ((delta / 2) / (np.pi / 2)) * 1 / 2 * Z_1q
+# h = hx + hz
+# for t in t_slice[1:]:
+#     x_pi2 = np.dot(expm(-1j * h * t_slice[1]), x_pi2)
+#
+# x_pi2m = I_1q
+# hx = -1 / 2 * X_1q
+# hz = delta / 2 / (np.pi / 2) * 1 / 2 * Z_1q
+# h = hx + hz
+# for t in t_slice[1:]:
+#     x_pi2m = np.dot(expm(-1j * h * t_slice[1]), x_pi2m)
+#
+# p = pulse_noisy_x(1)
+# # p = [Pulse(pulse_type='pulse', axis='X', sign=1, angle='pi/2')]
+#
+# for i in range(len(p)):
+#     print_pulse(p[i])
+# m1 = np.identity(2)
+# for i in reversed(range(len(p))):
+#     m1 = pulse_to_unitary(p[i], delta / 2) @ m1
+#
+#
+# delta_tilde = delta / (2 * (np.pi / 2))
+# omega = np.sqrt(1 + delta_tilde**2)
+# m2 = np.cos(np.pi/4 * omega) * I_1q - 1j * np.sin(np.pi/4 * omega) * (1 / omega * X_1q + delta_tilde / omega * Z_1q)
+#
+# print(gate_fidelity_1q(x_pi2, m2))
+# print(gate_fidelity_1q(x_pi2, m1))
+
+# test block end here
 
