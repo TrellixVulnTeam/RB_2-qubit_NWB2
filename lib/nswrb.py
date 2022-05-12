@@ -263,6 +263,33 @@ def time_varying_gaussian_noise(waveform, dt, std, f_noise=0):
     else:   # f_noise = 0 implies noise is static through whole sequence
         return get_gaussian_noisy_h(std)
 
+def get_gaussian_dephasing_noisy_h(std):
+    np.random.seed()
+    delta = np.random.normal(0.0, std)
+    sf1 = delta
+    sf2 = -delta
+    sf3 = -delta
+    sf4 = delta
+    h_noise = 2 * np.pi * np.diag([sf1, sf2, sf3, sf4])
+    return h_noise
+
+def time_varying_gaussian_dephasing_noise(waveform, dt, std, f_noise=0):
+    n1 = len(waveform[0])
+    if f_noise:
+        n2 = round(1 / dt / f_noise)  # n2: number of time slices that have the same noise value
+        k = math.ceil(n1 / n2) + 1
+        noisy_h = np.empty((k, 4, 4))
+        for i in range(k):
+            noisy_h[i] = get_gaussian_dephasing_noisy_h(std)
+        np.random.seed()
+        n2_initial = np.random.randint(n2)
+        h_noise = np.array([[m]*n2 for m in noisy_h])
+        h_noise = h_noise.reshape(-1, 4, 4)
+        h_noise = h_noise[n2_initial:n2_initial+n1]
+        return h_noise
+    else:   # f_noise = 0 implies noise is static through whole sequence
+        return get_gaussian_dephasing_noisy_h(std)
+
 
 '''''''''
 OU noise and 1/f noise

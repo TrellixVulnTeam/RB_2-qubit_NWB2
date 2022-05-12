@@ -1,4 +1,3 @@
-import random
 import matplotlib.pyplot as plt
 import multiprocessing as mp
 import copy
@@ -14,13 +13,19 @@ def RB_single_sequence(l, delta, rho_initial, delta_t, noise_type):
     # end of adding noise
     seq = get_seq_1q(cliff_seq, noise_seq, delta_t=delta_t, noise_type=noise_type)
     f = np.zeros(len(l))
-    rho = copy.deepcopy(rho_initial)
+    # rho = copy.deepcopy(rho_initial)
+
+    g = get_perfect_cliff(np.random.randint(24))
+    rho = g @ copy.deepcopy(rho_initial) @ g.conj().T
+    rho_rd_initial = g @ copy.deepcopy(rho_initial) @ g.conj().T
+
     for i in range(len(seq)):
         rho = seq[i] @ rho @ seq[i].conj().T
         if i+1 in l:
             inv = get_seq_inverse(cliff_seq[:(i+1)])
             rho_inversed = inv @ rho @ inv.conj().T
-            fidelity = abs(np.trace(rho_initial @ rho_inversed))
+            # fidelity = abs(np.trace(rho_initial @ rho_inversed))
+            fidelity = abs(np.trace(rho_rd_initial @ rho_inversed))
             j = l.index(i+1)
             f[j] += fidelity
     return f
@@ -65,7 +70,7 @@ if __name__ == '__main__':
         pickle.dump((delta_list[i], F), ff)
         ff.close()
 
-        popt, pcov = curve_fit(func, L, F, p0=[1, 0, 0], bounds=(0, 1), maxfev=5000)
+        popt, pcov = curve_fit(func, L, F, p0=[1, 0], bounds=(0, 1), maxfev=5000)
         F_Clifford[i] = (1 - popt[1]) * 100
 
         residuals = F - func(L, *popt)

@@ -2,10 +2,771 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d70837f3-f2df-469d-865e-32745c819d82" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/RB_1q/constant delta trace fidelity.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RB_1q/gate dependent RB test.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lab frame RB/ensemble dephasing noise analysis.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RB_1q/channel noise vs hamiltonian noise.py" beforeDir="false" afterPath="$PROJECT_DIR$/RB_1q/channel noise vs hamiltonian noise.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RB_1q/1q_mp_RB_const_delta.py" beforeDir="false" afterPath="$PROJECT_DIR$/RB_1q/1q_mp_RB_const_delta.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RB_1q/constant delta fidelity.png" beforeDir="false" afterPath="$PROJECT_DIR$/RB_1q/constant delta fidelity.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RB_1q/data/.ipynb_checkpoints/plot-checkpoint.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/RB_1q/data/.ipynb_checkpoints/plot-checkpoint.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RB_1q/data/const_delta_fidelity_ch_1q.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RB_1q/data/const_delta_fidelity_h_1q.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RB_1q/data/const_delta_list_1q.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RB_1q/data/plot.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/RB_1q/data/plot.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RB_1q/data/thr_const_delta_f_hamiltonian_1q.pkl" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/RB_1q/noisy pulse sorting.py" beforeDir="false" afterPath="$PROJECT_DIR$/RB_1q/noisy pulse sorting.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/oneqrb.py" beforeDir="false" afterPath="$PROJECT_DIR$/lib/oneqrb.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/generator analysis/Cliff_indices_4.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/generator analysis/Lab_frame_analysis.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/generator analysis/Prim_perfect.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/generator analysis/crosstalk_amp_error_synchronize.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/generator analysis/dqdot.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/generator analysis/energy_fluc_err_analysis.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/generator analysis/finding_Tpi_2_via_prim_gate.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/generator analysis/finding_Tpi_2_via_pulse.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/generator analysis/generator.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/generator analysis/phase_offset_compensate.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/generator analysis/test.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/generator analysis/x.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/generator analysis/x_1q.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/generator analysis/y.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/generator analysis/y_1q.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/f = 1 over dt setup/1/2q_lab_RB_noisy_L.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/f = 1 over dt setup/1/2q_lab_RB_noisy_y.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/infidelity vs stddev/L too short/quasi_noise_infidelity.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/infidelity vs stddev/L too short/quasi_noise_sigma.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/infidelity vs stddev/better/index.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/infidelity vs stddev/better/quasi_noise_infidelity.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/infidelity vs stddev/better/quasi_noise_sigma.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/no noise/.ipynb_checkpoints/plot-checkpoint.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/no noise/plot.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/paper F=97.5 setup/.ipynb_checkpoints/plot-checkpoint.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/paper F=97.5 setup/1/2q_lab_RB_noisy_L.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/paper F=97.5 setup/1/2q_lab_RB_noisy_y.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/paper F=97.5 setup/1/97.47.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/paper F=97.5 setup/1/fitting.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/paper F=97.5 setup/2/2q_lab_RB_noisy_L.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/paper F=97.5 setup/2/2q_lab_RB_noisy_y.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/paper F=97.5 setup/2/fitting.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/paper F=97.5 setup/2/下載 (1).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/paper F=97.5 setup/2q_lab_RB_noisy_L.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/paper F=97.5 setup/2q_lab_RB_noisy_y.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/paper F=97.5 setup/3/2q_lab_RB_noisy_L.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/paper F=97.5 setup/3/2q_lab_RB_noisy_y.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/paper F=97.5 setup/3/fitting.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/paper F=97.5 setup/3/下載.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/paper F=97.5 setup/4/2q_lab_RB_noisy_L.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/paper F=97.5 setup/4/2q_lab_RB_noisy_y.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/paper F=97.5 setup/plot.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs alpha/1x noise (21k Hz) re = 500/.ipynb_checkpoints/plot 1x one_over_f-checkpoint.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs alpha/1x noise (21k Hz) re = 500/0.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs alpha/1x noise (21k Hz) re = 500/1.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs alpha/1x noise (21k Hz) re = 500/10.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs alpha/1x noise (21k Hz) re = 500/11.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs alpha/1x noise (21k Hz) re = 500/12.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs alpha/1x noise (21k Hz) re = 500/13.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs alpha/1x noise (21k Hz) re = 500/14.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs alpha/1x noise (21k Hz) re = 500/15.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs alpha/1x noise (21k Hz) re = 500/16.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs alpha/1x noise (21k Hz) re = 500/17.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs alpha/1x noise (21k Hz) re = 500/18.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs alpha/1x noise (21k Hz) re = 500/19.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs alpha/1x noise (21k Hz) re = 500/2.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs alpha/1x noise (21k Hz) re = 500/20.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs alpha/1x noise (21k Hz) re = 500/21.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs alpha/1x noise (21k Hz) re = 500/22.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs alpha/1x noise (21k Hz) re = 500/3.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs alpha/1x noise (21k Hz) re = 500/4.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs alpha/1x noise (21k Hz) re = 500/5.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs alpha/1x noise (21k Hz) re = 500/6.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs alpha/1x noise (21k Hz) re = 500/7.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs alpha/1x noise (21k Hz) re = 500/8.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs alpha/1x noise (21k Hz) re = 500/9.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs alpha/1x noise (21k Hz) re = 500/one_f_noise_alpha.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs alpha/1x noise (21k Hz) re = 500/one_f_noise_infidelity.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs alpha/1x noise (21k Hz) re = 500/one_f_noise_r_squared.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs alpha/1x noise (21k Hz) re = 500/plot 1x one_over_f.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs alpha/1x noise (21k Hz) re = 500/primitive_length.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs alpha/5x noise (21k Hz) re = 500/.ipynb_checkpoints/plot 5x one_over_f-checkpoint.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs alpha/5x noise (21k Hz) re = 500/0.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs alpha/5x noise (21k Hz) re = 500/1.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs alpha/5x noise (21k Hz) re = 500/10.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs alpha/5x noise (21k Hz) re = 500/11.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs alpha/5x noise (21k Hz) re = 500/12.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs alpha/5x noise (21k Hz) re = 500/13.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs alpha/5x noise (21k Hz) re = 500/14.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs alpha/5x noise (21k Hz) re = 500/15.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs alpha/5x noise (21k Hz) re = 500/16.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs alpha/5x noise (21k Hz) re = 500/17.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs alpha/5x noise (21k Hz) re = 500/18.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs alpha/5x noise (21k Hz) re = 500/19.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs alpha/5x noise (21k Hz) re = 500/2.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs alpha/5x noise (21k Hz) re = 500/20.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs alpha/5x noise (21k Hz) re = 500/21.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs alpha/5x noise (21k Hz) re = 500/22.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs alpha/5x noise (21k Hz) re = 500/3.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs alpha/5x noise (21k Hz) re = 500/4.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs alpha/5x noise (21k Hz) re = 500/5.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs alpha/5x noise (21k Hz) re = 500/6.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs alpha/5x noise (21k Hz) re = 500/7.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs alpha/5x noise (21k Hz) re = 500/8.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs alpha/5x noise (21k Hz) re = 500/9.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs alpha/5x noise (21k Hz) re = 500/one_f_noise_alpha.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs alpha/5x noise (21k Hz) re = 500/one_f_noise_infidelity.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs alpha/5x noise (21k Hz) re = 500/one_f_noise_r_squared.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs alpha/5x noise (21k Hz) re = 500/plot 5x one_over_f.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs alpha/5x noise (21k Hz) re = 500/primitive_length.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/.ipynb_checkpoints/plot-checkpoint.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/1x noise/using frequency re=125/infidelity vs freq.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/1x noise/using frequency re=125/noise_switch_frequency.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/1x noise/using frequency re=125/noise_switch_infidelity.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/1x noise/using frequency re=125/noise_switch_r_squared.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/1x noise/using frequency re=125/r_sqrd vs frequency.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/1x noise/using switching time re=125/infidelity vs switching time.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/1x noise/using switching time re=125/noise_switch_infidelity.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/1x noise/using switching time re=125/noise_switch_r_squared.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/1x noise/using switching time re=125/noise_switch_time.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/1x noise/using switching time re=125/r_sqrd vs switching time.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/2x noise/infidelity vs frequency.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/2x noise/noise_switch_frequency.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/2x noise/noise_switch_infidelity.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/2x noise/noise_switch_r_squared.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/2x noise/r_sqrd vs freq.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/5x noise/infidelity vs time.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/5x noise/noise_switch_infidelity.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/5x noise/noise_switch_r_squared.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/5x noise/noise_switch_time.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/5x noise/r_sqrd vs time.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/noise_switch_infidelity.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/noise_switch_r_squared.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/noise_switch_time.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/plot.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/1x noise with f=dt-1 and f=0/combined/.ipynb_checkpoints/plot combined-checkpoint.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/1x noise with f=dt-1 and f=0/combined/F_Clifford 1.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/1x noise with f=dt-1 and f=0/combined/F_Clifford 2.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/1x noise with f=dt-1 and f=0/combined/F_Clifford 3.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/1x noise with f=dt-1 and f=0/combined/F_Clifford 4.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/1x noise with f=dt-1 and f=0/combined/noise_switch_frequency.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/1x noise with f=dt-1 and f=0/combined/plot combined.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/1x noise with f=dt-1 and f=0/combined/r_sqrd 1.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/1x noise with f=dt-1 and f=0/combined/r_sqrd 2.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/1x noise with f=dt-1 and f=0/combined/r_sqrd 3.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/1x noise with f=dt-1 and f=0/combined/r_sqrd 4.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/1x noise with f=dt-1 and f=0/re = 200 (2)/.ipynb_checkpoints/plot 2-checkpoint.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/1x noise with f=dt-1 and f=0/re = 200 (2)/0.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/1x noise with f=dt-1 and f=0/re = 200 (2)/1.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/1x noise with f=dt-1 and f=0/re = 200 (2)/10.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/1x noise with f=dt-1 and f=0/re = 200 (2)/11.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/1x noise with f=dt-1 and f=0/re = 200 (2)/12.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/1x noise with f=dt-1 and f=0/re = 200 (2)/13.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/1x noise with f=dt-1 and f=0/re = 200 (2)/14.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/1x noise with f=dt-1 and f=0/re = 200 (2)/15.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/1x noise with f=dt-1 and f=0/re = 200 (2)/16.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/1x noise with f=dt-1 and f=0/re = 200 (2)/17.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/1x noise with f=dt-1 and f=0/re = 200 (2)/18.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/1x noise with f=dt-1 and f=0/re = 200 (2)/19.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/1x noise with f=dt-1 and f=0/re = 200 (2)/2.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/1x noise with f=dt-1 and f=0/re = 200 (2)/3.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/1x noise with f=dt-1 and f=0/re = 200 (2)/4.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/1x noise with f=dt-1 and f=0/re = 200 (2)/5.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/1x noise with f=dt-1 and f=0/re = 200 (2)/6.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/1x noise with f=dt-1 and f=0/re = 200 (2)/7.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/1x noise with f=dt-1 and f=0/re = 200 (2)/8.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/1x noise with f=dt-1 and f=0/re = 200 (2)/9.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/1x noise with f=dt-1 and f=0/re = 200 (2)/F_Clifford 2.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/1x noise with f=dt-1 and f=0/re = 200 (2)/noise_switch_frequency.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/1x noise with f=dt-1 and f=0/re = 200 (2)/noise_switch_infidelity.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/1x noise with f=dt-1 and f=0/re = 200 (2)/noise_switch_r_squared.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/1x noise with f=dt-1 and f=0/re = 200 (2)/plot 2.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/1x noise with f=dt-1 and f=0/re = 200 (2)/primitive_length.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/1x noise with f=dt-1 and f=0/re = 200 (2)/r_sqrd 2.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/1x noise with f=dt-1 and f=0/re = 200 (3)/.ipynb_checkpoints/plot 3-checkpoint.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/1x noise with f=dt-1 and f=0/re = 200 (3)/0.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/1x noise with f=dt-1 and f=0/re = 200 (3)/1.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/1x noise with f=dt-1 and f=0/re = 200 (3)/10.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/1x noise with f=dt-1 and f=0/re = 200 (3)/11.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/1x noise with f=dt-1 and f=0/re = 200 (3)/12.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/1x noise with f=dt-1 and f=0/re = 200 (3)/13.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/1x noise with f=dt-1 and f=0/re = 200 (3)/14.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/1x noise with f=dt-1 and f=0/re = 200 (3)/15.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/1x noise with f=dt-1 and f=0/re = 200 (3)/16.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/1x noise with f=dt-1 and f=0/re = 200 (3)/17.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/1x noise with f=dt-1 and f=0/re = 200 (3)/18.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/1x noise with f=dt-1 and f=0/re = 200 (3)/19.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/1x noise with f=dt-1 and f=0/re = 200 (3)/2.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/1x noise with f=dt-1 and f=0/re = 200 (3)/3.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/1x noise with f=dt-1 and f=0/re = 200 (3)/4.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/1x noise with f=dt-1 and f=0/re = 200 (3)/5.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/1x noise with f=dt-1 and f=0/re = 200 (3)/6.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/1x noise with f=dt-1 and f=0/re = 200 (3)/7.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/1x noise with f=dt-1 and f=0/re = 200 (3)/8.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/1x noise with f=dt-1 and f=0/re = 200 (3)/9.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/1x noise with f=dt-1 and f=0/re = 200 (3)/F_Clifford 3.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/1x noise with f=dt-1 and f=0/re = 200 (3)/noise_switch_frequency.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/1x noise with f=dt-1 and f=0/re = 200 (3)/noise_switch_infidelity.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/1x noise with f=dt-1 and f=0/re = 200 (3)/noise_switch_r_squared.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/1x noise with f=dt-1 and f=0/re = 200 (3)/plot 3.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/1x noise with f=dt-1 and f=0/re = 200 (3)/primitive_length.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/1x noise with f=dt-1 and f=0/re = 200 (3)/r_sqrd 3.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/1x noise with f=dt-1 and f=0/re = 200/.ipynb_checkpoints/plot-checkpoint.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/1x noise with f=dt-1 and f=0/re = 200/0.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/1x noise with f=dt-1 and f=0/re = 200/1.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/1x noise with f=dt-1 and f=0/re = 200/10.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/1x noise with f=dt-1 and f=0/re = 200/11.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/1x noise with f=dt-1 and f=0/re = 200/12.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/1x noise with f=dt-1 and f=0/re = 200/13.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/1x noise with f=dt-1 and f=0/re = 200/14.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/1x noise with f=dt-1 and f=0/re = 200/15.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/1x noise with f=dt-1 and f=0/re = 200/16.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/1x noise with f=dt-1 and f=0/re = 200/17.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/1x noise with f=dt-1 and f=0/re = 200/18.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/1x noise with f=dt-1 and f=0/re = 200/19.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/1x noise with f=dt-1 and f=0/re = 200/2.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/1x noise with f=dt-1 and f=0/re = 200/3.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/1x noise with f=dt-1 and f=0/re = 200/4.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/1x noise with f=dt-1 and f=0/re = 200/5.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/1x noise with f=dt-1 and f=0/re = 200/6.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/1x noise with f=dt-1 and f=0/re = 200/7.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/1x noise with f=dt-1 and f=0/re = 200/8.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/1x noise with f=dt-1 and f=0/re = 200/9.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/1x noise with f=dt-1 and f=0/re = 200/F_Clifford 1.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/1x noise with f=dt-1 and f=0/re = 200/noise_switch_frequency.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/1x noise with f=dt-1 and f=0/re = 200/noise_switch_infidelity.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/1x noise with f=dt-1 and f=0/re = 200/noise_switch_r_squared.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/1x noise with f=dt-1 and f=0/re = 200/plot.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/1x noise with f=dt-1 and f=0/re = 200/primitive_length.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/1x noise with f=dt-1 and f=0/re = 200/r_sqrd 1.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/1x noise/.ipynb_checkpoints/plot-checkpoint.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/1x noise/no seed re=125/0.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/1x noise/no seed re=125/1.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/1x noise/no seed re=125/10.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/1x noise/no seed re=125/11.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/1x noise/no seed re=125/12.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/1x noise/no seed re=125/13.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/1x noise/no seed re=125/14.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/1x noise/no seed re=125/15.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/1x noise/no seed re=125/16.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/1x noise/no seed re=125/17.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/1x noise/no seed re=125/18.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/1x noise/no seed re=125/19.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/1x noise/no seed re=125/2.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/1x noise/no seed re=125/20.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/1x noise/no seed re=125/21.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/1x noise/no seed re=125/22.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/1x noise/no seed re=125/23.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/1x noise/no seed re=125/24.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/1x noise/no seed re=125/25.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/1x noise/no seed re=125/26.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/1x noise/no seed re=125/27.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/1x noise/no seed re=125/28.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/1x noise/no seed re=125/29.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/1x noise/no seed re=125/3.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/1x noise/no seed re=125/4.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/1x noise/no seed re=125/5.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/1x noise/no seed re=125/6.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/1x noise/no seed re=125/7.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/1x noise/no seed re=125/8.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/1x noise/no seed re=125/9.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/1x noise/no seed re=125/noise_switch_infidelity.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/1x noise/no seed re=125/noise_switch_r_squared.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/1x noise/no seed re=125/noise_switch_time.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/1x noise/no seed re=125/plot.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/1x noise/no seed re=125/primitive_length.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/1x noise/switching time with random initial re=200/0.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/1x noise/switching time with random initial re=200/1.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/1x noise/switching time with random initial re=200/10.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/1x noise/switching time with random initial re=200/11.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/1x noise/switching time with random initial re=200/12.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/1x noise/switching time with random initial re=200/13.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/1x noise/switching time with random initial re=200/14.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/1x noise/switching time with random initial re=200/15.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/1x noise/switching time with random initial re=200/16.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/1x noise/switching time with random initial re=200/17.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/1x noise/switching time with random initial re=200/18.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/1x noise/switching time with random initial re=200/19.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/1x noise/switching time with random initial re=200/2.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/1x noise/switching time with random initial re=200/20.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/1x noise/switching time with random initial re=200/21.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/1x noise/switching time with random initial re=200/22.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/1x noise/switching time with random initial re=200/23.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/1x noise/switching time with random initial re=200/24.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/1x noise/switching time with random initial re=200/25.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/1x noise/switching time with random initial re=200/26.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/1x noise/switching time with random initial re=200/27.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/1x noise/switching time with random initial re=200/28.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/1x noise/switching time with random initial re=200/29.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/1x noise/switching time with random initial re=200/3.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/1x noise/switching time with random initial re=200/30.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/1x noise/switching time with random initial re=200/31.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/1x noise/switching time with random initial re=200/32.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/1x noise/switching time with random initial re=200/33.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/1x noise/switching time with random initial re=200/34.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/1x noise/switching time with random initial re=200/35.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/1x noise/switching time with random initial re=200/36.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/1x noise/switching time with random initial re=200/37.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/1x noise/switching time with random initial re=200/38.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/1x noise/switching time with random initial re=200/39.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/1x noise/switching time with random initial re=200/4.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/1x noise/switching time with random initial re=200/5.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/1x noise/switching time with random initial re=200/6.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/1x noise/switching time with random initial re=200/7.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/1x noise/switching time with random initial re=200/8.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/1x noise/switching time with random initial re=200/9.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/1x noise/switching time with random initial re=200/noise_switch_infidelity.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/1x noise/switching time with random initial re=200/noise_switch_r_squared.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/1x noise/switching time with random initial re=200/noise_switch_time.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/1x noise/switching time with random initial re=200/plot.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/1x noise/switching time with random initial re=200/primitive_length.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/1x noise/switching time with random initial re=250 2/.ipynb_checkpoints/plot-checkpoint.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/1x noise/switching time with random initial re=250 2/0.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/1x noise/switching time with random initial re=250 2/1.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/1x noise/switching time with random initial re=250 2/10.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/1x noise/switching time with random initial re=250 2/11.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/1x noise/switching time with random initial re=250 2/12.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/1x noise/switching time with random initial re=250 2/13.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/1x noise/switching time with random initial re=250 2/14.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/1x noise/switching time with random initial re=250 2/15.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/1x noise/switching time with random initial re=250 2/16.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/1x noise/switching time with random initial re=250 2/17.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/1x noise/switching time with random initial re=250 2/18.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/1x noise/switching time with random initial re=250 2/19.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/1x noise/switching time with random initial re=250 2/2.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/1x noise/switching time with random initial re=250 2/20.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/1x noise/switching time with random initial re=250 2/21.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/1x noise/switching time with random initial re=250 2/22.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/1x noise/switching time with random initial re=250 2/23.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/1x noise/switching time with random initial re=250 2/24.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/1x noise/switching time with random initial re=250 2/25.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/1x noise/switching time with random initial re=250 2/26.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/1x noise/switching time with random initial re=250 2/27.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/1x noise/switching time with random initial re=250 2/28.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/1x noise/switching time with random initial re=250 2/29.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/1x noise/switching time with random initial re=250 2/3.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/1x noise/switching time with random initial re=250 2/4.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/1x noise/switching time with random initial re=250 2/5.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/1x noise/switching time with random initial re=250 2/6.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/1x noise/switching time with random initial re=250 2/7.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/1x noise/switching time with random initial re=250 2/8.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/1x noise/switching time with random initial re=250 2/9.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/1x noise/switching time with random initial re=250 2/noise_switch_infidelity.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/1x noise/switching time with random initial re=250 2/noise_switch_r_squared.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/1x noise/switching time with random initial re=250 2/noise_switch_time.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/1x noise/switching time with random initial re=250 2/plot.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/1x noise/switching time with random initial re=250 2/primitive_length.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/1x noise/switching time with random initial re=250 3/0.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/1x noise/switching time with random initial re=250 3/1.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/1x noise/switching time with random initial re=250 3/10.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/1x noise/switching time with random initial re=250 3/11.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/1x noise/switching time with random initial re=250 3/12.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/1x noise/switching time with random initial re=250 3/13.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/1x noise/switching time with random initial re=250 3/14.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/1x noise/switching time with random initial re=250 3/15.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/1x noise/switching time with random initial re=250 3/16.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/1x noise/switching time with random initial re=250 3/17.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/1x noise/switching time with random initial re=250 3/18.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/1x noise/switching time with random initial re=250 3/19.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/1x noise/switching time with random initial re=250 3/2.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/1x noise/switching time with random initial re=250 3/20.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/1x noise/switching time with random initial re=250 3/21.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/1x noise/switching time with random initial re=250 3/22.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/1x noise/switching time with random initial re=250 3/23.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/1x noise/switching time with random initial re=250 3/24.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/1x noise/switching time with random initial re=250 3/25.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/1x noise/switching time with random initial re=250 3/26.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/1x noise/switching time with random initial re=250 3/27.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/1x noise/switching time with random initial re=250 3/28.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/1x noise/switching time with random initial re=250 3/29.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/1x noise/switching time with random initial re=250 3/3.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/1x noise/switching time with random initial re=250 3/4.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/1x noise/switching time with random initial re=250 3/5.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/1x noise/switching time with random initial re=250 3/6.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/1x noise/switching time with random initial re=250 3/7.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/1x noise/switching time with random initial re=250 3/8.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/1x noise/switching time with random initial re=250 3/9.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/1x noise/switching time with random initial re=250 3/noise_switch_infidelity.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/1x noise/switching time with random initial re=250 3/noise_switch_r_squared.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/1x noise/switching time with random initial re=250 3/noise_switch_time.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/1x noise/switching time with random initial re=250 3/plot.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/1x noise/switching time with random initial re=250 3/primitive_length.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/1x noise/switching time with random initial re=250/.ipynb_checkpoints/plot-checkpoint.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/1x noise/switching time with random initial re=250/0.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/1x noise/switching time with random initial re=250/1.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/1x noise/switching time with random initial re=250/10.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/1x noise/switching time with random initial re=250/11.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/1x noise/switching time with random initial re=250/12.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/1x noise/switching time with random initial re=250/13.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/1x noise/switching time with random initial re=250/14.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/1x noise/switching time with random initial re=250/15.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/1x noise/switching time with random initial re=250/16.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/1x noise/switching time with random initial re=250/17.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/1x noise/switching time with random initial re=250/18.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/1x noise/switching time with random initial re=250/19.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/1x noise/switching time with random initial re=250/2.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/1x noise/switching time with random initial re=250/20.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/1x noise/switching time with random initial re=250/21.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/1x noise/switching time with random initial re=250/22.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/1x noise/switching time with random initial re=250/23.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/1x noise/switching time with random initial re=250/24.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/1x noise/switching time with random initial re=250/25.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/1x noise/switching time with random initial re=250/26.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/1x noise/switching time with random initial re=250/27.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/1x noise/switching time with random initial re=250/28.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/1x noise/switching time with random initial re=250/29.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/1x noise/switching time with random initial re=250/3.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/1x noise/switching time with random initial re=250/4.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/1x noise/switching time with random initial re=250/5.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/1x noise/switching time with random initial re=250/6.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/1x noise/switching time with random initial re=250/7.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/1x noise/switching time with random initial re=250/8.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/1x noise/switching time with random initial re=250/9.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/1x noise/switching time with random initial re=250/noise_switch_infidelity.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/1x noise/switching time with random initial re=250/noise_switch_r_squared.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/1x noise/switching time with random initial re=250/noise_switch_time.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/1x noise/switching time with random initial re=250/plot.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/1x noise/switching time with random initial re=250/primitive_length.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/1x noise/with seed re=125/0.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/1x noise/with seed re=125/1.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/1x noise/with seed re=125/10.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/1x noise/with seed re=125/11.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/1x noise/with seed re=125/12.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/1x noise/with seed re=125/13.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/1x noise/with seed re=125/14.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/1x noise/with seed re=125/15.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/1x noise/with seed re=125/16.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/1x noise/with seed re=125/17.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/1x noise/with seed re=125/18.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/1x noise/with seed re=125/19.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/1x noise/with seed re=125/2.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/1x noise/with seed re=125/20.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/1x noise/with seed re=125/21.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/1x noise/with seed re=125/22.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/1x noise/with seed re=125/23.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/1x noise/with seed re=125/24.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/1x noise/with seed re=125/25.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/1x noise/with seed re=125/26.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/1x noise/with seed re=125/27.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/1x noise/with seed re=125/28.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/1x noise/with seed re=125/29.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/1x noise/with seed re=125/3.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/1x noise/with seed re=125/4.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/1x noise/with seed re=125/5.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/1x noise/with seed re=125/6.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/1x noise/with seed re=125/7.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/1x noise/with seed re=125/8.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/1x noise/with seed re=125/9.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/1x noise/with seed re=125/noise_switch_infidelity.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/1x noise/with seed re=125/noise_switch_r_squared.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/1x noise/with seed re=125/noise_switch_time.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/1x noise/with seed re=125/plot.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/1x noise/with seed re=125/primitive_length.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/1x noise/with seed re=500/.ipynb_checkpoints/plot 1x-checkpoint.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/1x noise/with seed re=500/0.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/1x noise/with seed re=500/1.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/1x noise/with seed re=500/10.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/1x noise/with seed re=500/11.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/1x noise/with seed re=500/12.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/1x noise/with seed re=500/13.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/1x noise/with seed re=500/14.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/1x noise/with seed re=500/15.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/1x noise/with seed re=500/16.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/1x noise/with seed re=500/17.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/1x noise/with seed re=500/18.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/1x noise/with seed re=500/19.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/1x noise/with seed re=500/2.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/1x noise/with seed re=500/20.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/1x noise/with seed re=500/21.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/1x noise/with seed re=500/22.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/1x noise/with seed re=500/23.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/1x noise/with seed re=500/24.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/1x noise/with seed re=500/25.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/1x noise/with seed re=500/26.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/1x noise/with seed re=500/27.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/1x noise/with seed re=500/28.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/1x noise/with seed re=500/29.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/1x noise/with seed re=500/3.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/1x noise/with seed re=500/4.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/1x noise/with seed re=500/5.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/1x noise/with seed re=500/6.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/1x noise/with seed re=500/7.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/1x noise/with seed re=500/8.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/1x noise/with seed re=500/9.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/1x noise/with seed re=500/noise_switch_infidelity.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/1x noise/with seed re=500/noise_switch_r_squared.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/1x noise/with seed re=500/noise_switch_time.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/1x noise/with seed re=500/plot 1x.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/1x noise/with seed re=500/primitive_length.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/2x noise/with seed re = 250/0.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/2x noise/with seed re = 250/1.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/2x noise/with seed re = 250/10.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/2x noise/with seed re = 250/11.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/2x noise/with seed re = 250/12.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/2x noise/with seed re = 250/13.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/2x noise/with seed re = 250/14.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/2x noise/with seed re = 250/15.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/2x noise/with seed re = 250/16.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/2x noise/with seed re = 250/17.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/2x noise/with seed re = 250/18.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/2x noise/with seed re = 250/19.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/2x noise/with seed re = 250/2.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/2x noise/with seed re = 250/20.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/2x noise/with seed re = 250/21.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/2x noise/with seed re = 250/22.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/2x noise/with seed re = 250/23.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/2x noise/with seed re = 250/24.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/2x noise/with seed re = 250/25.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/2x noise/with seed re = 250/26.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/2x noise/with seed re = 250/27.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/2x noise/with seed re = 250/28.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/2x noise/with seed re = 250/29.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/2x noise/with seed re = 250/3.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/2x noise/with seed re = 250/4.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/2x noise/with seed re = 250/5.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/2x noise/with seed re = 250/6.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/2x noise/with seed re = 250/7.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/2x noise/with seed re = 250/8.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/2x noise/with seed re = 250/9.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/2x noise/with seed re = 250/noise_switch_infidelity.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/2x noise/with seed re = 250/noise_switch_r_squared.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/2x noise/with seed re = 250/noise_switch_time.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/2x noise/with seed re = 250/primitive_length.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/2x noise/with seed re = 500/.ipynb_checkpoints/plot 2x-checkpoint.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/2x noise/with seed re = 500/0.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/2x noise/with seed re = 500/1.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/2x noise/with seed re = 500/10.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/2x noise/with seed re = 500/11.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/2x noise/with seed re = 500/12.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/2x noise/with seed re = 500/13.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/2x noise/with seed re = 500/14.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/2x noise/with seed re = 500/15.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/2x noise/with seed re = 500/16.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/2x noise/with seed re = 500/17.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/2x noise/with seed re = 500/18.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/2x noise/with seed re = 500/19.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/2x noise/with seed re = 500/2.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/2x noise/with seed re = 500/20.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/2x noise/with seed re = 500/21.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/2x noise/with seed re = 500/22.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/2x noise/with seed re = 500/23.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/2x noise/with seed re = 500/24.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/2x noise/with seed re = 500/25.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/2x noise/with seed re = 500/26.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/2x noise/with seed re = 500/27.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/2x noise/with seed re = 500/28.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/2x noise/with seed re = 500/29.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/2x noise/with seed re = 500/3.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/2x noise/with seed re = 500/4.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/2x noise/with seed re = 500/5.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/2x noise/with seed re = 500/6.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/2x noise/with seed re = 500/7.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/2x noise/with seed re = 500/8.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/2x noise/with seed re = 500/9.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/2x noise/with seed re = 500/noise_switch_infidelity.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/2x noise/with seed re = 500/noise_switch_r_squared.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/2x noise/with seed re = 500/noise_switch_time.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/2x noise/with seed re = 500/plot 2x.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/2x noise/with seed re = 500/primitive_length.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/5x noise with f=dt-1 and f=0/re = 200/.ipynb_checkpoints/5x plot-checkpoint.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/5x noise with f=dt-1 and f=0/re = 200/.ipynb_checkpoints/plot-checkpoint.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/5x noise with f=dt-1 and f=0/re = 200/0.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/5x noise with f=dt-1 and f=0/re = 200/0_std.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/5x noise with f=dt-1 and f=0/re = 200/1.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/5x noise with f=dt-1 and f=0/re = 200/10.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/5x noise with f=dt-1 and f=0/re = 200/10_std.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/5x noise with f=dt-1 and f=0/re = 200/11.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/5x noise with f=dt-1 and f=0/re = 200/11_std.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/5x noise with f=dt-1 and f=0/re = 200/12.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/5x noise with f=dt-1 and f=0/re = 200/12_std.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/5x noise with f=dt-1 and f=0/re = 200/13.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/5x noise with f=dt-1 and f=0/re = 200/13_std.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/5x noise with f=dt-1 and f=0/re = 200/14.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/5x noise with f=dt-1 and f=0/re = 200/14_std.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/5x noise with f=dt-1 and f=0/re = 200/15.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/5x noise with f=dt-1 and f=0/re = 200/15_std.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/5x noise with f=dt-1 and f=0/re = 200/16.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/5x noise with f=dt-1 and f=0/re = 200/16_std.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/5x noise with f=dt-1 and f=0/re = 200/17.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/5x noise with f=dt-1 and f=0/re = 200/17_std.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/5x noise with f=dt-1 and f=0/re = 200/18.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/5x noise with f=dt-1 and f=0/re = 200/18_std.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/5x noise with f=dt-1 and f=0/re = 200/19.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/5x noise with f=dt-1 and f=0/re = 200/19_std.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/5x noise with f=dt-1 and f=0/re = 200/1_std.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/5x noise with f=dt-1 and f=0/re = 200/2.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/5x noise with f=dt-1 and f=0/re = 200/2_std.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/5x noise with f=dt-1 and f=0/re = 200/3.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/5x noise with f=dt-1 and f=0/re = 200/3_std.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/5x noise with f=dt-1 and f=0/re = 200/4.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/5x noise with f=dt-1 and f=0/re = 200/4_std.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/5x noise with f=dt-1 and f=0/re = 200/5.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/5x noise with f=dt-1 and f=0/re = 200/5_std.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/5x noise with f=dt-1 and f=0/re = 200/5x plot.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/5x noise with f=dt-1 and f=0/re = 200/6.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/5x noise with f=dt-1 and f=0/re = 200/6_std.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/5x noise with f=dt-1 and f=0/re = 200/7.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/5x noise with f=dt-1 and f=0/re = 200/7_std.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/5x noise with f=dt-1 and f=0/re = 200/8.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/5x noise with f=dt-1 and f=0/re = 200/8_std.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/5x noise with f=dt-1 and f=0/re = 200/9.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/5x noise with f=dt-1 and f=0/re = 200/9_std.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/5x noise with f=dt-1 and f=0/re = 200/noise_switch_frequency.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/5x noise with f=dt-1 and f=0/re = 200/noise_switch_infidelity.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/5x noise with f=dt-1 and f=0/re = 200/noise_switch_r_squared.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/5x noise with f=dt-1 and f=0/re = 200/plot.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/5x noise with f=dt-1 and f=0/re = 200/primitive_length.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/5x noise/with seed re=500/.ipynb_checkpoints/plot 5x-checkpoint.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/5x noise/with seed re=500/0.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/5x noise/with seed re=500/1.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/5x noise/with seed re=500/10.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/5x noise/with seed re=500/11.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/5x noise/with seed re=500/12.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/5x noise/with seed re=500/13.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/5x noise/with seed re=500/14.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/5x noise/with seed re=500/15.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/5x noise/with seed re=500/16.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/5x noise/with seed re=500/17.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/5x noise/with seed re=500/18.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/5x noise/with seed re=500/19.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/5x noise/with seed re=500/2.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/5x noise/with seed re=500/20.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/5x noise/with seed re=500/21.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/5x noise/with seed re=500/22.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/5x noise/with seed re=500/23.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/5x noise/with seed re=500/24.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/5x noise/with seed re=500/25.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/5x noise/with seed re=500/26.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/5x noise/with seed re=500/27.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/5x noise/with seed re=500/28.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/5x noise/with seed re=500/29.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/5x noise/with seed re=500/3.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/5x noise/with seed re=500/4.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/5x noise/with seed re=500/5.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/5x noise/with seed re=500/6.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/5x noise/with seed re=500/7.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/5x noise/with seed re=500/8.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/5x noise/with seed re=500/9.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/5x noise/with seed re=500/noise_switch_infidelity.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/5x noise/with seed re=500/noise_switch_r_squared.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/5x noise/with seed re=500/noise_switch_time.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/5x noise/with seed re=500/plot 5x.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs noise frequency/raw_data/5x noise/with seed re=500/primitive_length.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs ou noise gamma/raw data/1x noise (21k Hz) re = 1500/.ipynb_checkpoints/plot 1x ou-checkpoint.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs ou noise gamma/raw data/1x noise (21k Hz) re = 1500/0.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs ou noise gamma/raw data/1x noise (21k Hz) re = 1500/1.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs ou noise gamma/raw data/1x noise (21k Hz) re = 1500/10.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs ou noise gamma/raw data/1x noise (21k Hz) re = 1500/11.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs ou noise gamma/raw data/1x noise (21k Hz) re = 1500/12.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs ou noise gamma/raw data/1x noise (21k Hz) re = 1500/13.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs ou noise gamma/raw data/1x noise (21k Hz) re = 1500/14.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs ou noise gamma/raw data/1x noise (21k Hz) re = 1500/15.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs ou noise gamma/raw data/1x noise (21k Hz) re = 1500/16.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs ou noise gamma/raw data/1x noise (21k Hz) re = 1500/17.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs ou noise gamma/raw data/1x noise (21k Hz) re = 1500/18.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs ou noise gamma/raw data/1x noise (21k Hz) re = 1500/19.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs ou noise gamma/raw data/1x noise (21k Hz) re = 1500/2.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs ou noise gamma/raw data/1x noise (21k Hz) re = 1500/20.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs ou noise gamma/raw data/1x noise (21k Hz) re = 1500/21.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs ou noise gamma/raw data/1x noise (21k Hz) re = 1500/22.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs ou noise gamma/raw data/1x noise (21k Hz) re = 1500/3.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs ou noise gamma/raw data/1x noise (21k Hz) re = 1500/4.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs ou noise gamma/raw data/1x noise (21k Hz) re = 1500/5.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs ou noise gamma/raw data/1x noise (21k Hz) re = 1500/6.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs ou noise gamma/raw data/1x noise (21k Hz) re = 1500/7.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs ou noise gamma/raw data/1x noise (21k Hz) re = 1500/8.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs ou noise gamma/raw data/1x noise (21k Hz) re = 1500/9.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs ou noise gamma/raw data/1x noise (21k Hz) re = 1500/ou_noise_infidelity.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs ou noise gamma/raw data/1x noise (21k Hz) re = 1500/ou_noise_log_gamma.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs ou noise gamma/raw data/1x noise (21k Hz) re = 1500/ou_noise_r_squared.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs ou noise gamma/raw data/1x noise (21k Hz) re = 1500/plot 1x ou.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs ou noise gamma/raw data/1x noise (21k Hz) re = 1500/primitive_length.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs ou noise gamma/raw data/1x noise (21k Hz) re = 500/.ipynb_checkpoints/plot 1x ou-checkpoint.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs ou noise gamma/raw data/1x noise (21k Hz) re = 500/0.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs ou noise gamma/raw data/1x noise (21k Hz) re = 500/1.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs ou noise gamma/raw data/1x noise (21k Hz) re = 500/10.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs ou noise gamma/raw data/1x noise (21k Hz) re = 500/11.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs ou noise gamma/raw data/1x noise (21k Hz) re = 500/12.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs ou noise gamma/raw data/1x noise (21k Hz) re = 500/13.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs ou noise gamma/raw data/1x noise (21k Hz) re = 500/14.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs ou noise gamma/raw data/1x noise (21k Hz) re = 500/15.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs ou noise gamma/raw data/1x noise (21k Hz) re = 500/16.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs ou noise gamma/raw data/1x noise (21k Hz) re = 500/17.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs ou noise gamma/raw data/1x noise (21k Hz) re = 500/18.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs ou noise gamma/raw data/1x noise (21k Hz) re = 500/19.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs ou noise gamma/raw data/1x noise (21k Hz) re = 500/2.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs ou noise gamma/raw data/1x noise (21k Hz) re = 500/20.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs ou noise gamma/raw data/1x noise (21k Hz) re = 500/21.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs ou noise gamma/raw data/1x noise (21k Hz) re = 500/22.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs ou noise gamma/raw data/1x noise (21k Hz) re = 500/3.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs ou noise gamma/raw data/1x noise (21k Hz) re = 500/4.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs ou noise gamma/raw data/1x noise (21k Hz) re = 500/5.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs ou noise gamma/raw data/1x noise (21k Hz) re = 500/6.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs ou noise gamma/raw data/1x noise (21k Hz) re = 500/7.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs ou noise gamma/raw data/1x noise (21k Hz) re = 500/8.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs ou noise gamma/raw data/1x noise (21k Hz) re = 500/9.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs ou noise gamma/raw data/1x noise (21k Hz) re = 500/ou_noise_infidelity.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs ou noise gamma/raw data/1x noise (21k Hz) re = 500/ou_noise_log_gamma.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs ou noise gamma/raw data/1x noise (21k Hz) re = 500/ou_noise_r_squared.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs ou noise gamma/raw data/1x noise (21k Hz) re = 500/plot 1x ou.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs ou noise gamma/raw data/1x noise (21k Hz) re = 500/primitive_length.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs ou noise gamma/raw data/5x noise (21k Hz) re = 1000/.ipynb_checkpoints/plot 5x ou-checkpoint.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs ou noise gamma/raw data/5x noise (21k Hz) re = 1000/0.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs ou noise gamma/raw data/5x noise (21k Hz) re = 1000/1.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs ou noise gamma/raw data/5x noise (21k Hz) re = 1000/10.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs ou noise gamma/raw data/5x noise (21k Hz) re = 1000/11.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs ou noise gamma/raw data/5x noise (21k Hz) re = 1000/12.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs ou noise gamma/raw data/5x noise (21k Hz) re = 1000/13.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs ou noise gamma/raw data/5x noise (21k Hz) re = 1000/14.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs ou noise gamma/raw data/5x noise (21k Hz) re = 1000/15.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs ou noise gamma/raw data/5x noise (21k Hz) re = 1000/16.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs ou noise gamma/raw data/5x noise (21k Hz) re = 1000/17.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs ou noise gamma/raw data/5x noise (21k Hz) re = 1000/18.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs ou noise gamma/raw data/5x noise (21k Hz) re = 1000/19.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs ou noise gamma/raw data/5x noise (21k Hz) re = 1000/2.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs ou noise gamma/raw data/5x noise (21k Hz) re = 1000/20.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs ou noise gamma/raw data/5x noise (21k Hz) re = 1000/21.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs ou noise gamma/raw data/5x noise (21k Hz) re = 1000/22.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs ou noise gamma/raw data/5x noise (21k Hz) re = 1000/3.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs ou noise gamma/raw data/5x noise (21k Hz) re = 1000/4.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs ou noise gamma/raw data/5x noise (21k Hz) re = 1000/5.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs ou noise gamma/raw data/5x noise (21k Hz) re = 1000/6.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs ou noise gamma/raw data/5x noise (21k Hz) re = 1000/7.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs ou noise gamma/raw data/5x noise (21k Hz) re = 1000/8.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs ou noise gamma/raw data/5x noise (21k Hz) re = 1000/9.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs ou noise gamma/raw data/5x noise (21k Hz) re = 1000/ou_noise_infidelity.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs ou noise gamma/raw data/5x noise (21k Hz) re = 1000/ou_noise_log_gamma.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs ou noise gamma/raw data/5x noise (21k Hz) re = 1000/ou_noise_r_squared.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs ou noise gamma/raw data/5x noise (21k Hz) re = 1000/plot 5x ou.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs ou noise gamma/raw data/5x noise (21k Hz) re = 1000/primitive_length.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs ou noise gamma/raw data/5x noise (21k Hz) re = 500/.ipynb_checkpoints/plot 5x ou-checkpoint.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs ou noise gamma/raw data/5x noise (21k Hz) re = 500/0.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs ou noise gamma/raw data/5x noise (21k Hz) re = 500/1.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs ou noise gamma/raw data/5x noise (21k Hz) re = 500/10.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs ou noise gamma/raw data/5x noise (21k Hz) re = 500/11.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs ou noise gamma/raw data/5x noise (21k Hz) re = 500/12.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs ou noise gamma/raw data/5x noise (21k Hz) re = 500/13.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs ou noise gamma/raw data/5x noise (21k Hz) re = 500/14.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs ou noise gamma/raw data/5x noise (21k Hz) re = 500/15.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs ou noise gamma/raw data/5x noise (21k Hz) re = 500/16.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs ou noise gamma/raw data/5x noise (21k Hz) re = 500/17.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs ou noise gamma/raw data/5x noise (21k Hz) re = 500/18.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs ou noise gamma/raw data/5x noise (21k Hz) re = 500/19.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs ou noise gamma/raw data/5x noise (21k Hz) re = 500/2.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs ou noise gamma/raw data/5x noise (21k Hz) re = 500/20.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs ou noise gamma/raw data/5x noise (21k Hz) re = 500/21.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs ou noise gamma/raw data/5x noise (21k Hz) re = 500/22.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs ou noise gamma/raw data/5x noise (21k Hz) re = 500/3.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs ou noise gamma/raw data/5x noise (21k Hz) re = 500/4.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs ou noise gamma/raw data/5x noise (21k Hz) re = 500/5.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs ou noise gamma/raw data/5x noise (21k Hz) re = 500/6.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs ou noise gamma/raw data/5x noise (21k Hz) re = 500/7.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs ou noise gamma/raw data/5x noise (21k Hz) re = 500/8.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs ou noise gamma/raw data/5x noise (21k Hz) re = 500/9.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs ou noise gamma/raw data/5x noise (21k Hz) re = 500/ou_noise_infidelity.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs ou noise gamma/raw data/5x noise (21k Hz) re = 500/ou_noise_log_gamma.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs ou noise gamma/raw data/5x noise (21k Hz) re = 500/ou_noise_r_squared.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs ou noise gamma/raw data/5x noise (21k Hz) re = 500/plot 5x ou.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab frame RB/r-squared vs ou noise gamma/raw data/5x noise (21k Hz) re = 500/primitive_length.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/dblqdot.py" beforeDir="false" afterPath="$PROJECT_DIR$/lib/dblqdot.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/nswrb.py" beforeDir="false" afterPath="$PROJECT_DIR$/lib/nswrb.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/phase correction.py" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -43,11 +804,35 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lab frame RB/static dephasing noise analysis.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1920">
+              <caret line="125" column="24" selection-start-line="125" selection-start-column="24" selection-end-line="125" selection-end-column="24" />
+              <folding>
+                <element signature="e#0#23#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lab frame RB/ensemble dephasing noise analysis.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="3728">
+              <caret line="240" column="17" selection-start-line="240" selection-start-column="17" selection-end-line="240" selection-end-column="17" />
+              <folding>
+                <element signature="e#0#23#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/RB_1q/noisy pulse sorting.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="432">
-              <caret line="249" column="77" selection-start-line="249" selection-start-column="77" selection-end-line="249" selection-end-column="77" />
+            <state relative-caret-position="2992">
+              <caret line="193" selection-start-line="193" selection-end-line="198" selection-end-column="14" />
               <folding>
                 <element signature="e#0#17#0" expanded="true" />
               </folding>
@@ -56,12 +841,47 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lib/oneqrb.py">
+        <entry file="file://$PROJECT_DIR$/lib/twoqrb.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="474">
-              <caret line="120" column="37" selection-start-line="120" selection-start-column="37" selection-end-line="120" selection-end-column="37" />
+            <state relative-caret-position="1648">
+              <caret line="105" column="4" selection-start-line="105" selection-start-column="4" selection-end-line="105" selection-end-column="4" />
               <folding>
-                <element signature="e#150#168#0" expanded="true" />
+                <element signature="e#106#119#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lib/nswrb.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="4624">
+              <caret line="292" selection-start-line="292" selection-end-line="292" />
+              <folding>
+                <element signature="e#238#262#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lab frame RB/mp_lab_SRB_with_gaussian_noise.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="464">
+              <caret line="33" column="21" selection-start-line="33" selection-start-column="21" selection-end-line="33" selection-end-column="21" />
+              <folding>
+                <element signature="e#0#13#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/generator_analysis/finding_Tpi_2_via_pulse.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <folding>
+                <element signature="e#0#18#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -78,7 +898,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>fide</find>
       <find>s</find>
       <find>w,</find>
       <find>M</find>
@@ -108,6 +927,7 @@
       <find>log</find>
       <find>i</find>
       <find>reversed</find>
+      <find>gamma</find>
     </findStrings>
     <replaceStrings>
       <replace>a,</replace>
@@ -128,6 +948,7 @@
       <replace>p *= p_ac[:, 3]</replace>
       <replace>p = p * p_ac[:, 3]</replace>
       <replace>j</replace>
+      <replace>N</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -136,11 +957,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/generator analysis/dqdot" />
-        <option value="$PROJECT_DIR$/generator analysis/dqdot.py" />
-        <option value="$PROJECT_DIR$/SRB_2qubit/dqdot.py" />
-        <option value="$PROJECT_DIR$/SRB_2qubit/dblqrb.py" />
-        <option value="$PROJECT_DIR$/SRB_2qubit/dblqdot.py" />
         <option value="$PROJECT_DIR$/SRB_2qubit/dblqdrb.py" />
         <option value="$PROJECT_DIR$/SRB_2qubit/twoqrb.py" />
         <option value="$PROJECT_DIR$/SRB_2qubit/SRB_with_gaussian_noise(stochastic).py" />
@@ -154,12 +970,10 @@
         <option value="$PROJECT_DIR$/lib/lab frame pulses.py" />
         <option value="$PROJECT_DIR$/test/lab frame pulses.py" />
         <option value="$PROJECT_DIR$/results/plot.py" />
-        <option value="$PROJECT_DIR$/test/phase correction.py" />
         <option value="$PROJECT_DIR$/test/nswrb_test.py" />
         <option value="$PROJECT_DIR$/lab frame RB/fidelity with different std dev.py" />
         <option value="$PROJECT_DIR$/test/mp test.py" />
         <option value="$PROJECT_DIR$/lab frame RB/fidelity_with_different_std_dev.py" />
-        <option value="$PROJECT_DIR$/lib/dblqdot.py" />
         <option value="$PROJECT_DIR$/lab frame RB/mp_lab_SRB_with_gaussian_noise.py" />
         <option value="$PROJECT_DIR$/lab frame RB/mp_lab_RB_with_different_noise_frequency.py" />
         <option value="$PROJECT_DIR$/lab frame RB/test.py" />
@@ -174,7 +988,6 @@
         <option value="$PROJECT_DIR$/lab frame RB/lab_SRB_with_gaussian_noise.py" />
         <option value="$PROJECT_DIR$/test/rbnoise_test2.py" />
         <option value="$PROJECT_DIR$/Clifford decompose/Clifford sympletic.py" />
-        <option value="$PROJECT_DIR$/lib/nswrb.py" />
         <option value="$PROJECT_DIR$/test/rbnoise_test3.py" />
         <option value="$PROJECT_DIR$/lib/twoqrb.py" />
         <option value="$PROJECT_DIR$/generator analysis/test.py" />
@@ -184,16 +997,24 @@
         <option value="$PROJECT_DIR$/RB_1q/channel noise extraction.py" />
         <option value="$PROJECT_DIR$/RB_1q/1q_mp_RB.py" />
         <option value="$PROJECT_DIR$/RB_1q/channel noise vs hamiltonian noise.py" />
+        <option value="$PROJECT_DIR$/RB_1q/test.py" />
+        <option value="$PROJECT_DIR$/RB_1q/constant delta trace fidelity.py" />
         <option value="$PROJECT_DIR$/RB_1q/1q_mp_RB_const_delta.py" />
+        <option value="$PROJECT_DIR$/RB_1q/gate dependent RB test.py" />
+        <option value="$PROJECT_DIR$/lib/dblqdot.py" />
+        <option value="$PROJECT_DIR$/test/phase correction.py" />
         <option value="$PROJECT_DIR$/lib/oneqrb.py" />
+        <option value="$PROJECT_DIR$/lib/nswrb.py" />
+        <option value="$PROJECT_DIR$/lab frame RB/static dephasing noise analysis.py" />
         <option value="$PROJECT_DIR$/RB_1q/noisy pulse sorting.py" />
+        <option value="$PROJECT_DIR$/lab frame RB/ensemble dephasing noise analysis.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="7">
-    <option name="x" value="-10" />
-    <option name="y" value="-10" />
-    <option name="width" value="1550" />
+    <option name="x" value="23" />
+    <option name="y" value="54" />
+    <option name="width" value="1556" />
     <option name="height" value="880" />
   </component>
   <component name="ProjectLevelVcsManager">
@@ -278,7 +1099,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.noisy pulse sorting">
+  <component name="RunManager" selected="Python.ensemble dephasing noise analysis">
     <configuration default="true" type="tests" factoryName="Attests">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -298,28 +1119,6 @@
       <option name="PATTERN" value="" />
       <option name="USE_PATTERN" value="false" />
       <method />
-    </configuration>
-    <configuration name="1q_mp_RB_const_delta" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="2-qubit" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/RB_1q" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/RB_1q/1q_mp_RB_const_delta.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="true" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
     </configuration>
     <configuration name="Cliff2_pickle" type="PythonConfigurationType" factoryName="Python">
       <module name="2-qubit" />
@@ -387,51 +1186,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="channel noise vs hamiltonian noise" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="2-qubit" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/RB_1q" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/RB_1q/channel noise vs hamiltonian noise.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="true" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="hamiltonian noise test" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="2-qubit" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/RB_1q/Hamiltonian noise analysis" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/RB_1q/Hamiltonian noise analysis/hamiltonian noise test.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="true" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="mp_lab_SRB_with_gaussian_noise" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="ensemble dephasing noise analysis" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="2-qubit" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -444,7 +1199,29 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/lab frame RB/mp_lab_SRB_with_gaussian_noise.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/lab frame RB/ensemble dephasing noise analysis.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="true" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="gate dependent RB test" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="2-qubit" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/RB_1q" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/RB_1q/gate dependent RB test.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="true" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -457,6 +1234,9 @@
       <module name="2-qubit" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
       <option name="SDK_HOME" value="" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/RB_1q" />
       <option name="IS_MODULE_SDK" value="true" />
@@ -464,6 +1244,50 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/RB_1q/noisy pulse sorting.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="true" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="phase correction" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="2-qubit" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/test" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/test/phase correction.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="true" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="static dephasing noise analysis" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="2-qubit" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/lab frame RB" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/lab frame RB/static dephasing noise analysis.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="true" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -484,19 +1308,19 @@
     <list>
       <item itemvalue="Python.Cliff2_pickle" />
       <item itemvalue="Python.OU_noise" />
-      <item itemvalue="Python.channel noise vs hamiltonian noise" />
       <item itemvalue="Python.noisy pulse sorting" />
-      <item itemvalue="Python.mp_lab_SRB_with_gaussian_noise" />
-      <item itemvalue="Python.hamiltonian noise test" />
-      <item itemvalue="Python.1q_mp_RB_const_delta" />
+      <item itemvalue="Python.gate dependent RB test" />
+      <item itemvalue="Python.phase correction" />
+      <item itemvalue="Python.static dephasing noise analysis" />
+      <item itemvalue="Python.ensemble dephasing noise analysis" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.ensemble dephasing noise analysis" />
         <item itemvalue="Python.noisy pulse sorting" />
-        <item itemvalue="Python.channel noise vs hamiltonian noise" />
-        <item itemvalue="Python.1q_mp_RB_const_delta" />
-        <item itemvalue="Python.hamiltonian noise test" />
-        <item itemvalue="Python.mp_lab_SRB_with_gaussian_noise" />
+        <item itemvalue="Python.static dephasing noise analysis" />
+        <item itemvalue="Python.phase correction" />
+        <item itemvalue="Python.gate dependent RB test" />
       </list>
     </recent_temporary>
   </component>
@@ -806,7 +1630,40 @@
       <workItem from="1648272073685" duration="593000" />
       <workItem from="1648394828069" duration="10672000" />
       <workItem from="1648440236994" duration="2594000" />
-      <workItem from="1648553769074" duration="14453000" />
+      <workItem from="1648553769074" duration="15089000" />
+      <workItem from="1648616242049" duration="466000" />
+      <workItem from="1649500209797" duration="2463000" />
+      <workItem from="1649648541479" duration="3926000" />
+      <workItem from="1649762586472" duration="6321000" />
+      <workItem from="1649784083535" duration="597000" />
+      <workItem from="1649914205178" duration="12995000" />
+      <workItem from="1649947200444" duration="3650000" />
+      <workItem from="1650090864220" duration="4082000" />
+      <workItem from="1650113238241" duration="6012000" />
+      <workItem from="1650132745709" duration="613000" />
+      <workItem from="1650174126388" duration="850000" />
+      <workItem from="1650550064836" duration="616000" />
+      <workItem from="1650618461280" duration="2598000" />
+      <workItem from="1650644351036" duration="7221000" />
+      <workItem from="1650698146891" duration="2172000" />
+      <workItem from="1650709605910" duration="3165000" />
+      <workItem from="1650727079351" duration="4319000" />
+      <workItem from="1650864178741" duration="628000" />
+      <workItem from="1650951869945" duration="2256000" />
+      <workItem from="1650989340201" duration="5024000" />
+      <workItem from="1650999663710" duration="1144000" />
+      <workItem from="1651031336048" duration="1358000" />
+      <workItem from="1651037587967" duration="1297000" />
+      <workItem from="1651039899150" duration="61000" />
+      <workItem from="1651424975343" duration="1321000" />
+      <workItem from="1651466429114" duration="616000" />
+      <workItem from="1651509994465" duration="2602000" />
+      <workItem from="1651572512695" duration="7362000" />
+      <workItem from="1651586282414" duration="9065000" />
+      <workItem from="1651596652412" duration="3012000" />
+      <workItem from="1651904548214" duration="1200000" />
+      <workItem from="1652071638689" duration="608000" />
+      <workItem from="1652175976646" duration="625000" />
     </task>
     <servers />
   </component>
@@ -816,7 +1673,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="971020000" />
+    <option name="totallyTimeSpent" value="1071901000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -829,9 +1686,8 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
-    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.14392324" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.20309168" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" weight="0.32995737" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -842,9 +1698,9 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.4914712" weight="0.3201133" />
       <window_info anchor="bottom" id="Version Control" order="7" sideWeight="0.4804772" weight="0.47396964" />
-      <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.77132195" weight="0.30260304" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="8" sideWeight="0.77132195" visible="true" weight="0.1735358" />
       <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.22867803" side_tool="true" weight="0.30368763" />
-      <window_info anchor="bottom" id="Python Console" order="10" sideWeight="0.76865673" visible="true" weight="0.5010846" />
+      <window_info anchor="bottom" id="Python Console" order="10" sideWeight="0.76865673" weight="0.2776204" />
       <window_info anchor="bottom" id="Docker" order="11" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="12" />
       <window_info anchor="bottom" id="Concurrent Activities Diagram" order="13" weight="0.329718" />
@@ -852,7 +1708,7 @@
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Database" order="3" weight="0.3297587" />
-      <window_info active="true" anchor="right" id="SciView" order="4" sideWeight="0.8184569" visible="true" weight="0.34488273" />
+      <window_info anchor="right" id="SciView" order="4" sideWeight="0.8184569" visible="true" weight="0.26439232" />
       <window_info anchor="right" x="0" y="0" width="337" height="638" id="Documentation" order="5" sideWeight="0.18154311" side_tool="true" weight="0.54371" />
     </layout>
     <layout-to-restore>
@@ -916,185 +1772,14 @@
     <SUITE FILE_PATH="coverage/RB_2_qubit$plot.coverage" NAME="plot Coverage Results" MODIFIED="1561455278973" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/RB_2_qubit$generator.coverage" NAME="generator Coverage Results" MODIFIED="1561453790907" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/RB_2_qubit$SRB_with_gaussian_noise.coverage" NAME="SRB_with_gaussian_noise Coverage Results" MODIFIED="1565199240826" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/RB_2_qubit$constant_delta_trace_fidelity.coverage" NAME="constant delta trace fidelity Coverage Results" MODIFIED="1649654060586" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/RB_1q" />
     <SUITE FILE_PATH="coverage/RB_2_qubit$Unittests_in_test.coverage" NAME="Unittests in test Coverage Results" MODIFIED="1633344551470" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" />
-    <SUITE FILE_PATH="coverage/RB_2_qubit$noisy_pulse_sorting.coverage" NAME="noisy pulse sorting Coverage Results" MODIFIED="1647146842697" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/RB_1q" />
+    <SUITE FILE_PATH="coverage/RB_2_qubit$noisy_pulse_sorting.coverage" NAME="noisy pulse sorting Coverage Results" MODIFIED="1650122615550" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/RB_1q" />
     <SUITE FILE_PATH="coverage/RB_2_qubit$gates_with_noise.coverage" NAME="gates_with_noise Coverage Results" MODIFIED="1563805928108" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/RB_2_qubit$rbnoise_test.coverage" NAME="rbnoise_test Coverage Results" MODIFIED="1636185903632" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" />
     <SUITE FILE_PATH="coverage/RB_2_qubit$energy_fluc_err_analysis.coverage" NAME="energy_fluc_err_analysis Coverage Results" MODIFIED="1597070015317" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/generator analysis" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$USER_HOME$/RB/Lib/site-packages/scipy/signal/__init__.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$USER_HOME$/.PyCharm2019.1/system/python_stubs/772880067/builtins.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="193">
-          <caret line="258" column="4" selection-start-line="258" selection-start-column="4" selection-end-line="258" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/rbnoise_naive_test.py" />
-    <entry file="file://$PROJECT_DIR$/test/lab frame pulses.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="32">
-          <caret line="6" selection-start-line="6" selection-end-line="9" selection-end-column="44" />
-          <folding>
-            <element signature="e#0#16#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/RB/Lib/site-packages/numpy/core/fromnumeric.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="131">
-          <caret line="1820" column="4" selection-start-line="1820" selection-start-column="4" selection-end-line="1820" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/RB/Lib/site-packages/scipy/fftpack/basic.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1119">
-          <caret line="185" column="4" selection-start-line="185" selection-start-column="4" selection-end-line="185" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/.PyCharm2019.1/system/python_stubs/772880067/numpy/core/umath.py" />
-    <entry file="file://$USER_HOME$/RB/Lib/site-packages/numpy/core/numeric.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="368">
-          <caret line="370" column="8" selection-start-line="370" selection-start-column="8" selection-end-line="370" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/rbnoise_test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="352">
-          <caret line="23" column="29" selection-start-line="23" selection-start-column="29" selection-end-line="23" selection-end-column="29" />
-          <folding>
-            <element signature="e#0#25#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/nswrb_test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="11" column="7" selection-start-line="11" selection-start-column="7" selection-end-line="11" selection-end-column="7" />
-          <folding>
-            <element signature="e#0#23#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/rbnoise_test2.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret selection-end-line="2" />
-          <folding>
-            <element signature="e#0#25#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Clifford decompose/arXiv 1805.05027/C_2 decompose demo.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/rbnoise_test3.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="10" selection-start-line="10" selection-end-line="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lab frame RB/fidelity_with_different_std_dev.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="13" selection-start-column="13" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lab frame RB/lab_SRB_with_gaussian_noise.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="15" selection-start-line="15" selection-end-line="15" />
-          <folding>
-            <element signature="e#0#13#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SRB_2qubit/SRB_with_gaussian_noise(quasi-static).py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1744">
-          <caret line="113" column="14" selection-start-line="113" selection-start-column="14" selection-end-line="113" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/rbnoise.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1408">
-          <caret line="89" column="34" selection-start-line="89" selection-start-column="34" selection-end-line="89" selection-end-column="34" />
-          <folding>
-            <element signature="e#75#93#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lab frame RB/test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="9" selection-start-line="9" selection-end-line="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/RB/Lib/site-packages/scipy/linalg/matfuncs.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="210" column="4" selection-start-line="210" selection-start-column="4" selection-end-line="210" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/dblqdot.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3120">
-          <caret line="197" column="20" selection-start-line="197" selection-start-column="20" selection-end-line="197" selection-end-column="67" />
-          <folding>
-            <element signature="e#180#198#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/1_f_kappa_alpha_relation.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="256">
-          <caret line="58" column="109" selection-start-line="58" selection-start-column="13" selection-end-line="58" selection-end-column="109" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/OU_1_f_noise.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-464">
-          <caret line="75" column="40" selection-start-line="75" selection-start-column="40" selection-end-line="75" selection-end-column="40" />
-          <folding>
-            <element signature="e#0#44#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/generator analysis/test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="16" lean-forward="true" selection-start-column="16" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/RB/Lib/site-packages/numpy/__init__.pyi" />
     <entry file="file://$PROJECT_DIR$/lab frame RB/mp_lab_RB_with_different_noise_frequency.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="412">
@@ -1149,28 +1834,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lab frame RB/mp_fidelity_with_different_std_dev.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="352">
-          <caret line="22" column="53" selection-start-line="22" selection-start-column="53" selection-end-line="22" selection-end-column="53" />
-          <folding>
-            <element signature="e#0#13#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python37/Lib/site-packages/matplotlib/__init__.py">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lab frame RB/mp_lab_SRB_with_gaussian_noise.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-57">
-          <caret line="44" column="21" selection-start-line="44" selection-start-column="21" selection-end-line="44" selection-end-column="21" />
-          <folding>
-            <element signature="e#0#13#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Clifford decompose/Cliff2_pickle_generate.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -1205,29 +1870,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/RB_venv/Lib/site-packages/qiskit/__init__.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/twoqrb.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="388">
-          <caret line="129" selection-start-line="129" selection-end-line="135" selection-end-column="121" />
-          <folding>
-            <element signature="e#106#119#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/RB_1q/channel noise vs hamiltonian noise.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="37" lean-forward="true" selection-start-line="37" selection-end-line="37" />
-          <folding>
-            <element signature="e#0#24#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/lab frame RB/mp_lab_RB_with_one_over_f_noise.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="112">
@@ -1238,42 +1880,239 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/RB_venv/Lib/site-packages/qiskit/quantum_info/__init__.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/RB_venv/Lib/site-packages/qiskit/providers/__init__.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/RB_venv/Lib/site-packages/qiskit/providers/aer/noise/errors/standard_errors.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="151">
+          <caret line="209" column="4" selection-start-line="209" selection-start-column="4" selection-end-line="209" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/RB_venv/Lib/site-packages/qiskit/quantum_info/operators/channel/ptm.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/RB_venv/Lib/site-packages/qiskit/quantum_info/operators/channel/quantum_channel.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="304">
+          <caret line="32" column="16" selection-start-line="32" selection-start-column="16" selection-end-line="32" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/RB_venv/Lib/site-packages/qiskit/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="256">
+          <caret line="16" selection-start-line="16" selection-end-line="16" />
+          <folding>
+            <element signature="e#560#574#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/rbnoise.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1424">
+          <caret line="89" column="34" selection-start-line="89" selection-start-column="34" selection-end-line="89" selection-end-column="34" />
+          <folding>
+            <element signature="e#75#93#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/RB_1q/constant delta trace fidelity.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="15" column="25" selection-start-line="15" selection-start-column="25" selection-end-line="15" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/RB_1q/1q_mp_RB_const_delta.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1248">
-          <caret line="78" selection-start-line="78" selection-end-line="80" selection-end-column="14" />
+        <state relative-caret-position="528">
+          <caret line="33" column="18" selection-start-line="33" selection-start-column="18" selection-end-line="33" selection-end-column="18" />
+          <folding>
+            <element signature="e#0#31#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lab frame RB/fidelity_with_different_std_dev.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-line="3" selection-end-column="23" />
           <folding>
             <element signature="e#0#13#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/nswrb.py">
+    <entry file="file://$PROJECT_DIR$/generator analysis/test.py" />
+    <entry file="file://$PROJECT_DIR$/lab frame RB/test.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="464">
-          <caret line="194" column="26" selection-start-line="194" selection-start-column="26" selection-end-line="194" selection-end-column="26" />
+        <state relative-caret-position="144">
+          <caret line="9" selection-start-line="9" selection-end-line="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/generator analysis/Lab_frame_analysis.py" />
+    <entry file="file://$PROJECT_DIR$/lab frame RB/lab_SRB_with_gaussian_noise.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="432">
+          <caret line="30" column="34" selection-start-line="30" selection-start-column="34" selection-end-line="30" selection-end-column="34" />
           <folding>
-            <element signature="e#238#262#0" expanded="true" />
+            <element signature="e#0#13#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/oneqrb.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="474">
-          <caret line="120" column="37" selection-start-line="120" selection-start-column="37" selection-end-line="120" selection-end-column="37" />
+        <state relative-caret-position="167">
+          <caret line="16" selection-start-line="16" selection-end-line="23" />
           <folding>
             <element signature="e#150#168#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/RB_1q/gate dependent RB test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="139">
+          <caret line="70" lean-forward="true" selection-start-line="70" selection-end-line="70" />
+          <folding>
+            <element signature="e#0#31#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python37/Lib/site-packages/matplotlib/pyplot.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/phase correction.py" />
+    <entry file="file://$PROJECT_DIR$/generator analysis/phase_offset_compensate.py" />
+    <entry file="file://$PROJECT_DIR$/generator_analysis/phase_offset_compensate.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-4831">
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/generator_analysis/Lab_frame_analysis.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1375">
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/phase_correction.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/dblqdot.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="224">
+          <caret line="16" selection-start-line="16" selection-end-line="16" />
+          <folding>
+            <element signature="e#180#198#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/RB_1q/channel noise vs hamiltonian noise.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="576">
+          <caret line="37" selection-start-line="37" selection-end-line="37" />
+          <folding>
+            <element signature="e#0#24#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lab frame RB/mp_fidelity_with_different_std_dev.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="577">
+          <caret line="41" column="25" selection-start-line="41" selection-start-column="25" selection-end-line="41" selection-end-column="25" />
+          <folding>
+            <element signature="e#0#13#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python37/Lib/site-packages/scipy/__init__.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lab frame RB/static dephasing noise analysis.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1920">
+          <caret line="125" column="24" selection-start-line="125" selection-start-column="24" selection-end-line="125" selection-end-column="24" />
+          <folding>
+            <element signature="e#0#23#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lab frame RB/ensemble dephasing noise analysis.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3728">
+          <caret line="240" column="17" selection-start-line="240" selection-start-column="17" selection-end-line="240" selection-end-column="17" />
+          <folding>
+            <element signature="e#0#23#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/RB_1q/noisy pulse sorting.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="432">
-          <caret line="249" column="77" selection-start-line="249" selection-start-column="77" selection-end-line="249" selection-end-column="77" />
+        <state relative-caret-position="2992">
+          <caret line="193" selection-start-line="193" selection-end-line="198" selection-end-column="14" />
           <folding>
             <element signature="e#0#17#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/twoqrb.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1648">
+          <caret line="105" column="4" selection-start-line="105" selection-start-column="4" selection-end-line="105" selection-end-column="4" />
+          <folding>
+            <element signature="e#106#119#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/nswrb.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4624">
+          <caret line="292" selection-start-line="292" selection-end-line="292" />
+          <folding>
+            <element signature="e#238#262#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lab frame RB/mp_lab_SRB_with_gaussian_noise.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="464">
+          <caret line="33" column="21" selection-start-line="33" selection-start-column="21" selection-end-line="33" selection-end-column="21" />
+          <folding>
+            <element signature="e#0#13#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/generator_analysis/finding_Tpi_2_via_pulse.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
           </folding>
         </state>
       </provider>

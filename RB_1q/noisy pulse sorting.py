@@ -1,7 +1,10 @@
 import copy as cp
 from lib.oneqrb import *
 from qiskit import quantum_info
+from qiskit.providers.aer.noise import depolarizing_error
+from qiskit.quantum_info.operators.channel import ptm
 import matplotlib.pyplot as plt
+import scipy.stats as stats
 '''
 1. Sort the Hamiltonian noise into left unitary operation.
 2. Extract the noise for each Clifford as unitary matrices. (numpy array)
@@ -51,7 +54,7 @@ def third_pauli(a1, a2):
 def commute_transform(p1, p2):
     if not (isinstance(p1, Pulse) and isinstance(p2, Pulse)):
         raise TypeError('The two inputs should be of type "Pulse" objects.')
-    if p1.pulse_type == 'pulse' and p2.pulse_type == 'noise':
+    if p1.pulse_type == 'noise' and p2.pulse_type == 'pulse':
         if p1.axis == p2.axis:
             temp = cp.deepcopy(p2)
 
@@ -67,17 +70,17 @@ def commute_transform(p1, p2):
         else:
             ax = third_pauli(p1.axis, p2.axis)
             sgn = p1.sign * p2.sign * eijk(p1.axis, p2.axis, ax)
-            temp = cp.deepcopy(p2)
+            temp = cp.deepcopy(p1)
 
-            p2.pulse_type = p1.pulse_type       # 'pulse'
-            p2.axis = p1.axis
-            p2.sign = p1.sign
-            p2.angle = p1.angle
+            p1.pulse_type = p2.pulse_type       # 'pulse'
+            p1.axis = p2.axis
+            p1.sign = p2.sign
+            p1.angle = p2.angle
 
-            p1.pulse_type = temp.pulse_type     # 'noise'
-            p1.axis = ax
-            p1.sign = sgn
-            p1.angle = temp.angle
+            p2.pulse_type = temp.pulse_type     # 'noise'
+            p2.axis = ax
+            p2.sign = sgn
+            p2.angle = temp.angle
         return True
     else:
         return False
@@ -133,7 +136,7 @@ def pulse_noisy_clifford(idx):
 def list_flatten(t):
     return [item for sublist in t for item in sublist]
 
-def noise_transform_to_left_channel(pulse_list):
+def noise_transform_to_right_channel(pulse_list):
     for j in range(len(pulse_list)):
         if not (isinstance(pulse_list[j], Pulse)):
             raise TypeError('The input should be list of type "Pulse" objects.')
@@ -176,16 +179,36 @@ def pulse_to_unitary(p, delta):
     m = np.cos(angle / 2) * I_1q - p.sign * 1j * np.sin(angle / 2) * sigma
     return m
 
+def find_theoretical_p(noisy_clifford_list):
+    m = np.zeros((16, 16))
+    for i in range(len(noisy_clifford_list)):
+        g_ptm = ptm.PTM(quantum_info.Operator(get_perfect_cliff(i))).data
+        depol_ch_ptm = ptm.PTM(depolarizing_error(1, 1)).data
+        g_u_ptm = g_ptm - depol_ch_ptm
+        g_tilde_ptm = ptm.PTM(quantum_info.Operator(noisy_clifford_list[i])).data
+        m = m + np.kron(g_u_ptm, g_tilde_ptm)
+    m = 1 / 24 * m
+    w, v = np.linalg.eig(m)
+    return w
 
-'''
+def pdf_delta_list(mid, sigma, deltas):
+    res = [0] * len(deltas)
+    d = stats.norm(mid, sigma)
+    for i in range(len(res)):
+        res[i] = d.pdf(deltas[i])
+    return res
+
+
 # Single delta demonstration
-
+'''
 noise_unitary = []
 delta = 0.5
+noisy_clifford_unitary = []
+
 for n in range(24):
     L = pulse_noisy_clifford(n)
     pulse_noise = []
-    noise_transform_to_left_channel(L)
+    noise_transform_to_right_channel(L)
 
     # print clifford after transformation in terms of the "Pulse" objects
     print("Clifford #", n)
@@ -201,45 +224,57 @@ for n in range(24):
     noise_unitary.append(m)
     # print("Noise channel for Clifford #", n)
     # print(m)
+
     print("Noise trace fidelity = ", gate_fidelity_1q(m, I_1q))
-    c_thr = m @ get_perfect_cliff(n)
-    c_exp = get_cliff_1q(n, delta_t=1000, noise_type=HAMILTONIAN_NOISE, noise_angle=delta)
+    c_thr = get_perfect_cliff(n) @ m
+    noisy_clifford_unitary.append(c_thr)
+    c_exp = get_cliff_1q(n, delta_t=100, noise_type=HAMILTONIAN_NOISE, noise_angle=delta)
     print("Clifford trace fidelity (thr vs. exp) = ", gate_fidelity_1q(c_exp, c_thr))
     print(" ")
 
-depolarizing_str = []
+d = 2
+p = np.real(np.amax(find_theoretical_p(noisy_clifford_unitary)))
+print((p * (d - 1) + 1) / d)
+
+F_hamiltonian = []
 d = 2
 for i in range(len(noise_unitary)):
-    ch = quantum_info.Operator(noise_unitary[i])
+    ch = quantum_info.Operator(get_perfect_cliff(i) @ noise_unitary[i] @ get_perfect_cliff(i).conj().T)
     F_ave = quantum_info.average_gate_fidelity(ch)
-    p = (d * F_ave - 1) / (d - 1)
-    depolarizing_str.append(p)
+    # p = (d * F_ave - 1) / (d - 1)
+    # depolarizing_str.append(p)
+    F_hamiltonian.append(F_ave)
+
 
 dephasing_unitary = np.cos(delta) * I_1q - 1j * np.sin(delta) * Z_1q
 dephasing_ch = quantum_info.Operator(dephasing_unitary)
 F_dephasing = quantum_info.average_gate_fidelity(dephasing_ch)
-p_dephasing = (d * F_dephasing - 1) / (d - 1)
+# p_dephasing = (d * F_dephasing - 1) / (d - 1)
 
-print("Depolarizing strength: ", depolarizing_str)
-print("Hamiltonain noise average gate fidelity: ", (np.mean(depolarizing_str)*(d-1)+1)/2)
+# print("Depolarizing strength: ", depolarizing_str)
+# print("Hamiltonain noise average gate fidelity: ", (np.mean(depolarizing_str)*(d-1)+1)/2)
+print("Hamiltonain noise average gate fidelity: ", np.mean(F_hamiltonian))
 print("Dephasing channel noise average gate fidelity: ", F_dephasing)
-# Single delta demonstration end here
 '''
+# Single delta demonstration end here
+
 
 # Depolarizing strength comparison for different "delta"
-
+'''
 delta_list = [x * 0.01 for x in list(range(1, 51))]
 d = 2
 
 avg_depol_str = []
+thr_depol_str = []
 depha_str = []
 
 for delta in delta_list:
     noise_unitary = []
+    noisy_clifford_unitary = []
     for n in range(24):
         L = pulse_noisy_clifford(n)
         pulse_noise = []
-        noise_transform_to_left_channel(L)
+        noise_transform_to_right_channel(L)
 
         for i in range(len(L)):
             if L[i].pulse_type == 'noise':
@@ -249,14 +284,19 @@ for delta in delta_list:
         for i in reversed(range(len(pulse_noise))):
             m = pulse_to_unitary(pulse_noise[i], delta/2) @ m  # delta/2: 1/2 here because of Clifford decomposition
         noise_unitary.append(m)
+        c_thr = get_perfect_cliff(n) @ m
+        noisy_clifford_unitary.append(c_thr)
 
     depol_str = []
     for i in range(len(noise_unitary)):
         ch = quantum_info.Operator(noise_unitary[i])
         F_ave = quantum_info.average_gate_fidelity(ch)
-        p = (d * F_ave - 1) / (d - 1)
-        depol_str.append(p)
+        p1 = (d * F_ave - 1) / (d - 1)
+        depol_str.append(p1)
     avg_depol_str.append(np.mean(depol_str))
+
+    p2 = np.real(np.amax(find_theoretical_p(noisy_clifford_unitary)))
+    thr_depol_str.append(p2)
 
     depha_m = np.cos(delta) * I_1q - 1j * np.sin(delta) * Z_1q
     depha_ch = quantum_info.Operator(depha_m)
@@ -265,8 +305,9 @@ for delta in delta_list:
     depha_str.append(p_depha)
 
 plot1 = plt.figure(1)
-plt.plot(delta_list, depha_str, 'ro', markersize=2, label='channel noise')
-plt.plot(delta_list, avg_depol_str, 'bo', markersize=2, label='Hamiltonian noise')
+plt.plot(delta_list, depha_str, 'ro', markersize=2, label='channel noise p')
+plt.plot(delta_list, avg_depol_str, 'bo', markersize=2, label='Hamiltonian noise averaged p')
+plt.plot(delta_list, thr_depol_str, 'go', markersize=2, label='Hamiltonian noise RB theoretical p')
 
 plt.title('Depolarizing strength p with constant noise')
 plt.xlabel("noise strength delta (rad)")
@@ -274,8 +315,9 @@ plt.ylabel("depolarizing strength")
 plt.legend()
 plt.show()
 
-fidelity_channel = [(x*(d-1)+1)/2 for x in depha_str]
-fidelity_hamiltonian = [(x*(d-1)+1)/2 for x in avg_depol_str]
+fidelity_channel = [(x*(d-1)+1)/d for x in depha_str]
+fidelity_thr_hamiltonian = [(x*(d-1)+1)/d for x in thr_depol_str]
+fidelity_avg_hamiltonian = [(x*(d-1)+1)/d for x in avg_depol_str]
 
 f1 = open('thr_const_delta_list_1q.pkl', 'wb')
 pickle.dump(delta_list, f1)
@@ -285,13 +327,135 @@ f2 = open('thr_const_delta_f_channel_1q.pkl', 'wb')
 pickle.dump(fidelity_channel, f2)
 f2.close()
 
-f3 = open('thr_const_delta_f_hamiltonian_1q.pkl', 'wb')
-pickle.dump(fidelity_hamiltonian, f3)
+f3 = open('thr_const_delta_f_hamiltonian_avg_1q.pkl', 'wb')
+pickle.dump(fidelity_avg_hamiltonian, f3)
 f3.close()
+
+f4 = open('thr_const_delta_f_hamiltonian_rb_1q.pkl', 'wb')
+pickle.dump(fidelity_thr_hamiltonian, f4)
+f4.close()
 
 plot2 = plt.figure(2)
 plt.plot(delta_list, fidelity_channel, 'ro', markersize=2, label='channel noise')
-plt.plot(delta_list, fidelity_hamiltonian, 'bo', markersize=2, label='Hamiltonian noise')
+plt.plot(delta_list, fidelity_avg_hamiltonian, 'bo', markersize=2, label='Hamiltonian noise average')
+plt.plot(delta_list, fidelity_thr_hamiltonian, 'go', markersize=2, label='Hamiltonian noise RB theoretical')
+
+plt.title('Average gate fidelity F with constant noise')
+plt.xlabel("noise strength delta (rad)")
+plt.ylabel("Clifford average gate fidelity")
+plt.legend()
+plt.show()
+'''
+# Depolarizing strength comparison for different "delta" end here
+
+
+# Theoretical fidelity for different sigma ensemble noise start here
+
+sigma_list = [x * 0.01 for x in list(range(1, 51))]
+sigma_max = sigma_list[-1]
+
+n = 100
+d = 2
+
+delta_list = [-3 * sigma_max + 6 * x * sigma_max / n for x in range(n+1)]
+
+# cliffords_ensemble_list[i][j] : i-th Clifford with noise parameter delta_list[j]
+cliffords_ensemble_list = []
+for i in range(24):
+    cliffords_ensemble_list.append([])
+
+# noise_ensemble_list[i][j] : right-noise gate on i-th Clifford with noise parameter delta_list[j]
+noise_ensemble_list = []
+for i in range(24):
+    noise_ensemble_list.append([])
+
+for i in range(24):
+    L = pulse_noisy_clifford(i)
+    pulse_noise = []
+    noise_transform_to_right_channel(L)
+
+    for j in range(len(L)):
+        if L[j].pulse_type == 'noise':
+            pulse_noise.append(L[j])
+
+    for delta in delta_list:
+        m = np.identity(2)
+        for k in reversed(range(len(pulse_noise))):
+            m = pulse_to_unitary(pulse_noise[k], delta / 2) @ m  # delta/2: 1/2 here because of Clifford decomposition
+        noise_ensemble_list[i].append(m)
+        c = get_perfect_cliff(i) @ m
+        cliffords_ensemble_list[i].append(c)
+
+f1 = open('cliffords_ensemble_noises_samples.pkl', 'wb')
+pickle.dump(cliffords_ensemble_list, f1)
+f1.close()
+
+f2 = open('ensemble_noises_samples.pkl', 'wb')
+pickle.dump(delta_list, f2)
+f2.close()
+
+f_delta_list = [[0] * len(delta_list)] * 24
+for i in range(24):
+    for j in range(len(delta_list)):
+        ch = quantum_info.Operator(noise_ensemble_list[i][j])
+        f_delta_list[i][j] = quantum_info.average_gate_fidelity(ch)
+
+f3 = open('f_ave_ensemble_noises_samples.pkl', 'wb')
+pickle.dump(f_delta_list, f3)
+f3.close()
+print(f_delta_list)
+
+fidelity_avg_hamiltonian = []
+fidelity_thr_hamiltonian = []
+
+for sigma in sigma_list:
+    # average gate fidelity
+    f_clifford = [0] * 24
+    for i in range(len(f_clifford)):
+        f = 0
+        pdf = pdf_delta_list(0, sigma, delta_list)
+        for j in range(len(pdf)):
+            f += pdf[j] * (6 * sigma_max / n) * f_delta_list[i][j]
+        f_clifford[i] = f
+    fidelity_avg_hamiltonian.append(np.mean(f_clifford))
+
+    # Wallman fidelity
+    g_tilde_ptm_list = []
+    for i in range(24):
+        g_tilde_ptm = np.zeros((4, 4))
+        for j in range(len(delta_list)):
+            g_tilde_ptm = g_tilde_ptm + pdf[j] * (6 * sigma_max / n) * ptm.PTM(quantum_info.Operator(cliffords_ensemble_list[i][j])).data
+        g_tilde_ptm_list.append(g_tilde_ptm)
+
+    m = np.zeros((16, 16))
+    for i in range(24):
+        g_ptm = ptm.PTM(quantum_info.Operator(get_perfect_cliff(i))).data
+        depol_ch_ptm = ptm.PTM(depolarizing_error(1, 1)).data
+        g_u_ptm = g_ptm - depol_ch_ptm
+        g_tilde_ptm = g_tilde_ptm_list[i]
+        m = m + np.kron(g_u_ptm, g_tilde_ptm)
+    m = 1 / 24 * m
+    w, v = np.linalg.eig(m)
+
+    p2 = np.real(np.amax(w))
+    fidelity_thr_hamiltonian.append((p2*(d-1)+1)/d)
+
+
+f1 = open('thr_ensemble_sigma_list_1q.pkl', 'wb')
+pickle.dump(sigma_list, f1)
+f1.close()
+
+f3 = open('thr_ensemble_sigma_f_hamiltonian_avg_1q.pkl', 'wb')
+pickle.dump(fidelity_avg_hamiltonian, f3)
+f3.close()
+
+f4 = open('thr_ensemble_sigma_f_hamiltonian_rb_1q.pkl', 'wb')
+pickle.dump(fidelity_thr_hamiltonian, f4)
+f4.close()
+
+plot2 = plt.figure(1)
+plt.plot(sigma_list[1:], fidelity_avg_hamiltonian[1:], 'bo', markersize=2, label='Hamiltonian noise average')
+plt.plot(sigma_list[1:], fidelity_thr_hamiltonian[1:], 'go', markersize=2, label='Hamiltonian noise RB theoretical')
 
 plt.title('Average gate fidelity F with constant noise')
 plt.xlabel("noise strength delta (rad)")
@@ -299,10 +463,8 @@ plt.ylabel("Clifford average gate fidelity")
 plt.legend()
 plt.show()
 
-for i in range(len(delta_list)):
-    print(delta_list[i], ":", fidelity_hamiltonian[i])
-# Depolarizing strength comparison for different "delta" end here
 
+# Theoretical fidelity for different sigma ensemble noise end here
 
 # test block start here
 
